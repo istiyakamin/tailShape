@@ -1,0 +1,20 @@
+{
+  "name": "tailshape",
+  "version": "1.0.0",
+  "description": "tailShape tailwind by shaperk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/tailshape.css -o ./dist/tailshape.css --watch"
+  },
+  "author": "Istiyak Amin",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "postcss-cli": "^9.1.0"
+  }
+}

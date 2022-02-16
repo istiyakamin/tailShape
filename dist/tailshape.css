@@ -1750,6 +1750,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1778,6 +1783,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .via-red-500 {
   --tw-gradient-stops: var(--tw-gradient-from), #ef4444, var(--tw-gradient-to, rgb(239 68 68 / 0));
+}
+
+.via-emerald-300 {
+  --tw-gradient-stops: var(--tw-gradient-from), #6ee7b7, var(--tw-gradient-to, rgb(110 231 183 / 0));
 }
 
 .to-yellow-500 {
@@ -3089,8 +3098,54 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-cyan-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-cyan-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 116 144 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-indigo-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 48 163 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-indigo-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 180 252 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-opacity-40 {
   --tw-bg-opacity: 0.4;
+}
+
+.dark .dark\:bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.dark .dark\:bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.dark .dark\:bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.dark .dark\:bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
 }
 
 .dark .dark\:from-emerald-800 {
@@ -3098,8 +3153,69 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(6 95 70 / 0));
 }
 
+.dark .dark\:from-red-200 {
+  --tw-gradient-from: #fecaca;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(254 202 202 / 0));
+}
+
+.dark .dark\:from-red-500 {
+  --tw-gradient-from: #ef4444;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(239 68 68 / 0));
+}
+
+.dark .dark\:from-violet-500 {
+  --tw-gradient-from: #8b5cf6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(139 92 246 / 0));
+}
+
+.dark .dark\:from-violet-600 {
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(124 58 237 / 0));
+}
+
+.dark .dark\:from-black {
+  --tw-gradient-from: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
+}
+
+.dark .dark\:via-emerald-300 {
+  --tw-gradient-stops: var(--tw-gradient-from), #6ee7b7, var(--tw-gradient-to, rgb(110 231 183 / 0));
+}
+
+.dark .dark\:via-emerald-500 {
+  --tw-gradient-stops: var(--tw-gradient-from), #10b981, var(--tw-gradient-to, rgb(16 185 129 / 0));
+}
+
+.dark .dark\:via-emerald-800 {
+  --tw-gradient-stops: var(--tw-gradient-from), #065f46, var(--tw-gradient-to, rgb(6 95 70 / 0));
+}
+
 .dark .dark\:to-cyan-800 {
   --tw-gradient-to: #155e75;
+}
+
+.dark .dark\:to-red-200 {
+  --tw-gradient-to: #fecaca;
+}
+
+.dark .dark\:to-green-300 {
+  --tw-gradient-to: #86efac;
+}
+
+.dark .dark\:to-green-500 {
+  --tw-gradient-to: #22c55e;
+}
+
+.dark .dark\:to-black {
+  --tw-gradient-to: #000;
+}
+
+.dark .dark\:to-green-600 {
+  --tw-gradient-to: #16a34a;
+}
+
+.dark .dark\:to-green-800 {
+  --tw-gradient-to: #166534;
 }
 
 .dark .dark\:fill-white {
@@ -3112,6 +3228,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .dark .dark\:p-2 {
   padding: 0.5rem;
+}
+
+.dark .dark\:font-bold {
+  font-weight: 700;
 }
 
 .dark .dark\:text-white {
@@ -3213,6 +3333,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:ring-purple-300 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(216 180 254 / var(--tw-ring-opacity));
+}
+
+.dark .dark\:ring-green-400 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(74 222 128 / var(--tw-ring-opacity));
 }
 
 .dark .dark\:focus-within\:border-blue-300:focus-within {

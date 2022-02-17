@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,574 +8,633 @@
     <link rel="stylesheet" href="./../../../dist/tailshape.css">
 </head>
 <body>
-    <!--
-  Welcome to Tailwind Play, the official Tailwind CSS playground!
 
-  Everything here works just like it does when you're running Tailwind locally
-  with a real build pipeline. You can customize your config file, use features
-  like `@apply`, or even add third-party plugins.
+  <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+    d
+  </button>
 
-  Feel free to play with this example if you're just learning, or trash it and
-  start from scratch if you know enough to be dangerous. Have fun!
--->
-<section class="text-gray-600 body-font">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-      <div class="text-center lg:w-2/3 w-full">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed vexillologist</h1>
-        <p class="mb-8 leading-relaxed">
-          Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave
-          ugh. Pour-over meditation PBR&amp;B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.
-        </p>
-        <div class="flex justify-center">
-          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-        </div>
-      </div>
-    </div>
-</section>
-<hr>
-<div class="relative flex flex-col items-center justify-center min-h-screen bg-white bg-cover min-w-screen">
-    <div class="flex flex-col items-center justify-center p-10 mx-auto lg:flex-row lg:max-w-6xl lg:p-0">
-        <div
-            class="container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
-            <h1
-                class="relative z-20 text-5xl font-extrabold leading-none text-purple-500 xl:text-6xl sm:text-center lg:text-left">
-                Designed with<br class="md:hidden lg:block"> <span class="text-gray-800">you in mind</span></h1>
-            <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-xl sm:text-center lg:text-left">We've
-                crafted
-                the ultimate design tool that will help you build the design of your dreams. Built with configuration in
-                mind,
-                you can fully customize every aspect.</p>
-            <div class="relative flex mt-4">
-                <a href="#_"
-                    class="flex items-center self-start justify-center px-5 py-3 mt-5 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-purple-500 border border-transparent rounded-full shadow hover:bg-purple-600 focus:outline-none focus:border-purple-600 focus:shadow-outline-purple md:py-4 md:text-lg xl:text-xl md:px-10">Get
-                    Started</a>
-                <a href="#_"
-                    class="relative flex items-center self-start justify-center py-3 pl-10 pr-5 mt-5 ml-5 text-base font-medium leading-tight text-gray-400 transition duration-150 ease-in-out bg-gray-100 border-transparent rounded-full shadow-sm md:pl-16 md:pr-10 hover:text-purple-500 focus:outline-none md:py-4 md:text-lg xl:text-xl">
-                    <svg class="absolute left-0 w-6 h-6 ml-3 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-purple-500">How It Works</span>
-                </a>
+
+    <!-- hero 1 start -->
+    <section class="section_divider" id="hero_1">
+      <div>Hero 1</div>
+    </section>
+
+    <section class="text-gray-600 dark:bg-gray-800 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-cyan-300">Microdosing synth tattooed vexillologist</h1>
+            <p class="mb-8 leading-relaxed">
+              Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave
+              ugh. Pour-over meditation PBR&amp;B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.
+            </p>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none dark:hover:bg-cyan-400 dark:hover:text-gray-800 hover:bg-indigo-600 rounded text-lg">Button</button>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 dark:bg-cyan-400 rounded dark:hover:bg-indigo-600 dark:hover:text-gray-200 text-lg">Button</button>
             </div>
+          </div>
         </div>
-        <div class="relative w-full px-5 rounded-lg cursor-pointer md:w-2/3 lg:w-1/2 group xl:px-0">
-            <div class="absolute top-0 left-0 w-11/12 -mt-20 opacity-50">
-                <svg class="w-full h-full ml-4 text-purple-100" viewBox="0 0 200 200"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor"
-                        d="M45,-78C58.3,-70.3,69,-58.2,75.2,-44.4C81.3,-30.7,82.9,-15.3,83.5,0.4C84.2,16,83.8,32.1,76.5,43.9C69.2,55.7,55.1,63.3,41.2,69.4C27.3,75.4,13.6,80,-0.7,81.2C-15.1,82.5,-30.1,80.3,-41.2,72.6C-52.2,64.9,-59.2,51.6,-67.1,38.5C-75.1,25.5,-83.9,12.8,-83.8,0C-83.8,-12.7,-74.9,-25.4,-65.8,-36.4C-56.7,-47.4,-47.4,-56.7,-36.4,-65.7C-25.4,-74.7,-12.7,-83.5,1.6,-86.2C15.9,-89,31.8,-85.7,45,-78Z"
-                        transform="translate(100 100)" />
-                </svg>
-            </div>
-            <div class="relative overflow-hidden rounded-md shadow-2xl cursor-pointer group">
-                <div class="absolute flex items-center justify-center w-full h-full">
-                    <span class="flex items-center justify-center w-20 h-20 bg-purple-500 rounded-full shadow-2xl">
-                        <svg class="w-auto h-8 ml-1 text-white fill-current" viewBox="0 0 52 66"
+    </section>
+
+    <!-- hero 1 end -->
+
+    <!-- hero 2 start -->
+    <section class="section_divider" id="hero_2">
+      <div>Hero 2</div>
+    </section>
+        
+    <div class="relative flex flex-col items-center justify-center min-h-screen dark:bg-gray-800 bg-white bg-cover min-w-screen">
+        <div class="flex flex-col items-center justify-center p-10 mx-auto lg:flex-row lg:max-w-6xl lg:p-0">
+            <div
+                class="container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
+                <h1
+                    class="relative z-20 text-5xl font-extrabold leading-none text-purple-500 xl:text-6xl sm:text-center lg:text-left">
+                    Designed with<br class="md:hidden lg:block"> <span class="text-gray-800">you in mind</span></h1>
+                <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-xl sm:text-center lg:text-left">We've
+                    crafted
+                    the ultimate design tool that will help you build the design of your dreams. Built with configuration in
+                    mind,
+                    you can fully customize every aspect.</p>
+                <div class="relative flex mt-4">
+                    <a href="#_"
+                        class="flex items-center self-start justify-center px-5 py-3 mt-5 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-purple-500 border border-transparent rounded-full shadow hover:bg-purple-600 focus:outline-none focus:border-purple-600 focus:shadow-outline-purple md:py-4 md:text-lg xl:text-xl md:px-10">Get
+                        Started</a>
+                    <a href="#_"
+                        class="relative flex items-center self-start justify-center py-3 pl-10 pr-5 mt-5 ml-5 text-base font-medium leading-tight text-gray-400 transition duration-150 ease-in-out bg-gray-100 border-transparent rounded-full shadow-sm md:pl-16 md:pr-10 hover:text-purple-500 focus:outline-none md:py-4 md:text-lg xl:text-xl">
+                        <svg class="absolute left-0 w-6 h-6 ml-3 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z"
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-purple-500">How It Works</span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative w-full px-5 rounded-lg cursor-pointer md:w-2/3 lg:w-1/2 group xl:px-0">
+                <div class="absolute top-0 left-0 w-11/12 -mt-20 opacity-50">
+                    <svg class="w-full h-full ml-4 text-purple-100 dark:text-gray-700" viewBox="0 0 200 200"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor"
+                            d="M45,-78C58.3,-70.3,69,-58.2,75.2,-44.4C81.3,-30.7,82.9,-15.3,83.5,0.4C84.2,16,83.8,32.1,76.5,43.9C69.2,55.7,55.1,63.3,41.2,69.4C27.3,75.4,13.6,80,-0.7,81.2C-15.1,82.5,-30.1,80.3,-41.2,72.6C-52.2,64.9,-59.2,51.6,-67.1,38.5C-75.1,25.5,-83.9,12.8,-83.8,0C-83.8,-12.7,-74.9,-25.4,-65.8,-36.4C-56.7,-47.4,-47.4,-56.7,-36.4,-65.7C-25.4,-74.7,-12.7,-83.5,1.6,-86.2C15.9,-89,31.8,-85.7,45,-78Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div class="relative overflow-hidden rounded-md shadow-2xl cursor-pointer group">
+                    <div class="absolute flex items-center justify-center w-full h-full">
+                        <span class="flex items-center justify-center w-20 h-20 bg-purple-500 rounded-full shadow-2xl">
+                            <svg class="w-auto h-8 ml-1 text-white fill-current" viewBox="0 0 52 66"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z"
+                                    fill-rule="nonzero" /></svg>
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&h=1603&q=80"
+                        class="z-10 object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hero 2 end -->
+
+    <!-- hero 3 start -->
+    <section class="section_divider">
+      <div>Hero 3</div>
+    </section>
+    
+    <div class="relative flex flex-col items-center justify-center min-h-screen bg-cover min-w-screen"
+        style="background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80')">
+        <div class="absolute inset-0 w-full h-full bg-black bg-opacity-75"></div>
+
+        <div class="flex max-w-6xl mx-auto">
+            <div class="container relative flex flex-col w-1/2 px-10 pb-1 pr-12 text-2xl font-hairline text-white">
+                <h2 class="relative z-20 text-5xl font-extrabold leading-tight text-white">Build a culture<br> that excels
+                </h2>
+                <p class="relative z-20 block mt-4 text-xl">We've created the ultimate resource for turning your culture
+                    into a
+                    super-powered productivity machine by encouraging collaboration growth, and incentives!</p>
+                <div class="flex mt-4">
+                    <a href="#_"
+                        class="flex items-center self-start justify-center px-5 py-3 mt-5 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-lg shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-8">Get
+                        Started</a>
+                    <a href="#_"
+                        class="flex items-center self-start justify-center px-5 py-3 mt-5 ml-5 text-base font-medium leading-tight text-indigo-500 transition duration-150 ease-in-out bg-gray-200 border-transparent rounded-lg shadow hover:bg-white focus:outline-none focus:border-gray-100 focus:shadow-outline-gray md:py-4 md:text-lg md:px-8">How
+                        It Works</a>
+                </div>
+            </div>
+            <div class="relative w-1/2 overflow-hidden rounded-lg shadow-2xl cursor-pointer group">
+                <div class="absolute flex items-center justify-center w-full h-full bg-black bg-opacity-25">
+                    <span class="flex items-center justify-center w-20 h-20 bg-white bg-opacity-75 rounded-full">
+                        <svg class="w-auto h-8 ml-1 text-indigo-600 fill-current" viewBox="0 0 52 66"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z"
                                 fill-rule="nonzero" /></svg>
                     </span>
                 </div>
-                <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&h=1603&q=80"
-                    class="z-10 object-cover w-full h-full">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3290&q=80"
+                    class="object-cover w-full h-full">
             </div>
         </div>
     </div>
-</div>
-<hr>
-<div class="relative flex flex-col items-center justify-center min-h-screen bg-cover min-w-screen"
-    style="background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80')">
-    <div class="absolute inset-0 w-full h-full bg-black bg-opacity-75"></div>
 
-    <div class="flex max-w-6xl mx-auto">
-        <div class="container relative flex flex-col w-1/2 px-10 pb-1 pr-12 text-2xl font-hairline text-white">
-            <h2 class="relative z-20 text-5xl font-extrabold leading-tight text-white">Build a culture<br> that excels
-            </h2>
-            <p class="relative z-20 block mt-4 text-xl">We've created the ultimate resource for turning your culture
-                into a
-                super-powered productivity machine by encouraging collaboration growth, and incentives!</p>
-            <div class="flex mt-4">
-                <a href="#_"
-                    class="flex items-center self-start justify-center px-5 py-3 mt-5 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-lg shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-8">Get
-                    Started</a>
-                <a href="#_"
-                    class="flex items-center self-start justify-center px-5 py-3 mt-5 ml-5 text-base font-medium leading-tight text-indigo-500 transition duration-150 ease-in-out bg-gray-200 border-transparent rounded-lg shadow hover:bg-white focus:outline-none focus:border-gray-100 focus:shadow-outline-gray md:py-4 md:text-lg md:px-8">How
-                    It Works</a>
-            </div>
-        </div>
-        <div class="relative w-1/2 overflow-hidden rounded-lg shadow-2xl cursor-pointer group">
-            <div class="absolute flex items-center justify-center w-full h-full bg-black bg-opacity-25">
-                <span class="flex items-center justify-center w-20 h-20 bg-white bg-opacity-75 rounded-full">
-                    <svg class="w-auto h-8 ml-1 text-indigo-600 fill-current" viewBox="0 0 52 66"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z"
-                            fill-rule="nonzero" /></svg>
-                </span>
-            </div>
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3290&q=80"
-                class="object-cover w-full h-full">
-        </div>
-    </div>
-</div>
-<hr>
-<div class="flex min-h-screen">
-    <section class="grid grid-cols-3 text-gray-900 bg-green-500 sm:grid-cols-2">
-        <div class="z-10 h-full col-span-2 sm:col-span-1 place-self-end">
-            <div class="flex items-center w-full h-full">
-                <div class="max-w-xs p-4 text-sm text-right sm:max-w-xl sm:p-10 sm:text-base lg:max-w-2xl">
-                    <h1 class="mb-10 -mr-12 text-2xl font-bold leading-tight text-white sm:-mr-20 sm:text-3xl md:text-4xl lg:text-5xl">
-                        We Deliver at your<br />
-                        Doorstep.
-                    </h1>
-                    <p class="mb-10 lg:pl-32">
-                        With our award-winning delivery service, our personnel delivers food directly to your doorstep. With your safety in mind, all deliveries are tracked and recorded.
-                    </p>
-                    <a href="#" class="px-1 pb-1 font-semibold uppercase transition-colors duration-500 border-b-4 border-gray-800 text-md hover:border-green-700 hover:text-white">Learn more</a>
-                </div>
-            </div>
-        </div>
-        <div class="min-h-full">
-            <img class="object-cover w-full h-full"
-                src="https://images.unsplash.com/photo-1559941727-6fb446e7e8ae?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=3936&h=2624&fit=crop&ixid=eyJhcHBfaWQiOjF9"
-                alt="Food delivery worker on a bycicle" />
-        </div>
+    <!-- hero 3 end -->
+
+    <!-- hero 4 start -->
+    <section class="section_divider">
+      <div>Hero 4</div>
     </section>
-</div>
-<hr>
-<style>
-    [x-cloak] { display: none; }
-</style>
 
-<div class="relative h-screen lg:h-screen w-full bg-cover bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);">
-
-<div class="absolute inset-0 z-0 bg-gray-900 opacity-75"></div>
-
-    <!-- Desktop menu -->
-    <nav>
-        <ul class="text-white text-sm relative z-10 p-6 hidden md:flex">
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">First Link</a>
-            </li>
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">Second Link</a>
-            </li>
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">Third Link</a>
-            </li>
-            <li class="mx-auto">
-                <span class="text-3xl">Event</span>
-            </li>
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">Fourth Link</a>
-            </li>
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">Fifth Link</a>
-            </li>
-            <li class="mx-2">
-                <a class="hover:text-gray-300" href="#">Sixth Link</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- End Desktop menu -->
-
-    <!-- Mobile menu -->
-    <div x-data="{ open: false }">
-        <nav class="flex items-center justify-between flex-wrap p-6 md:hidden w-full z-20" :class="open === true ? 'fixed h-full bg-blue-900' : 'relative bg-transparent'">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <span class="font-semibold text-xl tracking-tight">Event</span>
-            </div>
-            <div class="block lg:hidden">
-                <button @click="open = !open" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white focus:outline-none">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                </button>
-            </div>
-            <div x-cloak x-show.transition="open" class="w-full h-full flex items-center justify-center">
-                <div class="text-xl lg:flex-grow">
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-                    First link
-                </a>
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-                    Second Link
-                </a>
-                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
-                    Third Link
-                </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- End Mobile menu -->
-
-    <div class="h-full container mx-auto flex items-center justify-center">
-
-        <div class="flex flex-col items-center z-10">
-            <h1 class="mx-6 mt-1 text-xl font-bold text-center text-white md:text-6xl sm:text-center sm:mx-0">Here a really cool title!</h1>
-            <p class="text-white text-xl font-medium w-2/3 text-center my-6">Some fancy text to invite to an event, the place of the event and the date of the event.</p>
-            <div class="flex flex-col md:flex-row justify-center mt-10">
-                <a href="#" class="py-2 px-8 rounded-full border-2 border-pink-500 text-white hover:bg-pink-500 text-center m-2">Tickets</a>
-                <a href="#" class="py-2 px-8 rounded-full border-2 border-pink-500 text-white bg-pink-500 hover:bg-transparent text-center m-2">Coming soon</a>
-            </div>
-        </div>
-
-    </div>
-<div>
-<hr>
-<div class="relative flex flex-col items-center justify-center min-h-screen bg-white bg-cover min-w-screen">
-    <div
-        class="flex flex-col flex-col-reverse items-center justify-center p-10 mx-auto lg:flex-row lg:max-w-6xl lg:p-0">
-        <div class="relative w-full pr-10 rounded-lg cursor-pointer md:w-2/3 lg:w-1/2 group">
-            <div class="relative rounded-md">
-                <img src="https://cdn.devdojo.com/images/september2020/grow-together.png"
-                    class="z-10 object-cover w-full h-full">
-            </div>
-        </div>
-        <div
-            class="container relative z-20 flex flex-col w-full px-5 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
-            <h1
-                class="relative z-20 font-sans text-4xl font-extrabold leading-none text-black sm:text-5xl xl:text-6xl sm:text-center lg:text-left">
-                <span class="relative">
-                    <span
-                        class="absolute bottom-0 left-0 inline-block w-full h-4 mb-1 -ml-1 transform -skew-x-3 bg-yellow-200"></span>
-                    <span class="relative">Learn Together,</span>
-                </span>
-                <span class="relative block text-yellow-400">Grow Together.</span>
-            </h1>
-            <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-lg sm:text-center lg:text-left">Join our
-                community and thrive with us! We can all help each other, learn together, and grow together.</p>
-            <div class="relative flex items-center mt-10">
-                <a href="#_"
-                    class="flex items-center self-start justify-center px-5 py-3 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-yellow-500 border border-transparent rounded-lg shadow hover:bg-yellow-600 focus:outline-none focus:border-yellow-600 focus:shadow-outline-yellow md:py-4 md:text-lg xl:text-xl md:px-10">Get
-                    Started</a>
-                <a href="#_"
-                    class="relative flex inline-block h-full ml-5 text-base text-lg font-medium leading-tight text-gray-600 underline transition duration-150 ease-in-out border-transparent">
-                    Try Our Service for Free
-                </a>
-            </div>
-            <p class="mt-6 text-xs text-gray-500 rounded-full">Already a member? <a href="#_"
-                    class="font-medium text-yellow-500 underline">Login Here</a></p>
-        </div>
-    </div>
-</div>
-<hr>
-<div class="flex items-center justify-center min-h-screen bg-white min-w-screen">
-    <div class="flex flex-col flex-col-reverse items-center justify-center mx-auto lg:flex-row lg:max-w-4xl lg:p-0">
-        <div class="container flex flex-col w-full px-5 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
-            <h1 class="font-sans text-4xl font-extrabold leading-none text-black sm:text-5xl xl:text-6xl sm:text-center lg:text-left">
-                <span class="text-gray-800">Stay focused</span>
-                <span class="block text-blue-400">and know yourself.</span>
-            </h1>
-            <p class="mt-6 text-base text-gray-600 xl:text-lg s">Your guide to mental health and happiness. How about
-                try to meditate? Start to meditate just 5 min per day and see the results.</p>
-            <div class="items-center justify-center m-10 rflex">
-                <a href="#_" class="flex items-center self-start justify-center px-5 py-3 text-base font-medium leading-tight text-white bg-blue-800 border border-transparent rounded-lg shadow md:py-4 md:text-lg xl:text-xl md:px-10">
-                    Come with us
-                </a>
-            </div>
-        </div>
-        <div class="px-5 md:w-2/3 lg:w-1/2">
-            <img src="https://ouch-cdn.icons8.com/preview/123/00b6b699-606c-42b1-ba42-20f17872a135.png"
-                alt="Illustration of person meditating" class="object-cover w-full h-50">
-        </div>
-    </div>
-</div>
-<hr>
-<div class="flex items-center justify-between">
-    <div class="float-left h-full">
-        <div class="mx-16 my-6">
-            <div class="py-2 text-6xl font-bold leading-none text-purple-700">
-                <h1>Shopping <br>
-                    Made Easier!
-                </h1>
-            </div>
-            <div>
-                <p class="text-xl text-gray-600">
-                    We've designed the best shopping experience. <br>
-                    Now just one click away!
-                </p>
-            </div>
-            <div class="my-10">
-                <a href=#>
-                    <span class="p-4 px-6 font-medium text-white bg-green-500 border-4 border-transparent rounded-lg  hover:bg-green-600">Start Shopping</span>
-                </a>
-                <a href=#>
-                    <span class="p-4 px-8 mx-8 font-medium text-gray-700 bg-gray-300 border-4 border-transparent rounded-lg hover:bg-gray-500">Learn More</span>
-                </a>
-            </div>
-        </div>
-        <div>
-
-        </div>
-    </div>
-    <div class="float-right px-20 my-8">
-        <img src="https://source.unsplash.com/400x450/?simple" alt="shopping">
-    </div>
-</div>
-<hr>
-<section class="relative min-h-screen bg-white bg-gray-200 rounded-lg min-w-screen animation-fade animation-delay">
-    <div class="container px-1 mx-auto sm:px-10 md:px-0">
-        <div class="flex flex-col items-center justify-center w-full md:flex-row">
-            <div class="flex justify-center w-full md:max-w-md md:mr-8 lg:mr-12">
-                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1H7IW0.json"  background="transparent" class="max-w-md min-w-sm" speed="1" loop autoplay></lottie-player>
-            </div>
-
-            <div class="w-full max-w-md px-4 pb-10 text-xs text-center md:pb-0 sm:text-sm lg:text-base md:max-w-lg md:w-full md:text-left">
-                <h2 class="text-2xl font-bold leading-snug sm:text-3xl md:text-4xl lg:text-5xl md:leading-tight md:mt-10">
-                  Understanding the<br />
-                  customer journey.
-                </h2>
-
-                <p class="mt-4 sm:mt-6 md:max-w-sm">
-                  To succeed, one must have an unwavering desire to succeed amidst fear of failure.
-                </p>
-
-                <button class="flex justify-center w-full max-w-xs py-4 mx-auto mt-10 text-sm font-semibold text-black transition-colors duration-100 bg-orange-500 rounded hover:bg-purple-600 hover:text-white focus:bg-purple-600 focus:text-white md:max-w-sm md:mx-0">
-                  Start your 14 day FREE Trial
-                </button>
-
-                <hr class="my-10 border-2" />
-
-                <p class="text-gray-700 text-md">
-                  “Our conversion rates have gone up 12% since we start using this platform! I highly recommend using this tool.”
-                </p>
-
-                <div class="mt-4">
-                    <div class="self-center font-semibold text-gray-900">Jane Doe, CTO of SomeCompany</div>
-                    <div class="flex justify-center mt-3 md:justify-start">
-                        <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
-                            <g class="nc-icon-wrapper" fill="currentColor">
-                                <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
-                            </g>
-                        </svg>
-                        <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
-                            <g class="nc-icon-wrapper" fill="currentColor">
-                                <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
-                            </g>
-                        </svg>
-                        <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
-                            <g class="nc-icon-wrapper" fill="currentColor">
-                                <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
-                            </g>
-                        </svg>
-                        <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
-                            <g class="nc-icon-wrapper" fill="currentColor">
-                                <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
-                            </g>
-                        </svg>
-                        <svg class="w-8 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
-                            <g class="nc-icon-wrapper" fill="currentColor">
-                                <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
-                            </g>
-                        </svg>
+    <div class="flex min-h-screen">
+        <section class="grid grid-cols-3 text-gray-900 bg-green-500 sm:grid-cols-2">
+            <div class="z-10 h-full col-span-2 sm:col-span-1 place-self-end">
+                <div class="flex items-center w-full h-full">
+                    <div class="max-w-xs p-4 text-sm text-right sm:max-w-xl sm:p-10 sm:text-base lg:max-w-2xl">
+                        <h1 class="mb-10 -mr-12 text-2xl font-bold leading-tight text-white sm:-mr-20 sm:text-3xl md:text-4xl lg:text-5xl">
+                            We Deliver at your<br />
+                            Doorstep.
+                        </h1>
+                        <p class="mb-10 lg:pl-32">
+                            With our award-winning delivery service, our personnel delivers food directly to your doorstep. With your safety in mind, all deliveries are tracked and recorded.
+                        </p>
+                        <a href="#" class="px-1 pb-1 font-semibold uppercase transition-colors duration-500 border-b-4 border-gray-800 text-md hover:border-green-700 hover:text-white">Learn more</a>
                     </div>
                 </div>
             </div>
+            <div class="min-h-full">
+                <img class="object-cover w-full h-full"
+                    src="https://images.unsplash.com/photo-1559941727-6fb446e7e8ae?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=3936&h=2624&fit=crop&ixid=eyJhcHBfaWQiOjF9"
+                    alt="Food delivery worker on a bycicle" />
+            </div>
+        </section>
+    </div>
+
+    <!-- hero 4 end -->
+
+    
+    <!-- hero 5 start -->
+    <section class="section_divider" id="hero_2">
+      <div>Hero 5</div>
+    </section>
+            
+    <div class="relative h-screen lg:h-screen w-full bg-cover bg-no-repeat bg-[url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80)]">
+
+        <!-- background overlay start -->
+        <div class="absolute inset-0 z-0 bg-gray-900 opacity-75"></div>
+        <!-- background overlay  end -->
+        <div class="h-full container mx-auto flex items-center justify-center">
+
+            <div class="flex flex-col items-center z-10">
+                <h1 class="mx-6 mt-1 text-xl font-bold text-center text-white md:text-6xl sm:text-center sm:mx-0">Here a really cool title!</h1>
+                <p class="text-white text-xl font-medium w-2/3 text-center my-6">Some fancy text to invite to an event, the place of the event and the date of the event.</p>
+                <div class="flex flex-col md:flex-row justify-center mt-10">
+                    <a href="#" class="py-2 px-8 rounded-full border-2 border-pink-500 text-white hover:bg-pink-500 text-center m-2">Tickets</a>
+                    <a href="#" class="py-2 px-8 rounded-full border-2 border-pink-500 text-white bg-pink-500 hover:bg-transparent text-center m-2">Coming soon</a>
+                </div>
+            </div>
 
         </div>
     </div>
-</section>
-<hr>
-<section class="px-4 py-24 mx-auto max-w-7xl">
-    <div class="grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
-      <div class="col-auto text-center md:col-span-7 lg:text-left">
-        <h1 class="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl md:leading-none tracking-none md:tracking-tight">Ready to start your journey?</h1>
-        <p class="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
-          Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
-        </p>
+
+    <!-- hero 5 end -->
+      
+    <!-- hero 6 start -->
+    <section class="section_divider">
+      <div>Hero 6</div>
+    </section>
+      
+    <div class="relative flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-800 bg-cover min-w-screen">
+        <div
+            class="flex flex-col  items-center justify-center p-10 mx-auto lg:flex-row lg:max-w-6xl lg:p-0">
+            <div class="relative w-full pr-10 rounded-lg cursor-pointer md:w-2/3 lg:w-1/2 group">
+                <div class="relative rounded-md">
+                    <img src="https://cdn.devdojo.com/images/september2020/grow-together.png"
+                        class="z-10 object-cover w-full h-full">
+                </div>
+            </div>
+            <div
+                class="container relative z-20 flex flex-col w-full px-5 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
+                <h1
+                    class="relative z-20 font-sans text-4xl font-extrabold leading-none text-black sm:text-5xl xl:text-6xl sm:text-center lg:text-left">
+                    <span class="relative">
+                        <span
+                            class="absolute bottom-0 left-0 inline-block w-full h-4 mb-1 -ml-1 transform -skew-x-3 bg-yellow-200 dark:bg-amber-50 dark:opacity-20"></span>
+                        <span class="relative">Learn Together,</span>
+                    </span>
+                    <span class="relative block text-yellow-400">Grow Together.</span>
+                </h1>
+                <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-lg sm:text-center lg:text-left">Join our
+                    community and thrive with us! We can all help each other, learn together, and grow together.</p>
+                <div class="relative flex items-center mt-10">
+                    <a href="#_"
+                        class="flex items-center self-start justify-center px-5 py-3 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-yellow-500 border border-transparent rounded-lg shadow hover:bg-yellow-600 focus:outline-none focus:border-yellow-600 focus:shadow-outline-yellow md:py-4 md:text-lg xl:text-xl md:px-10">Get
+                        Started</a>
+                    <a href="#_"
+                        class="relative inline-block h-full ml-5 text-lg font-medium leading-tight text-gray-600 hover:text-yellow-600 dark:hover:text-gray-200 underline transition duration-150 ease-in-out border-transparent">
+                        Try Our Service for Free
+                    </a>
+                </div>
+                <p class="mt-6 text-xs text-gray-500 rounded-full">Already a member? <a href="#_"
+                        class="font-medium text-yellow-500 underline">Login Here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- hero 6 end -->
+
+    <!-- hero 7 start -->
+
+    <section class="section_divider">
+      <div>Hero 7</div>
+    </section>
+        
+    <div class="flex items-center justify-center min-h-screen bg-white dark:bg-gray-800 min-w-screen">
+        <div class="flex flex-col flex-col-reverse items-center justify-center mx-auto lg:flex-row lg:max-w-4xl lg:p-0">
+            <div class="container flex flex-col w-full px-5 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
+                <h1 class="font-sans text-4xl font-extrabold leading-none text-black sm:text-5xl xl:text-6xl sm:text-center lg:text-left">
+                    <span class="text-gray-800 dark:text-blue-400">Stay focused</span>
+                    <span class="block text-blue-400 dark:text-gray-200">and know yourself.</span>
+                </h1>
+                <p class="mt-6 text-base text-gray-600 xl:text-lg s">Your guide to mental health and happiness. How about
+                    try to meditate? Start to meditate just 5 min per day and see the results.</p>
+                <div class="items-center justify-center m-10 rflex">
+                    <a href="#_" class="flex items-center self-start justify-center px-5 py-3 text-base font-medium leading-tight text-white bg-blue-800 border border-transparent rounded-lg shadow md:py-4 md:text-lg xl:text-xl md:px-10">
+                        Come with us
+                    </a>
+                </div>
+            </div>
+            <div class="px-5 md:w-2/3 lg:w-1/2">
+                <img src="https://images.unsplash.com/photo-1559941727-6fb446e7e8ae?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=3936&h=2624&fit=crop&ixid=eyJhcHBfaWQiOjF9"
+                    alt="Illustration of person meditating" class="object-cover w-full h-50 rounded-md shadow-lg shadow-gray-800  hover:translate-y-2 transition duration-500">
+            </div>
+        </div>
+    </div>
+    <!-- hero 7 end -->
+
+    <!-- hero 8 start -->
+    <section class="section_divider">
+      <div>Hero 8</div>
+    </section>
+
+    <div class="flex items-center justify-between dark:bg-gray-800">
+        <div class="float-left h-full">
+            <div class="mx-16 my-6">
+                <div class="py-2 text-6xl font-bold leading-none text-purple-700">
+                    <h1>Shopping <br>
+                        Made Easier!
+                    </h1>
+                </div>
+                <div>
+                    <p class="text-xl text-gray-600">
+                        We've designed the best shopping experience. <br>
+                        Now just one click away!
+                    </p>
+                </div>
+                <div class="my-10">
+                    <a href=#>
+                        <span class="p-4 px-6 font-medium text-white bg-green-500 border-4 border-transparent rounded-lg  hover:bg-green-600">Start Shopping</span>
+                    </a>
+                    <a href=#>
+                        <span class="p-4 px-8 mx-8 font-medium text-gray-700 bg-gray-300 border-4 border-transparent rounded-lg hover:bg-gray-500">Learn More</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="float-right px-20 my-8">
+            <img class="rounded-lg hover:translate-y-2 transition duration-300" src="https://images.unsplash.com/photo-1557860537-4ca8968f344e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8c2ltcGxlfHx8fHx8MTY0NTEwNDMyMg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" alt="shopping">
+            <!-- <img src="https://source.unsplash.com/400x450/?simple" alt="shopping"> -->
+        </div>
+    </div>
+
+    <!-- hero 8 end -->
+
+    <!-- hero 9 start -->
+    <section class="section_divider">
+      <div>Hero 9</div>
+    </section>
+    
+    <section class="relative min-h-screen bg-gray-200 dark:bg-gray-800 rounded-lg min-w-screen animation-fade animation-delay">
+        <div class="container px-1 mx-auto sm:px-10 md:px-0">
+            <div class="flex flex-col items-center justify-center w-full md:flex-row">
+                <div class="flex justify-center w-full md:max-w-md md:mr-8 lg:mr-12">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1H7IW0.json"  background="transparent" class="max-w-md min-w-sm" speed="1" loop autoplay></lottie-player>
+                </div>
+
+                <div class="w-full max-w-md px-4 pb-10 text-xs text-center md:pb-0 sm:text-sm lg:text-base md:max-w-lg md:w-full md:text-left">
+                    <h2 class="text-2xl font-bold leading-snug dark:text-gray-300 sm:text-3xl md:text-4xl lg:text-5xl md:leading-tight md:mt-10">
+                      Understanding the<br />
+                      customer journey.
+                    </h2>
+
+                    <p class="mt-4 sm:mt-6 md:max-w-sm dark:text-purple-800">
+                      To succeed, one must have an unwavering desire to succeed amidst fear of failure.
+                    </p>
+
+                    <button class="flex justify-center w-full max-w-xs py-4 mx-auto mt-10 text-sm font-semibold text-black transition-colors duration-100 bg-orange-500 rounded hover:bg-purple-600 hover:text-white focus:bg-purple-600 focus:text-white md:max-w-sm md:mx-0">
+                      Start your 14 day FREE Trial
+                    </button>
+
+                    <hr class="my-10 border-2" />
+
+                    <p class="text-gray-700 dark:text-gray-300 text-md">
+                      “Our conversion rates have gone up 12% since we start using this platform! I highly recommend using this tool.”
+                    </p>
+
+                    <div class="mt-4">
+                        <div class="self-center font-semibold text-gray-900 dark:text-purple-800">Jane Doe, CTO of SomeCompany</div>
+                        <div class="flex justify-center mt-3 md:justify-start">
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- hero 9 end -->
+
+    <!-- hero 10 start -->
+    <section class="section_divider">
+      <div>Hero 10</div>
+    </section>
+        
+    <section class=" dark:bg-gray-800">
+      <div class="max-w-7xl  px-4 py-24 grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
+        <div class="col-auto text-center md:col-span-7 lg:text-left">
+          <h1 class="mb-4 text-3xl font-bold leading-tight text-gray-900 dark:text-yellow-300 md:text-4xl md:leading-none tracking-none md:tracking-tight">Ready to start your journey?</h1>
+          <p class="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
+            Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
+          </p>
+        </div>
+        <div class="col-auto md:col-span-4">
+          <form class="mb-6 border-0 rounded-lg shadow-xl ">
+            <div class="text-center  text-gray-700 dark:text-yellow-200 uppercase font-semibold mb-4 border-0 card-header">
+              <p class="pt-2"> talk with us</p>
+            </div>
+            <div class="grid">
+              <label class="mx-auto ">
+                <span class="sr-only">First Name</span>
+                <input class=" bg-transparent px-5 pb-1 mt-5 border-b-2 outline-none text-gray-800 dark:text-yellow-300 border-gray-500 dark:border-yellow-300" type="text" placeholder="First Name" required="true" />
+              </label>
+              <label class="mx-auto">
+                <span class="sr-only">Email Address</span>
+                <input class=" bg-transparent px-5 pb-1 mt-5 border-b-2 outline-none text-gray-800 dark:text-yellow-300 border-gray-500 dark:border-yellow-300 " type="email" placeholder="Email Address" required="true" />
+              </label>
+              <label class="mx-auto">
+                <span class="sr-only">Password</span>
+                <input class=" bg-transparent px-5 pb-1 mt-5 border-b-2 outline-none text-gray-800 dark:text-yellow-300 border-gray-500 dark:border-yellow-300" type="password" placeholder="Password" required="true" />
+              </label>
+
+              <div class="px-6 py-4 ">
+                <button class="w-full py-2 rounded-lg bg-gray-800 text-gray-300  dark:text-gray-800 dark:bg-yellow-400" type="submit">Sign up for free</button>
+              </div>
+            </div>
+
+
+            <div class="px-6 py-4 ">
+              <button class="w-full py-2 rounded-lg bg-blue-500 hover:bg-blue-400">
+                Continue with Google
+              </button>
+            </div>
+          </form>
+          <p class="text-xs text-center text-gray-600 dark:text-yellow-300">By signing up you agree to our <a href="#" class="text-primary">Terms of Service</a></p>
+        </div>
       </div>
-      <div class="col-auto md:col-span-4">
-        <form class="mb-6 border-0 rounded-lg shadow-xl card">
-          <div class="justify-center pb-0 text-gray-700 border-0 card-header">
-            <p class="pt-2">Start talking now</p>
-          </div>
-          <div class="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
-            <label class="flex">
-              <span class="sr-only">First Name</span>
-              <input class="mt-0 form-input" type="text" placeholder="First Name" required="true" />
-            </label>
-            <label class="flex">
-              <span class="sr-only">Email Address</span>
-              <input class="mt-0 form-input" type="email" placeholder="Email Address" required="true" />
-            </label>
-            <label class="flex">
-              <span class="sr-only">Password</span>
-              <input class="mt-0 form-input" type="password" placeholder="Password" required="true" />
-            </label>
-            <button class="w-full py-2 btn btn-primary" type="submit">Sign up for free</button>
-          </div>
-          <div class="px-6 py-4 card-body">
-            <button class="w-full py-2 btn btn-icon btn-google">
-              <svg
-                class="mr-1"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="transparent"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+    </section>
+    
+    <!-- hero 10 end -->
+
+    
+    <!-- hero 11 start -->
+    <section class="section_divider">
+      <div>Hero 11</div>
+    </section>
+    
+    <section class=" dark:bg-gray-800">
+        <div class=" px-4 py-32 mx-auto max-w-7xl w-full lg:w-8/12 xl:w-5/12">
+          <p class="mb-2 text-xs font-semibold tracking-wide text-gray-400 uppercase">For Developers</p>
+          <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 dark:text-cyan-300 md:text-4xl">Focus on your apps</h1>
+          <p class="mb-5 text-base text-gray-500 md:text-lg">
+            Today every company needs apps to engage their customers and run their businesses. Step up your ability to build, manage, and deploy great apps at scale with us.
+          </p>
+          <a href="#" class="w-full mb-2 rounded-lg px-2 py-2 hover:ring-2 hover:ring-gray-800 hover:bg-gray-200 hover:text-gray-800 bg-gray-800  text-gray-300 dark:text-cyan-300 dark:ring-2 dark:ring-cyan-300 dark:hover:bg-cyan-300 dark:hover:text-gray-800 mr-6 sm:w-auto sm:mb-0">Sign up for free</a>
+          <a href="#" class="w-full mb-2 rounded-lg px-2 py-2 ring-2 ring-gray-800 hover:bg-gray-800 hover:ring-0 hover:text-gray-300 dark:text-gray-800 dark:bg-cyan-300 dark:hover:text-cyan-300 dark:hover:ring-2 dark:hover:ring-cyan-300 dark:hover:bg-gray-800 sm:w-auto sm:mb-0">Read our blog</a>
+        </div>
+    </section>
+
+    <!-- hero 11 end -->
+
+    <!-- hero 12 start -->
+    <section class="section_divider">
+      <div>Hero 12</div>
+    </section>
+
+        
+    <section class="grid grid-cols-1 gap-0 bg-blue-100 bg-opacity-25 md:grid-cols-2">
+        <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
+          <span class="mb-3 text-white bg-blue-900 badge">Pre Beta</span>
+          <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Great customer relationships start here.</h1>
+          <form class="w-full mb-6">
+            <label class="sr-only">Your Email</label>
+            <div class="block lg:hidden">
+              <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
+              <button class="w-full mt-2 text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
+            </div>
+            <div class="hidden w-full form-append lg:flex">
+              <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
+              <button class="text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
+            </div>
+          </form>
+          <p class="pr-0 mb-4 text-sm text-blue-800 tracking-relaxed lg:pr-16">Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.</p>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            alt="3 women looking at a laptop"
+            class="object-cover w-full h-64 bg-gray-100 md:h-full"
+            loading="lazy"
+          />
+        </div>
+    </section>
+
+    <!-- hero 12 end -->
+    <!-- hero 13 start -->
+    <section class="section_divider">
+      <div>Hero 13</div>
+    </section>
+        
+    <section class="px-4 py-24 mx-auto max-w-7xl">
+        <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+          <h1 class="mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+            All your <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">customer feedback</span> in one single place.
+          </h1>
+          <p class="px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24">
+            Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, and complete your customer feedback loop.
+          </p>
+          <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
+            <a class="inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
+              Get Started
+              <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
+              Book a Demo
+              <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path
-                  d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z"
+                  fill-rule="evenodd"
+                  d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
+                  clip-rule="evenodd"
                 />
               </svg>
-              Continue with Google
-            </button>
+            </a>
           </div>
-        </form>
-        <p class="text-xs text-center text-gray-600">By signing up you agree to our <a href="#" class="text-primary">Terms of Service</a></p>
-      </div>
-    </div>
-  </section>
-<hr>
-<section class="px-4 py-32 mx-auto max-w-7xl">
-    <div class="w-full mx-auto lg:w-8/12 xl:w-5/12">
-      <p class="mb-2 text-xs font-semibold tracking-wide text-gray-400 uppercase">For Developers</p>
-      <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">Focus on your apps</h1>
-      <p class="mb-5 text-base text-gray-500 md:text-lg">
-        Today every company needs apps to engage their customers and run their businesses. Step up your ability to build, manage, and deploy great apps at scale with us.
-      </p>
-      <a href="#" class="w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0">Sign up for free</a>
-      <a href="#" class="w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0">Read our blog</a>
-    </div>
-  </section>
-<hr>
-<section class="grid grid-cols-1 gap-0 bg-blue-100 bg-opacity-25 md:grid-cols-2">
-    <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
-      <span class="mb-3 text-white bg-blue-900 badge">Pre Beta</span>
-      <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Great customer relationships start here.</h1>
-      <form class="w-full mb-6">
-        <label class="sr-only">Your Email</label>
-        <div class="block lg:hidden">
-          <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
-          <button class="w-full mt-2 text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
         </div>
-        <div class="hidden w-full form-append lg:flex">
-          <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
-          <button class="text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
+        <div class="w-full mx-auto mt-20 text-center md:w-10/12">
+          <img src="/hero.jpg" alt="Hellonext feedback boards software screenshot" class="w-full rounded-lg shadow-2xl" />
         </div>
-      </form>
-      <p class="pr-0 mb-4 text-sm text-blue-800 tracking-relaxed lg:pr-16">Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.</p>
-    </div>
-    <div>
-      <img
-        src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
-        alt="3 women looking at a laptop"
-        class="object-cover w-full h-64 bg-gray-100 md:h-full"
-        loading="lazy"
-      />
-    </div>
-  </section>
-<hr>
-<section class="px-4 py-24 mx-auto max-w-7xl">
-    <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-      <h1 class="mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-        All your <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">customer feedback</span> in one single place.
-      </h1>
-      <p class="px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24">
-        Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, and complete your customer feedback loop.
-      </p>
-      <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
-          Get Started
-          <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
-          Book a Demo
-          <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fill-rule="evenodd"
-              d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="w-full mx-auto mt-20 text-center md:w-10/12">
-      <img src="/hero.jpg" alt="Hellonext feedback boards software screenshot" class="w-full rounded-lg shadow-2xl" />
-    </div>
-  </section>
-<hr>
-<section class="px-4 py-24 mx-auto max-w-7xl">
-    <div class="grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
-      <div class="col-auto text-center md:col-span-7 lg:text-left">
-        <h1 class="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl md:leading-none tracking-none md:tracking-tight">Ready to start your journey?</h1>
-        <p class="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
-          Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
-        </p>
-      </div>
-      <div class="col-auto md:col-span-4">
-        <form class="mb-6 border-0 rounded-lg shadow-xl card">
-          <div class="justify-center pb-0 text-gray-700 border-0 card-header">
-            <p class="pt-2">Start talking now</p>
+    </section>
+    <!-- hero 13 end -->
+
+    <!-- hero 14 start -->
+    <section class="section_divider">
+      <div>Hero 14</div>
+    </section>
+
+        
+    <section class="px-4 py-24 mx-auto max-w-7xl">
+        <div class="grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
+          <div class="col-auto text-center md:col-span-7 lg:text-left">
+            <h1 class="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl md:leading-none tracking-none md:tracking-tight">Ready to start your journey?</h1>
+            <p class="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
+              Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
+            </p>
           </div>
-          <div class="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
-            <label class="flex">
-              <span class="sr-only">First Name</span>
-              <input class="mt-0 form-input" type="text" placeholder="First Name" required="true" />
-            </label>
-            <label class="flex">
-              <span class="sr-only">Email Address</span>
-              <input class="mt-0 form-input" type="email" placeholder="Email Address" required="true" />
-            </label>
-            <label class="flex">
-              <span class="sr-only">Password</span>
-              <input class="mt-0 form-input" type="password" placeholder="Password" required="true" />
-            </label>
-            <button class="w-full py-2 btn btn-primary" type="submit">Sign up for free</button>
+          <div class="col-auto md:col-span-4">
+            <form class="mb-6 border-0 rounded-lg shadow-xl card">
+              <div class="justify-center pb-0 text-gray-700 border-0 card-header">
+                <p class="pt-2">Start talking now</p>
+              </div>
+              <div class="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
+                <label class="flex">
+                  <span class="sr-only">First Name</span>
+                  <input class="mt-0 form-input" type="text" placeholder="First Name" required="true" />
+                </label>
+                <label class="flex">
+                  <span class="sr-only">Email Address</span>
+                  <input class="mt-0 form-input" type="email" placeholder="Email Address" required="true" />
+                </label>
+                <label class="flex">
+                  <span class="sr-only">Password</span>
+                  <input class="mt-0 form-input" type="password" placeholder="Password" required="true" />
+                </label>
+                <button class="w-full py-2 btn btn-primary" type="submit">Sign up for free</button>
+              </div>
+              <div class="px-6 py-4 card-body">
+                <button class="w-full py-2 btn btn-icon btn-google">
+                  <svg
+                    class="mr-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="transparent"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z"
+                    />
+                  </svg>
+                  Continue with Google
+                </button>
+              </div>
+            </form>
+            <p class="text-xs text-center text-gray-600">By signing up you agree to our <a href="#" class="text-primary">Terms of Service</a></p>
           </div>
-          <div class="px-6 py-4 card-body">
-            <button class="w-full py-2 btn btn-icon btn-google">
-              <svg
-                class="mr-1"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="transparent"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z"
-                />
-              </svg>
-              Continue with Google
-            </button>
-          </div>
-        </form>
-        <p class="text-xs text-center text-gray-600">By signing up you agree to our <a href="#" class="text-primary">Terms of Service</a></p>
+        </div>
+    </section>
+  <!-- hero 14 end -->
+
+  <!-- hero 15 start -->
+    <section class="section_divider">
+      <div>Hero 15</div>
+    </section>
+
+    <section class="dark:bg-coolGray-800 dark:text-coolGray-100">
+      <div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+        <h1 class="text-4xl font-bold leading-none sm:text-5xl">Quisquam necessita vel
+          <span class="dark:text-violet-400">laborum doloribus</span>delectus
+        </h1>
+        <p class="px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
+        <div class="flex flex-wrap justify-center">
+          <button class="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900">Get started</button>
+          <button class="px-8 py-3 m-2 text-lg border rounded dark:text-coolGray-50 dark:border-coolGray-700">Learn more</button>
+        </div>
       </div>
-    </div>
-  </section>
-<hr>
-<section class="dark:bg-coolGray-800 dark:text-coolGray-100">
-	<div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-		<h1 class="text-4xl font-bold leading-none sm:text-5xl">Quisquam necessita vel
-			<span class="dark:text-violet-400">laborum doloribus</span>delectus
-		</h1>
-		<p class="px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
-		<div class="flex flex-wrap justify-center">
-			<button class="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900">Get started</button>
-			<button class="px-8 py-3 m-2 text-lg border rounded dark:text-coolGray-50 dark:border-coolGray-700">Learn more</button>
-		</div>
-	</div>
-</section>  
+    </section>  
+
+  <!-- hero 15 end -->
+
+<!-- start of script section -->
+<script type="text/javascript">
+  let toogler = document.getElementById("dark_mood_toogler");
+  let doc_html_el = document.getElementsByTagName('html')[0];
+
+  doc_html_el.addEventListener('keyup',(e)=>{
+      // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+      if(e.ctrlKey && e.keyCode =='220'){
+        doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+
+      }
+  })
+  doc_html_el.addEventListener('keyup',(e)=>{
+      // key 220 is the backward slash , need to press ctrl+ / to show or hide the darkmode button
+      if(e.ctrlKey && e.keyCode =='191'){
+        toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+
+      }
+  })
+  toogler.addEventListener('click',()=>{
+    doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+    console.log(doc_html_el.className);
+  })
+</script>
+<!-- end of script section -->
+
 
   
 </body>

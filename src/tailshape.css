@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
     
+
 .section_divider{
     @apply py-12 text-center  bg-white font-mono font-bold text-lg dark:bg-slate-800 dark:text-gray-300 dark:border-y-2 dark:border-teal-500;
 }

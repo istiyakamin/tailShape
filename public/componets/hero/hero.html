@@ -460,22 +460,22 @@
     </section>
 
         
-    <section class="grid grid-cols-1 gap-0 bg-blue-100 bg-opacity-25 md:grid-cols-2">
+    <section class="grid grid-cols-1 gap-0 bg-blue-100 dark:bg-gray-800 bg-opacity-25 md:grid-cols-2">
         <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
-          <span class="mb-3 text-white bg-blue-900 badge">Pre Beta</span>
-          <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Great customer relationships start here.</h1>
+          <span class="mb-3 text-white bg-blue-900 dark:bg-emerald-400 rounded-xl text-sm px-2">Pre Beta</span>
+          <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 dark:text-cyan-300 md:text-4xl lg:text-5xl">Great customer relationships start here.</h1>
           <form class="w-full mb-6">
             <label class="sr-only">Your Email</label>
             <div class="block lg:hidden">
-              <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
+              <input class="text-blue-900 bg-transparent" type="email" placeholder="Enter your email..." required="true" />
               <button class="w-full mt-2 text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
             </div>
             <div class="hidden w-full form-append lg:flex">
-              <input class="text-blue-900 form-input form-input-lg" type="email" placeholder="Enter your email..." required="true" />
-              <button class="text-white bg-blue-900 hover:bg-blue-800 btn btn-lg" type="submit">Get Started</button>
+              <input class="text-black border-b-2 border-gray-800 dark:rounded dark:text-emerald-300 dark:placeholder:text-emerald-300  dark:bg-blue-900 outline-none p-1  " type="email" placeholder="Enter your email..." required="true" />
+              <button class="rounded-lg p-1 ml-3 text-white bg-blue-900 hover:bg-blue-800 dark:text-black dark:bg-emerald-400 hover:translate-x-1 transition duration-300" type="submit">Get Started</button>
             </div>
           </form>
-          <p class="pr-0 mb-4 text-sm text-blue-800 tracking-relaxed lg:pr-16">Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.</p>
+          <p class="pr-0 mb-4 text-sm text-blue-800 dark:text-cyan-300 tracking-relaxed lg:pr-16">Get the #1 Business Messenger and start delivering personalized experiences at every stage of the customer journey.</p>
         </div>
         <div>
           <img
@@ -488,27 +488,31 @@
     </section>
 
     <!-- hero 12 end -->
+
+
     <!-- hero 13 start -->
     <section class="section_divider">
       <div>Hero 13</div>
     </section>
         
-    <section class="px-4 py-24 mx-auto max-w-7xl">
+    <section class=" dark:bg-gray-800">
+      <header class="px-4 py-24 mx-auto max-w-7xl">
+
         <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-          <h1 class="mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-            All your <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">customer feedback</span> in one single place.
+          <h1 class="mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 dark:text-gray-300 md:text-6xl md:tracking-tight">
+            All your <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 dark:bg-gradient-to-r dark:from-cyan-300 dark:to-emerald-500 lg:inline">customer feedback</span> in one single place.
           </h1>
-          <p class="px-0 mb-6 text-lg text-gray-600 md:text-xl lg:px-24">
+          <p class="px-0 mb-6 text-lg dark:text-gray-500 text-gray-600 md:text-xl lg:px-24">
             Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, and complete your customer feedback loop.
           </p>
           <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-            <a class="inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
+            <a class="inline-flex items-center justify-center w-full mb-2 dark:text-cyan-400 sm:w-auto sm:mb-0" href="#">
               Get Started
-              <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <svg class="w-4 h-4 ml-1 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
+            <a class="inline-flex items-center justify-center w-full mb-2 dark:text-emerald-300 sm:w-auto sm:mb-0" href="#">
               Book a Demo
               <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path
@@ -520,9 +524,11 @@
             </a>
           </div>
         </div>
-        <div class="w-full mx-auto mt-20 text-center md:w-10/12">
+        <div class="w-full mx-auto mt-20 text-center dark:text-gray-500  md:w-10/12">
           <img src="/hero.jpg" alt="Hellonext feedback boards software screenshot" class="w-full rounded-lg shadow-2xl" />
         </div>
+
+      </header>
     </section>
     <!-- hero 13 end -->
 
@@ -531,61 +537,9 @@
       <div>Hero 14</div>
     </section>
 
-        
-    <section class="px-4 py-24 mx-auto max-w-7xl">
-        <div class="grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
-          <div class="col-auto text-center md:col-span-7 lg:text-left">
-            <h1 class="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl md:leading-none tracking-none md:tracking-tight">Ready to start your journey?</h1>
-            <p class="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
-              Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
-            </p>
-          </div>
-          <div class="col-auto md:col-span-4">
-            <form class="mb-6 border-0 rounded-lg shadow-xl card">
-              <div class="justify-center pb-0 text-gray-700 border-0 card-header">
-                <p class="pt-2">Start talking now</p>
-              </div>
-              <div class="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
-                <label class="flex">
-                  <span class="sr-only">First Name</span>
-                  <input class="mt-0 form-input" type="text" placeholder="First Name" required="true" />
-                </label>
-                <label class="flex">
-                  <span class="sr-only">Email Address</span>
-                  <input class="mt-0 form-input" type="email" placeholder="Email Address" required="true" />
-                </label>
-                <label class="flex">
-                  <span class="sr-only">Password</span>
-                  <input class="mt-0 form-input" type="password" placeholder="Password" required="true" />
-                </label>
-                <button class="w-full py-2 btn btn-primary" type="submit">Sign up for free</button>
-              </div>
-              <div class="px-6 py-4 card-body">
-                <button class="w-full py-2 btn btn-icon btn-google">
-                  <svg
-                    class="mr-1"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="transparent"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z"
-                    />
-                  </svg>
-                  Continue with Google
-                </button>
-              </div>
-            </form>
-            <p class="text-xs text-center text-gray-600">By signing up you agree to our <a href="#" class="text-primary">Terms of Service</a></p>
-          </div>
-        </div>
+    <section class="p-10 text-center text-lg font-bold dark:bg-gray-800 dark:text-cyan-300  ">
+      This section(hero 14) is already been modified (style already added in hero 10)
+      
     </section>
   <!-- hero 14 end -->
 
@@ -594,15 +548,15 @@
       <div>Hero 15</div>
     </section>
 
-    <section class="dark:bg-coolGray-800 dark:text-coolGray-100">
+    <section class="dark:bg-gray-800 dark:text-gray-100">
       <div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
         <h1 class="text-4xl font-bold leading-none sm:text-5xl">Quisquam necessita vel
-          <span class="dark:text-violet-400">laborum doloribus</span>delectus
+          <span class="dark:text-violet-400 text-red-400">laborum doloribus</span>delectus
         </h1>
         <p class="px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
         <div class="flex flex-wrap justify-center">
-          <button class="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900">Get started</button>
-          <button class="px-8 py-3 m-2 text-lg border rounded dark:text-coolGray-50 dark:border-coolGray-700">Learn more</button>
+          <button class="px-8 py-3 m-2 text-lg font-semibold rounded bg-red-400 dark:bg-violet-400 dark:text-gray-900">Get started</button>
+          <button class="px-8 py-3 m-2 text-lg border rounded bg-gray-400 dark:bg-gray-800 dark:text-gray-50 dark:border-gray-700">Learn more</button>
         </div>
       </div>
     </section>  

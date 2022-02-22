@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Accordion</title>
+</head>
+<body>
+
+
+  <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+    d
+  </button>
+
+
+<!-- accordion 3 start -->
+
+<section class="section_divider">
+    <div>
+        Accordion 3
+    </div>
+</section>
+
+<section class="bg-cyan-200 items-center transition duration-200 ">
+    
+        <div class="mx-auto text-gray-600 rounded-lg shadow-md dark:bg-gray-800 max-w-lg">
+            <ul class="w-full transition ">
+                <li aria-expanded="true" class="border-b border-gray-200 group" v-for="i in 5">
+
+                    <button class="flex w-full justify-center py-2 px-2 bg-gray-100 hover:bg-gray-200">
+                        What is term?  
+                        <span class="">   
+                            <svg class="h-6 fill-current text-gray-500 transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg>
+                        </span>
+                        
+                    </button>
+                    <div class="px-2 bg-gray-50  h-0 overflow-hidden group-hover:h-full transition-height">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem quod hic, magnam quis vero nobis cumque esse cum fugit maxime blanditiis quae maiores sint nisi? Vitae dolorem tempora nobis?</div>
+                </li>
+                
+            </ul>
+        </div>
+   
+        <div class=" max-w-lg mx-auto text-gray-600 rounded-lg shadow-md dark:bg-gray-800">
+            <ul class="w-full transition ">
+                <li aria-expanded="true" class="border-b border-gray-200 group" v-for="i in 5">
+
+                    <button class="flex w-full justify-center py-2 px-2 bg-gray-100 hover:bg-gray-200">
+                        What is term?  
+                        <span class="">   
+                            <svg class="h-6 fill-current text-gray-500 transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg>
+                        </span>
+                        
+                    </button>
+                    <div class="px-2 bg-gray-50  h-0 overflow-hidden group-hover:h-full transition-height">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem quod hic, magnam quis vero nobis cumque esse cum fugit maxime blanditiis quae maiores sint nisi? Vitae dolorem tempora nobis?</div>
+                </li>
+                
+            </ul>
+        </div>
+   
+        <div class="max-w-lg mx-auto text-gray-600 rounded-lg shadow-md dark:bg-gray-800">
+            <ul class="w-full transition ">
+                <li aria-expanded="true" class="border-b border-gray-200 group" v-for="i in 5">
+
+                    <button class="flex w-full justify-center py-2 px-2 bg-gray-100 hover:bg-gray-200">
+                        What is term?  
+                        <span class="">   
+                            <svg class="h-6 fill-current text-gray-500 transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg>
+                        </span>
+                        
+                    </button>
+                    <div class="px-2 bg-gray-50  h-0 overflow-hidden group-hover:h-full transition-height">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem quod hic, magnam quis vero nobis cumque esse cum fugit maxime blanditiis quae maiores sint nisi? Vitae dolorem tempora nobis?</div>
+                </li>
+                
+            </ul>
+        </div>
+   
+        
+</section>
+
+<!-- accordion 3 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

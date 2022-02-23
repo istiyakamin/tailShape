@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Accordion 9</title>
+</head>
+<body>
+
+
+  <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+    d
+  </button>
+
+<!-- accordion 9 start -->
+<section class="section_divider">
+    <div>Accordion 9</div>
+</section>
+
+<div x-data="accordion" class="max-w-md border border-gray-300 divide-y divide-gray-300">
+    <h3 class="text-lg">
+        <button x-bind="header('general')" class="flex items-center justify-between w-full px-4 py-2 font-medium focus:outline-black focus:border-blue-600">
+            <span>General</span>
+            <!-- Active: `transform rotate-180`, Inactive: `transform rotate-0` -->
+            <svg x-bind="headerIcon('general')" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.25 10.75L12 14.25L8.75 10.75"></path>
+            </svg>
+        </button>
+    </h3>
+
+    <div x-bind="section('general')" class="px-4 py-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim quis ante ut pellentesque. Quisque bibendum dapibus laoreet. Aliquam eget consectetur sem. Suspendisse massa lectus, rhoncus sed sollicitudin sed, auctor vel velit.
+    </div>
+
+    <h3 class="text-lg">
+        <button x-bind="header('settings')" class="flex items-center justify-between w-full px-4 py-2 font-medium focus:outline-black focus:border-blue-600">
+            <span>Settings</span>
+            <!-- Active: `transform rotate-180`, Inactive: `transform rotate-0` -->
+            <svg x-bind="headerIcon('settings')" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.25 10.75L12 14.25L8.75 10.75"></path>
+            </svg>
+        </button>
+    </h3>
+    
+    <div x-bind="section('settings')" class="px-4 py-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim quis ante ut pellentesque. Quisque bibendum dapibus laoreet. Aliquam eget consectetur sem. Suspendisse massa lectus, rhoncus sed sollicitudin sed, auctor vel velit.
+    </div>
+</div>
+
+<!-- accordion 9 end -->
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+
+</body>
+</html>

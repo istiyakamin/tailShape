@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./../../../dist/tailshape.css">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
     <title>Accordion</title>
 </head>
 <body>
@@ -354,6 +355,936 @@
 </section>
 
 <!-- accordion 4 end -->
+
+
+<!-- accordion 5 start -->
+<section class="section_divider">
+    <div>Accordion 5</div>
+</section>
+<!-- component -->
+<!-- This is an example component --> 
+  
+ 
+
+<style>
+    .accordion {
+    width: 100%;
+    }
+    
+    .panel {
+      display: none;
+      overflow: hidden;
+    }
+    </style>
+    <div class='flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto'>
+     
+    
+    <div class="bg-blue-200  mx-auto my-2"> 
+        
+    <h2 class="bg-dark-800 p-4 text-center font-black">Accordion</h2>
+    <button class="border-solid border-4 border-light-blue-500  text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 1</button>
+    <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 2</button>
+    <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 3</button>
+      <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+
+    </div>
+
+    <script>
+      
+    var accordElement = document.getElementsByClassName("accordion");
+        
+    for (i = 0; i < accordElement.length; i++) {
+      accordElement[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+<!-- accordion 5 end -->
+
+
+<!-- accordion 6 start -->
+<section class="section_divider">
+    <div>Accordion 6</div>
+</section>
+
+    <main class="p-5 bg-light-blue">
+      <div class="flex justify-center items-start my-2">
+        <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+          <h2 class="text-xl font-semibold text-vnet-blue mb-2">FAQ - Order, Shipping, Etc.</h2>
+          <ul class="flex flex-col">
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>When will my order arrive?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 text-gray-900">
+                  Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>How do I track my order?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                x-ref="tab"
+                :style="handleToggle()"
+              >
+                <p class="p-3 text-gray-900">
+                  Once shipped, you’ll get a confirmation email that includes a tracking number and additional information regarding tracking your order.
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>What’s your return policy?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                x-ref="tab"
+                :style="handleToggle()"
+              >
+                <p class="p-3 text-gray-900">
+                  We allow the return of all items within 30 days of your original order’s date. If you’re interested in returning your items, send us an email with your order number and we’ll ship a return label.
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>How do I make changes to an existing order?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                x-ref="tab"
+                :style="handleToggle()"
+              >
+                <p class="p-3 text-gray-900">
+                  Changes to an existing order can be made as long as the order is still in “processing” status. Please contact our team via email and we’ll make sure to apply the needed changes. If your order has already been shipped, we cannot apply any changes to it. If you are unhappy with your order when it arrives, please contact us for any changes you may require.
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>What shipping options do you have?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                x-ref="tab"
+                :style="handleToggle()"
+              >
+                <p class="p-3 text-gray-900">
+                  For USA domestic orders we offer FedEx and USPS shipping.
+                </p>
+              </div>
+            </li>
+            <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
+              <h2
+                @click="handleClick()"
+                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+              >
+                <span>What payment methods do you accept?</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                x-ref="tab"
+                :style="handleToggle()"
+              >
+                <p class="p-3 text-gray-900">
+                  Any method of payments acceptable by you. For example: We accept MasterCard, Visa, American Express, PayPal, JCB Discover, Gift Cards, etc.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('accordion', {
+        tab: 0
+      });
+      
+      Alpine.data('accordion', (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+        }
+      }));
+    })
+  </script>
+
+<!-- accordion 6 end -->
+
+<!-- accordion 7 start -->
+<section class="section_divider">
+    <div>Accordion 7</div>
+</section>
+<!-- component -->
+<div class=" p-20 flex items-center justify-center bg-gray-100">
+    <div class="flex flex-col px-6 py-8 bg-white shadow-lg">
+      <h1 class="mb-8 font-extrabold text-gray-800 leading-6">Coronavirus - Facts,<br/> advice and measures</h1>
+      <ul class="flex flex-col space-y-4 text-gray-900">
+        <div class="bg-yellow-100 border-l-4 border-yellow-300 rounded-md w-full px-6 py-4 cursor-pointer">Facts and knowledge about COVID19</div>
+        <div class="bg-purple-100 border-l-4 border-purple-300 rounded-md w-full px-6 py-4 cursor-pointer">For the public</div>
+        <div class="bg-red-100 border-l-4 border-red-300 rounded-md w-full px-6 py-4 cursor-pointer">For the government</div>
+        <ul>
+    </div>
+</div>
+
+<!-- accordion 7 end -->
+
+<!-- accordion 8 start  -->
+<section class="section_divider">
+    <div>Accordion 8</div>
+</section>
+
+    <div class="container mx-auto">
+      <div class="m-8 rounded overflow-hidden">
+        <!-- accordion-tab  -->
+        <div class="group outline-none accordion-section" tabindex="1">
+          <div
+            class="group bg-gray-900 flex justify-between px-4 py-3 items-center text-gray-500 transition ease duration-500 cursor-pointer pr-10 relative"
+          >
+            <div class="group-focus:text-white transition ease duration-500">
+              Title for Tab - 1
+            </div>
+            <div
+              class="h-8 w-8 border border-gray-700 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div
+            class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500"
+          >
+            <p class="p-2 text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              repellat amet doloribus consequuntur eos similique provident
+              tempora voluptates iure quia fuga dicta voluptatibus culpa
+              mollitia recusandae delectus id suscipit labore?
+            </p>
+          </div>
+        </div>
+        <!-- accordion-tab -->
+        <!-- accordion-tab  -->
+        <div class="group outline-none accordion-section" tabindex="2">
+          <div
+            class="group bg-gray-900 flex justify-between px-4 py-3 items-center text-gray-500 transition ease duration-500 cursor-pointer pr-10 relative"
+          >
+            <div class="group-focus:text-white transition ease duration-500">
+              Title for Tab - 2
+            </div>
+            <div
+              class="h-8 w-8 border border-gray-700 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div
+            class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500"
+          >
+            <p class="p-2 text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              repellat amet doloribus consequuntur eos similique provident
+              tempora voluptates iure quia fuga dicta voluptatibus culpa
+              mollitia recusandae delectus id suscipit labore?
+            </p>
+          </div>
+        </div>
+        <!-- accordion-tab -->
+        <!-- accordion-tab  -->
+        <div class="group outline-none accordion-section" tabindex="3">
+          <div
+            class="group bg-gray-900 flex justify-between px-4 py-3 items-center text-gray-500 transition ease duration-500 cursor-pointer pr-10 relative"
+          >
+            <div class="group-focus:text-white transition ease duration-500">
+              Title for Tab - 3
+            </div>
+            <div
+              class="h-8 w-8 border border-gray-700 rounded-full items-center inline-flex justify-center transform transition ease duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div
+            class="group-focus:max-h-screen max-h-0 bg-gray-800 px-4 overflow-hidden ease duration-500"
+          >
+            <p class="p-2 text-gray-400 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              repellat amet doloribus consequuntur eos similique provident
+              tempora voluptates iure quia fuga dicta voluptatibus culpa
+              mollitia recusandae delectus id suscipit labore?
+            </p>
+          </div>
+        </div>
+        <!-- accordion-tab -->
+      </div>
+    </div>
+
+    
+<!-- accordion 8 end -->
+
+<!-- accordion 9 start -->
+<section class="section_divider">
+    <div>Accordion 9</div>
+</section>
+
+<div x-data="accordion" class="max-w-md border border-gray-300 divide-y divide-gray-300">
+    <h3 class="text-lg">
+        <button x-bind="header('general')" class="flex items-center justify-between w-full px-4 py-2 font-medium focus:outline-black focus:border-blue-600">
+            <span>General</span>
+            <!-- Active: `transform rotate-180`, Inactive: `transform rotate-0` -->
+            <svg x-bind="headerIcon('general')" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.25 10.75L12 14.25L8.75 10.75"></path>
+            </svg>
+        </button>
+    </h3>
+
+    <div x-bind="section('general')" class="px-4 py-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim quis ante ut pellentesque. Quisque bibendum dapibus laoreet. Aliquam eget consectetur sem. Suspendisse massa lectus, rhoncus sed sollicitudin sed, auctor vel velit.
+    </div>
+
+    <h3 class="text-lg">
+        <button x-bind="header('settings')" class="flex items-center justify-between w-full px-4 py-2 font-medium focus:outline-black focus:border-blue-600">
+            <span>Settings</span>
+            <!-- Active: `transform rotate-180`, Inactive: `transform rotate-0` -->
+            <svg x-bind="headerIcon('settings')" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.25 10.75L12 14.25L8.75 10.75"></path>
+            </svg>
+        </button>
+    </h3>
+    
+    <div x-bind="section('settings')" class="px-4 py-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim quis ante ut pellentesque. Quisque bibendum dapibus laoreet. Aliquam eget consectetur sem. Suspendisse massa lectus, rhoncus sed sollicitudin sed, auctor vel velit.
+    </div>
+</div>
+
+<!-- accordion 9 end -->
+
+
+<!-- accordion 10 start -->
+<section class="section_divider">
+    <div>Accordion 10</div>
+</section>
+<!-- ====== FAQ Section Start -->
+<section
+   x-data="
+   {
+   openFaq1: false, 
+   openFaq2: false, 
+   openFaq3: false, 
+   openFaq4: false, 
+   openFaq5: false, 
+   openFaq6: false
+   }
+   "
+   class="
+   dark:bg-gray-800
+   bg-gray-300
+   pt-20
+   lg:pt-[120px]
+   pb-12
+   lg:pb-[90px]
+   relative
+   z-20
+   overflow-hidden
+
+   "
+   >
+   <div class="mx-20  ">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4">
+            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[520px]">
+               <span class="font-semibold text-lg text-primary mb-2 block">
+               FAQ
+               </span>
+               <h2
+                  class="
+                  font-bold
+                  text-3xl
+                  sm:text-4xl
+                  md:text-[40px]
+                  text-dark
+                  mb-4
+                  "
+                  >
+                  Any Questions? Look Here
+               </h2>
+               <p class="text-base text-body-color">
+                  There are many variations of passages of Lorem Ipsum available
+                  but the majority have suffered alteration in some form.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full lg:w-1/2 px-4">
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq1 = !openFaq1"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq1" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq2 = !openFaq2"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq2" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq3 = !openFaq3"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq3" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="w-full lg:w-1/2 px-4">
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq4 = !openFaq4"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq4" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq5 = !openFaq5"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq5" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               w-full
+               bg-white
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn flex w-full text-left"
+                  @click="openFaq6 = !openFaq6"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-black">
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq6" class="faq-content pl-[62px]">
+                  <p class="text-base text-body-color leading-relaxed py-3">
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="absolute bottom-0 right-0 z-[-1]">
+      <svg
+         width="1440"
+         height="886"
+         viewBox="0 0 1440 886"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         >
+         <path
+            opacity="0.5"
+            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+            fill="url(#paint0_linear)"
+            />
+         <defs>
+            <linearGradient
+               id="paint0_linear"
+               x1="1308.65"
+               y1="1142.58"
+               x2="602.827"
+               y2="-418.681"
+               gradientUnits="userSpaceOnUse"
+               >
+               <stop stop-color="#3056D3" stop-opacity="0.36" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+            </linearGradient>
+         </defs>
+      </svg>
+   </div>
+</section>
+<!-- ====== FAQ Section End -->
+<!-- accordion 10 end -->
+
+<!-- accordion 11 start  -->
+<section class="section_divider">
+    <div>Accordion 11</div>
+</section>
+
+<!-- component -->
+<!-- This is an example component -->
+<div class="max-w-2xl mx-auto bg-white p-16 rounded">
+
+	<div id="accordion-collapse" data-accordion="collapse">
+		<h2 id="accordion-collapse-heading-1">
+			<button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+      <span>What is Flowbite?</span>
+      <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+		</h2>
+		<div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+			<div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive
+					components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+				<p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
+						href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
+						class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing
+					websites even faster with components on top of Tailwind CSS.</p>
+			</div>
+		</div>
+		<h2 id="accordion-collapse-heading-2">
+			<button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium border border-gray-200 dark:border-gray-700 border-b-0 text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+      <span>Is there a Figma file available?</span>
+      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+		</h2>
+		<div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+			<div class="p-5 border border-gray-200 dark:border-gray-700 border-b-0">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the
+					Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+				<p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
+						target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+					based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+			</div>
+		</div>
+		<h2 id="accordion-collapse-heading-3">
+			<button type="button" class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+      <span>What are the differences between Flowbite and Tailwind UI?</span>
+      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+		</h2>
+		<div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+			<div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from
+					Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
+					difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
+					sections of pages.</p>
+				<p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
+					Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best
+					of two worlds.</p>
+				<p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+				<ul class="list-disc pl-5 dark:text-gray-400 text-gray-500">
+					<li><a href="https://flowbite.com/pro/" target="_blank"
+							class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+					<li><a href="https://tailwindui.com/" rel="nofollow" target="_blank"
+							class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
+</div>
+    
+
+<!-- accordion 11 end -->
 
 
 <!-- start of script section -->

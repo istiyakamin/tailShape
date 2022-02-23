@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Accordion 5</title>
+</head>
+<body>
+
+
+  <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+    d
+  </button>
+
+
+<!-- accordion 5 start -->
+<section class="section_divider">
+    <div>Accordion 5</div>
+</section>
+<!-- component -->
+<!-- This is an example component --> 
+  
+ 
+
+<style>
+    .accordion {
+    width: 100%;
+    }
+    
+    .panel {
+      display: none;
+      overflow: hidden;
+    }
+    </style>
+    <div class='flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto'>
+     
+    
+    <div class="bg-blue-200  mx-auto my-2"> 
+        
+    <h2 class="bg-dark-800 p-4 text-center font-black">Accordion</h2>
+    <button class="border-solid border-4 border-light-blue-500  text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 1</button>
+    <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 2</button>
+    <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button class="border-solid border-4 border-light-blue-500 text-left accordion p-4 font-black bg-yellow-500 hover:bg-red-700 focus:bg-red-700 rounded-sm">Section 3</button>
+      <div class="panel bg-blue-100 p-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+
+    </div>
+
+    <script>
+      
+    var accordElement = document.getElementsByClassName("accordion");
+        
+    for (i = 0; i < accordElement.length; i++) {
+      accordElement[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+<!-- accordion 5 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+  let toogler = document.getElementById("dark_mood_toogler");
+  let doc_html_el = document.getElementsByTagName('html')[0];
+
+  doc_html_el.addEventListener('keyup',(e)=>{
+      // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+      if(e.ctrlKey && e.keyCode =='220'){
+        doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+
+      }
+  })
+  doc_html_el.addEventListener('keyup',(e)=>{
+      // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+      if(e.ctrlKey && e.keyCode =='191'){
+        toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+
+      }
+  })
+  toogler.addEventListener('click',()=>{
+    doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+    console.log(doc_html_el.className);
+  })
+</script>
+<!-- end of script section -->
+
+
+</body>
+</html>

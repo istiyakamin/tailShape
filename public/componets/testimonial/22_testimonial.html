@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/tailshape.css">
+    <title>Testimonial 1</title>
+</head>
+<body>
+    
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+    
+
+
+<!-- testimonial 22 start -->
+<section class="section_divider">
+    <div>Testimonail 22</div>
+</section>
+
+
+<section class="dark:bg-gray-800 py-20">
+  <div class="bg-white  dark:bg-gray-800 dark:border-2 dark:border-emerald-300 w-72 shadow-lg mx-auto rounded-xl p-4">
+      <p class="text-gray-600 dark:text-white">
+          <span class="font-bold text-indigo-500 text-lg">
+              “
+          </span>
+          To get social media testimonials like these, keep your customers engaged with your social media accounts by posting regularly yourself
+          <span class="font-bold text-indigo-500 text-lg">
+              ”
+          </span>
+      </p>
+      <div class="flex items-center mt-4">
+          <a href="#" class="block relative">
+              <img alt="profil" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="mx-auto object-cover rounded-full h-10 w-10 "/>
+          </a>
+          <div class="flex flex-col ml-2 justify-between">
+              <span class="font-semibold text-indigo-500 text-sm">
+                  Jean Miguel
+              </span>
+              <span class="dark:text-gray-400 text-xs flex items-center">
+                  User of Tail-Kit
+                  <img src="#__" class="ml-2 h-4 w-4"/>
+              </span>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- testimonial 22 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+</script>
+<!-- end of script section -->
+
+
+</body>
+</html>

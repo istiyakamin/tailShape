@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/tailshape.css">
+    <title>Testimonial 1</title>
+</head>
+<body>
+    
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+    
+
+
+<!-- testimonial 23 start -->
+<section class="section_divider">
+    <div>Testimonial 23</div>
+</section>
+
+<section class="dark:bg-gray-800">
+    <div class="mx-auto py-10 px-4 w-full max-w-7xl dark:bg-gray-800 bg-gray-50">
+        <div class="relative mx-auto w-full h-full max-w-5xl flex shadow-xl">
+
+        <div class="z-10 relative py-10 pl-8 pr-2 w-full md:w-3/5 min-h-360px rounded md:rounded-r-none bg-blue-600 bg-opacity-70 md:bg-opacity-100 text-white">
+            <div class="mx-auto max-w-md flex flex-col">
+            <div class="flex-shrink-0">
+                <svg class="w-10 lg:w-12 h-10 lg:h-12" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold leading-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur aliquid, illo reiciendis voluptatum asperiores.</p>
+            <h3 class="mt-2 text-base font-bold">Adam Negan </h3>
+            <p class="text-sm">CEO of Bismart Enterprise</p>
+            </div>
+        </div>
+
+
+        <div class="absolute md:relative w-full md:w-2/5 min-h-full rounded-r overflow-hidden bg-blue-600">
+            <img src="https://fancytailwind.com/static/profile13-9abe52b1e8851f9e4afde349f2789d3e.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover filter grayscale brightness-125" />
+        </div>
+
+        <div class="z-10 absolute -bottom-5 right-1/2 md:-right-3 py-1 px-3 space-x-3 flex bg-yellow-500 text-yellow-100 transform translate-x-1/2 md:translate-x-0">
+                <button type="button" aria-label="previous" class="flex-shrink-0 hover:text-white" onClick={previousTestimony}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+                    </svg>
+                </button>
+                <button type="button" aria-label="next" class="flex-shrink-0 hover:text-white" onClick={nextTestimony}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </button>
+        </div>
+
+        </div>
+    </div>
+
+  </section>
+
+<!-- testimonial 23 end -->
+
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+</script>
+<!-- end of script section -->
+
+
+</body>
+</html>

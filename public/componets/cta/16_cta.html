@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/tailshape.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer>
+    </script><script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <title> CTA 16</title>
+    
+</head>
+<body>
+    
+
+
+    <!-- start cta 16  -->
+    <section class="section_divider" id="cta_16">
+        CTA 16
+    </section>
+    <div class="mx-auto w-full max-w-6xl flex flex-col sm:flex-row bg-gray-50">
+
+        <div class="relative py-4 sm:py-10 w-full sm:w-1/2 flex justify-center items-center">
+            <!-- https://fancytailwind.com/static/sport3-ffc61a71c74b9ea62a73e6c6822e290f.jpg -->
+          <img src="https:/source.unsplash.com/random/?grayscale" alt="" class="absolute top-0 left-0 w-full h-full object-cover object-top" />
+          <h2 class="relative text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-bold font-oswald uppercase tracking-tighter  sm:space-y-4" >
+            <span class="block">We don't take</span> 
+            <span class="block"> The summer off.</span> 
+            <span class="block"> We take it on.</span> 
+          </h2>
+        </div>
+  
+        <div class="relative py-4 px-5 w-full sm:w-1/2 flex justify-center items-center">
+          <img src="https://fancytailwind.com/static/sky1-2d513e4b36c6d0802a7cb3392a12eead.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover" />
+          <div class="relative my-auto w-full max-w-sm text-center">
+            <h2 class="mb-5 md:mb-10 sm:text-lg lg:text-xl text-white font-semibold uppercase tracking-wider">Exclusive summer offer</h2>
+            <div class="w-full flex flex-col lg:flex-row justify-center items-center text-xs sm:text-sm font-semibold uppercase space-y-3 lg:space-y-0">
+              <a href="#link" class="py-3 px-6 w-full lg:w-1/2 inline-block bg-black text-white transition-all duration-150 transform hover:scale-105 hover:z-10">Visit a club</a>
+              <a href="#link" class="py-3 px-6 w-full lg:w-1/2 inline-block bg-white text-black transition-all duration-150 transform hover:scale-105 hover:z-10">Member benefits</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    
+    <!-- end cta 16  -->
+
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

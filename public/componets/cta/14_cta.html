@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/tailshape.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer>
+    </script><script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <title> CTA 14</title>
+    
+</head>
+<body>
+    
+    <!-- start cta 14  -->
+    <section class="section_divider" id="cta_14"> 
+        CTA 14
+    </section>
+    
+    <div class="container m-auto px-6 py-40 ">
+    <div class="flex flex-col md:flex-row items-center justify-between relative w-100 h-auto md:h-64 bg-100 shadow-2xl rounded-lg p-8 dark:bg-gray-800">
+        <div class="w-8/12 text-2xl">
+            <img alt="quote" class="float-left mr-1" src="https://assets-global.website-files.com/5b5a66e9f3166b36708705fa/5cf8fb1f994fb7168d0d66fb_quote-intro.svg">
+            <span class="flex dark:text-yellow-100">We are team of developers with houndreds hours spend on coding, we create professional apps, webs.</span>
+        </div>
+        <div class="relative shadow-md font-medium my-5 py-2 px-4 text-white dark:text-gray-800 cursor-pointer bg-yellow-600 hover:bg-yellow-500 rounded text-lg text-center w-48">
+            <span class="absolute h-3 right-0 top-0 animate-ping inline-flex rounded-full bg-yellow-600">
+            </span>
+            Call now
+        </div>
+    </div>
+    </div>
+    
+    <!-- end cta 14  -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

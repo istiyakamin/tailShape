@@ -116,726 +116,731 @@
 
     <!-- pricing 1 end -->
 
-
-
-    <!-- pricing 2 start -->
-    <section class="section_divider">
-        <div>Pricing 2</div>
-    </section>
-
-    <section x-data="{ toggle: 'basic' }"
-    class="relative min-h-screen py-16 bg-gray-200 min-w-screen animation-fade animation-delay">
-    <div class="container w-full px-10 mx-auto sm:px-5">
-        <div class="sm:flex">
-            <aside class="w-full sm:flex-initial">
-                <div @click="toggle = 'basic'"
-                    :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'basic' }"
-                    class="flex mt-1 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
-                    <div class="self-center flex-shrink p-5">
-                        <svg x-show="toggle === 'basic'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
-                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                391.88,166.392 " />
-                        </svg>
-                        <svg x-show="toggle != 'basic'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                            xml:space="preserve">
-                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow px-0 py-5 md:px-5">
-                        <div class="text-2xl">Basic</div>
-                        <div class="pt-1 text-sm">Start pack + 3 submissions</div>
-                    </div>
-                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 5</div>
-                </div>
-                <div @click="toggle = 'silver'"
-                    :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'silver' }"
-                    class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
-                    <div class="self-center flex-shrink p-5">
-                        <svg x-show="toggle === 'silver'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
-                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                391.88,166.392 " />
-                        </svg>
-                        <svg x-show="toggle != 'silver'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                            xml:space="preserve">
-                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow px-0 py-5 md:px-5">
-                        <div class="text-2xl">Silver</div>
-                        <div class="pt-1 text-sm text-gray-500">Start pack + 10 submissions</div>
-                    </div>
-                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 10</div>
-                </div>
-                <div @click="toggle = 'gold'" :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'gold' }"
-                    class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
-                    <div class="self-center flex-shrink p-5">
-                        <svg x-show="toggle === 'gold'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
-                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                391.88,166.392 " />
-                        </svg>
-                        <svg x-show="toggle != 'gold'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                            xml:space="preserve">
-                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow px-0 py-5 md:px-5">
-                        <div class="text-2xl">Gold</div>
-                        <div class="pt-1 text-sm text-gray-500">Start pack + 20 submissions</div>
-                    </div>
-                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 15</div>
-                </div>
-            </aside>
-            <div x-show="toggle === 'basic'"
-                class="flex w-full mt-10 bg-white rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
-                <div class="flex-grow px-8 py-5">
-                    <div class="text-4xl">
-                        Basic Package
-                    </div>
-                    <div class="mt-0 text-lg text-gray-500">3 Submissions</div>
-
-                    <div class="flex mt-5">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">Starter pack</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">3 Submissions</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
-                    </div>
-                    <div class="flex">
-                        <div class="mt-8">
-                            <a href="#">
-                                <div
-                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
-                                    Choose Package
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex w-64 h-full bg-blue-500 bg-opacity-25 rounded-r md:flex-shrink"
-                    style="background: url('https://picsum.photos/400/400?grayscale');"></div>
-            </div>
-            <div x-show="toggle === 'silver'"
-                class="flex w-full mt-10 bg-white rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
-                <div class="flex-grow px-8 py-5">
-                    <div class="text-4xl">
-                        Silver Package
-                    </div>
-                    <div class="mt-0 text-lg text-gray-500">10 Submissions</div>
-
-                    <div class="flex mt-5">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">Starter pack</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">10 Submissions</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
-                    </div>
-                    <div class="flex">
-                        <div class="mt-8">
-                            <a href="#">
-                                <div
-                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
-                                    Choose Package
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex w-64 h-full bg-blue-500 bg-opacity-25 rounded-r md:flex-shrink"
-                    style="background: url('https://picsum.photos/400/400?grayscale');"></div>
-            </div>
-            <div x-show="toggle === 'gold'"
-                class="flex w-full mt-10 bg-white rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
-                <div class="flex-grow px-8 py-5">
-                    <div class="text-4xl">
-                        Gold Package
-                    </div>
-                    <div class="mt-0 text-lg text-gray-500">20 Submissions</div>
-
-                    <div class="flex mt-5">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">Starter pack</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">20 Submissions</div>
-                    </div>
-                    <div class="flex">
-                        <div class="self-center flex-shrink">
-                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
-                                    391.88,166.392 " />
-                            </svg>
-                        </div>
-                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
-                    </div>
-                    <div class="flex">
-                        <div class="mt-8">
-                            <a href="#">
-                                <div
-                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
-                                    Choose Package
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex w-64 h-full bg-blue-500 bg-opacity-25 rounded-r md:flex-shrink"
-                    style="background: url('https://picsum.photos/400/400?grayscale');"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    
-    <!-- pricing 2 end -->
-    
-    <!-- pricing 3 start  -->
-    <section class="section_divider">
-        <div>Pricing 3</div>
-    </section>
-    <div class="relative w-full h-full">
-        <div class="absolute hidden w-full bg-gray-50 lg:block h-96"></div>
-        <div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span class="relative inline-block">
-                <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-400 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                  <defs>
-                    <pattern id="2c67e949-4a23-49f7-bf27-ca140852cf21" x="0" y="0" width=".135" height=".30">
-                      <circle cx="1" cy="1" r=".7"></circle>
-                    </pattern>
-                  </defs>
-                  <rect fill="url(#2c67e949-4a23-49f7-bf27-ca140852cf21)" width="52" height="24"></rect>
-                </svg>
-                <span class="relative">Affordable</span>
-              </span>
-              for everyone
-            </h2>
-            <p class="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-            </p>
+        <!-- pricing 2 start -->
+        <section class="section_divider" id="pricing_2">
+          <div>Pricing 2</div>
+      </section>
+  
+      <section x-data="{ toggle: 'basic' }"
+      class="relative min-h-screen py-16 bg-gray-200 dark:bg-gray-800 min-w-screen animation-fade animation-delay">
+      <div class="container w-full px-10 mx-auto sm:px-5 ">
+          <div class="sm:flex ">
+              <aside class="w-full sm:flex-initial">
+                  <div @click="toggle = 'basic'"
+                      :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'basic' }"
+                      class="flex mt-1 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                      <div class="self-center flex-shrink p-5">
+                          <svg x-show="toggle === 'basic'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                              <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                              <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                  391.88,166.392 " />
+                          </svg>
+                          <svg x-show="toggle != 'basic'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                              y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                              xml:space="preserve">
+                              <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                          </svg>
+                      </div>
+                      <div class="flex-grow px-0 py-5 md:px-5">
+                          <div class="text-2xl">Basic</div>
+                          <div class="pt-1 text-sm">Start pack + 3 submissions</div>
+                      </div>
+                      <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 5</div>
+                  </div>
+                  <div @click="toggle = 'silver'"
+                      :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'silver' }"
+                      class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                      <div class="self-center flex-shrink p-5">
+                          <svg x-show="toggle === 'silver'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                              <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                              <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                  391.88,166.392 " />
+                          </svg>
+                          <svg x-show="toggle != 'silver'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                              y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                              xml:space="preserve">
+                              <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                          </svg>
+                      </div>
+                      <div class="flex-grow px-0 py-5 md:px-5">
+                          <div class="text-2xl">Silver</div>
+                          <div class="pt-1 text-sm text-gray-500">Start pack + 10 submissions</div>
+                      </div>
+                      <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 10</div>
+                  </div>
+                  <div @click="toggle = 'gold'" :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'gold' }"
+                      class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                      <div class="self-center flex-shrink p-5">
+                          <svg x-show="toggle === 'gold'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                              <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                              <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                  391.88,166.392 " />
+                          </svg>
+                          <svg x-show="toggle != 'gold'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                              y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                              xml:space="preserve">
+                              <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                          </svg>
+                      </div>
+                      <div class="flex-grow px-0 py-5 md:px-5">
+                          <div class="text-2xl">Gold</div>
+                          <div class="pt-1 text-sm text-gray-500">Start pack + 20 submissions</div>
+                      </div>
+                      <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 15</div>
+                  </div>
+              </aside>
+              <div x-show="toggle === 'basic'"
+                  class="flex w-full mt-10 bg-white dark:bg-gray-800  rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                  <div class="flex-grow px-8 py-5 dark:text-white dark:border-2 dark:rounded-l-md dark:border-emerald-300">
+                      <div class="text-4xl">
+                          Basic Package
+                      </div>
+                      <div class="mt-0 text-lg text-gray-500">3 Submissions</div>
+  
+                      <div class="flex mt-5 ">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">Starter pack</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">3 Submissions</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                      </div>
+                      <div class="flex">
+                          <div class="mt-8">
+                              <a href="#">
+                                  <div
+                                      class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                      Choose Package
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="flex w-64 h-full bg-blue-500 dark:border-l-2  bg-opacity-25 rounded-r md:flex-shrink"
+                      style="background: url('https://picsum.photos/400/400?grayscale');"></div>
+              </div>
+              <div x-show="toggle === 'silver'"
+                  class="flex w-full mt-10 bg-white dark:bg-gray-800 rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                  <div class="flex-grow px-8 py-5 dark:text-white">
+                      <div class="text-4xl ">
+                          Silver Package
+                      </div>
+                      <div class="mt-0 text-lg text-gray-500">10 Submissions</div>
+  
+                      <div class="flex mt-5">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">Starter pack</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">10 Submissions</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                      </div>
+                      <div class="flex">
+                          <div class="mt-8">
+                              <a href="#">
+                                  <div
+                                      class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                      Choose Package
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="flex w-64 h-full bg-blue-500 dark:border-l-2 dark:border-emerald-300 bg-opacity-25 rounded-r md:flex-shrink"
+                      style="background: url('https://picsum.photos/400/400?grayscale');"></div>
+              </div>
+              <div x-show="toggle === 'gold'"
+                  class="flex w-full mt-10 bg-white dark:bg-gray-800 rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                  <div class="flex-grow px-8 py-5 dark:text-white">
+                      <div class="text-4xl">
+                          Gold Package
+                      </div>
+                      <div class="mt-0 text-lg text-gray-500">20 Submissions</div>
+  
+                      <div class="flex mt-5">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">Starter pack</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">20 Submissions</div>
+                      </div>
+                      <div class="flex">
+                          <div class="self-center flex-shrink">
+                              <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                  style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                  <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                      391.88,166.392 " />
+                              </svg>
+                          </div>
+                          <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                      </div>
+                      <div class="flex">
+                          <div class="mt-8">
+                              <a href="#">
+                                  <div
+                                      class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                      Choose Package
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="flex w-64 h-full bg-blue-500 bg-opacity-25 dark:border-l-2 dark:border-emerald-300 rounded-r md:flex-shrink"
+                      style="background: url('https://picsum.photos/400/400?grayscale');"></div>
+              </div>
           </div>
-          <div class="grid max-w-screen-md gap-10 md:grid-cols-2 sm:mx-auto">
-            <div>
-              <div class="p-8 bg-gray-900 rounded">
-                <div class="mb-4 text-center">
-                  <p class="text-xl font-medium tracking-wide text-white">
-                    Starter Plan
+      </div>
+  </section>
+  
+      
+      <!-- pricing 2 end -->
+      
+  
+
+    <!-- pricing 3 start  -->
+    <section class="section_divider" id="pricing_3">
+      <div>Pricing 3</div>
+  </section>
+  <div class="relative w-full h-full bg-gray-50 dark:bg-gray-800">
+      <div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-emerald-300 sm:text-4xl md:mx-auto">
+            <span class="relative inline-block ">
+              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-400 dark:text-white lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                <defs class="">
+                  <pattern id="2c67e949-4a23-49f7-bf27-ca140852cf21" x="0" y="0" width=".135" height=".30">
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect fill="url(#2c67e949-4a23-49f7-bf27-ca140852cf21)" width="52" height="24"></rect>
+              </svg>
+              <span class="relative dark:text-emerald-300">Affordable</span>
+            </span>
+            for everyone
+          </h2>
+          <p class="text-base text-gray-700 dark:text-gray-400 md:text-lg">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+          </p>
+        </div>
+        <div class="grid max-w-screen-md gap-10 md:grid-cols-2 sm:mx-auto">
+          <div>
+            <div class="p-8 bg-gray-900 rounded">
+              <div class="mb-4 text-center">
+                <p class="text-xl font-medium tracking-wide text-white">
+                  Starter Plan
+                </p>
+                <div class="flex items-center justify-center">
+                  <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
+                    $39
                   </p>
-                  <div class="flex items-center justify-center">
-                    <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
-                      $39
-                    </p>
-                    <p class="text-lg text-gray-500">/ month</p>
-                  </div>
+                  <p class="text-lg text-gray-500">/ month</p>
                 </div>
-                <ul class="mb-8 space-y-2">
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">10 deploys per day</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">10 GB of storage</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">3 domains</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">SSL Certificates</p>
-                  </li>
-                </ul>
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                >
-                  Get Now
-                </button>
               </div>
-              <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
-              <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
-              <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
-            </div>
-            <div>
-              <div class="p-8 bg-gray-900 rounded">
-                <div class="mb-4 text-center">
-                  <p class="text-xl font-medium tracking-wide text-white">Pro Plan</p>
-                  <div class="flex items-center justify-center">
-                    <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
-                      $59
-                    </p>
-                    <p class="text-lg text-gray-500">/ month</p>
+              <ul class="mb-8 space-y-2">
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
                   </div>
-                </div>
-                <ul class="mb-8 space-y-2">
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">100 deploys per day</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">50 GB of storage</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">Unlimited domains</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-3">
-                      <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-300">SSL Certificates</p>
-                  </li>
-                </ul>
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-gray-900 transition duration-200 rounded shadow-md bg-teal-600 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
-                >
-                  Get Now
-                </button>
-              </div>
-              <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
-              <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
-              <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
+                  <p class="font-medium text-gray-300">10 deploys per day</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">10 GB of storage</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">3 domains</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">SSL Certificates</p>
+                </li>
+              </ul>
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+              >
+                Get Now
+              </button>
             </div>
+            <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
+            <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
+            <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
+          </div>
+          <div>
+            <div class="p-8 bg-gray-900 rounded">
+              <div class="mb-4 text-center">
+                <p class="text-xl font-medium tracking-wide text-white">Pro Plan</p>
+                <div class="flex items-center justify-center">
+                  <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
+                    $59
+                  </p>
+                  <p class="text-lg text-gray-500">/ month</p>
+                </div>
+              </div>
+              <ul class="mb-8 space-y-2">
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">100 deploys per day</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">50 GB of storage</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">Unlimited domains</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-3">
+                    <svg class="w-4 h-4 text-teal-accent-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-300">SSL Certificates</p>
+                </li>
+              </ul>
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-gray-900 transition duration-200 rounded shadow-md bg-teal-600 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
+              >
+                Get Now
+              </button>
+            </div>
+            <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
+            <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
+            <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
           </div>
         </div>
       </div>
-    
-    <!-- pricing 3 end -->
+    </div>
+  
+  <!-- pricing 3 end -->
+
+  
 
     <!-- pricing 4 start  -->
-    <section class="section_divider">
-        <div>Pricing 4</div>
-    </section>
-    <div class="px-4 py-16 mx-auto dark:bg-gray-800">
-        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 ">
-          <div>
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Our Pricing
-            </p>
-          </div>
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span class="relative inline-block">
-              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                <defs>
-                  <pattern id="7e5e8ff8-1960-4094-a63a-2a0c0f922d69" x="0" y="0" width=".135" height=".30">
-                    <circle cx="1" cy="1" r=".7"></circle>
-                  </pattern>
-                </defs>
-                <rect fill="url(#7e5e8ff8-1960-4094-a63a-2a0c0f922d69)" width="52" height="24"></rect>
-              </svg>
-              <span class="relative">Transparent</span>
-            </span>
-            pricing. Pay as you grow.
-          </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+    <section class="section_divider" id="pricing_4">
+      <div>Pricing 4</div>
+  </section>
+  <div class="px-4 py-16 mx-auto dark:bg-gray-800">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 ">
+        <div>
+          <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900  uppercase rounded-full bg-teal-400">
+            Our Pricing
           </p>
         </div>
-        <div class="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-          <div class="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
-            <div class="text-center">
-              <div class="text-lg font-semibold">Start</div>
-              <div class="flex items-center justify-center mt-2">
-                <div class="mr-1 text-5xl font-bold">Free</div>
-              </div>
-              <div class="mt-2 space-y-3">
-                <div class="text-gray-700">10 deploys per day</div>
-                <div class="text-gray-700">10 GB of storage</div>
-                <div class="text-gray-700">20 domains</div>
-              </div>
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl md:mx-auto">
+          <span class="relative inline-block dark:text-emerald-300 ">
+            <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+              <defs>
+                <pattern id="7e5e8ff8-1960-4094-a63a-2a0c0f922d69" x="0" y="0" width=".135" height=".30">
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#7e5e8ff8-1960-4094-a63a-2a0c0f922d69)" width="52" height="24"></rect>
+            </svg>
+            <span class="relative">Transparent</span>
+          </span>
+          pricing. Pay as you grow.
+        </h2>
+        <p class="text-base text-gray-700 dark:text-gray-300 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+        </p>
+      </div>
+      <div class="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+        <div class="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white dark:bg-gray-800 border-2 dark:border-emerald-200 rounded shadow-sm sm:items-center hover:shadow">
+          <div class="text-center dark:text-gray-300 ">
+            <div class="text-lg font-semibold">Start</div>
+            <div class="flex items-center justify-center mt-2">
+              <div class="mr-1 text-5xl font-bold">Free</div>
             </div>
-            <div>
-              <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
-                Start for free
-              </a>
-              <p class="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                Sed ut unde omnis iste natus accusantium doloremque.
-              </p>
-            </div>
-          </div>
-          <div class="relative flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow border-purple-800">
-            <div class="absolute inset-x-0 top-0 flex justify-center -mt-3">
-              <div class="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-purple-800">
-                Most Popular
-              </div>
-            </div>
-            <div class="text-center">
-              <div class="text-lg font-semibold">Pro</div>
-              <div class="flex items-center justify-center mt-2">
-                <div class="mr-1 text-5xl font-bold">$38</div>
-                <div class="text-gray-700">/ mo</div>
-              </div>
-              <div class="mt-2 space-y-3">
-                <div class="text-gray-700">200 deploys per day</div>
-                <div class="text-gray-700">80 GB of storage</div>
-                <div class="text-gray-700">Global CDN</div>
-              </div>
-            </div>
-            <div>
-              <a
-                href="/"
-                class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Buy Pro
-              </a>
-              <p class="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                Sed ut unde omnis iste natus accusantium doloremque.
-              </p>
+            <div class="mt-2 space-y-3 ">
+              <div class="text-gray-700 dark:text-gray-400">10 deploys per day</div>
+              <div class="text-gray-700 dark:text-gray-400">10 GB of storage</div>
+              <div class="text-gray-700 dark:text-gray-400">20 domains</div>
             </div>
           </div>
-          <div class="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
-            <div class="text-center">
-              <div class="text-lg font-semibold">Business</div>
-              <div class="flex items-center justify-center mt-2">
-                <div class="mr-1 text-5xl font-bold">$78</div>
-                <div class="text-gray-700">/ mo</div>
-              </div>
-              <div class="mt-2 space-y-3">
-                <div class="text-gray-700">500 GB of storage</div>
-                <div class="text-gray-700">Unlimited domains</div>
-                <div class="text-gray-700">24/7 Support</div>
-              </div>
+          <div>
+            <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 dark:bg-emerald-300 dark:hover:bg-emerald-500 dark:text-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
+              Start for free
+            </a>
+            <p class="max-w-xs mt-6 text-xs text-gray-600 dark:text-gray-400 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
+              Sed ut unde omnis iste natus accusantium doloremque.
+            </p>
+          </div>
+        </div>
+        <div class="relative flex flex-col justify-between p-8 transition-shadow duration-300 bg-white dark:bg-gray-800 border rounded shadow-sm sm:items-center hover:shadow border-purple-800">
+          <div class="absolute inset-x-0 top-0 flex justify-center -mt-3 ">
+            <div class="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-purple-800">
+              Most Popular
             </div>
-            <div>
-              <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
-                Buy Business
-              </a>
-              <p class="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
-                Sed ut unde omnis iste natus accusantium doloremque.
-              </p>
+          </div>
+          <div class="text-center dark:text-gray-300">
+            <div class="text-lg font-semibold">Pro</div>
+            <div class="flex items-center justify-center mt-2">
+              <div class="mr-1 text-5xl font-bold">$38</div>
+              <div class="text-gray-700">/ mo</div>
             </div>
+            <div class="mt-2 space-y-3">
+              <div class="text-gray-700 dark:text-gray-400 ">200 deploys per day</div>
+              <div class="text-gray-700 dark:text-gray-400 ">80 GB of storage</div>
+              <div class="text-gray-700 dark:text-gray-400 ">Global CDN</div>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/"
+              class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+            >
+              Buy Pro
+            </a>
+            <p class="max-w-xs mt-6 text-xs text-gray-600 dark:text-gray-400 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
+              Sed ut unde omnis iste natus accusantium doloremque.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white dark:bg-gray-800 border-2 dark:border-emerald-200 rounded shadow-sm sm:items-center hover:shadow">
+          <div class="text-center dark:text-gray-300">
+            <div class="text-lg font-semibold">Business</div>
+            <div class="flex items-center justify-center mt-2">
+              <div class="mr-1 text-5xl font-bold">$78</div>
+              <div class="text-gray-700">/ mo</div>
+            </div>
+            <div class="mt-2 space-y-3">
+              <div class="text-gray-700 dark:text-gray-400">500 GB of storage</div>
+              <div class="text-gray-700 dark:text-gray-400">Unlimited domains</div>
+              <div class="text-gray-700 dark:text-gray-400">24/7 Support</div>
+            </div>
+          </div>
+          <div>
+            <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 dark:bg-emerald-300 dark:hover:bg-emerald-500 dark:text-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
+              Buy Business
+            </a>
+            <p class="max-w-xs mt-6 text-xs text-gray-600 dark:text-gray-400 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
+              Sed ut unde omnis iste natus accusantium doloremque.
+            </p>
           </div>
         </div>
       </div>
-    
-    <!-- pricing 4 end -->
+    </div>
+  
+  <!-- pricing 4 end -->
 
-
-    <!-- pricing 5 start  -->
+  <!-- pricing 5 start  -->
     <section class="section_divider">
-        <div>Pricing 5</div>
-    </section>
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <div>
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Brand new
-            </p>
-          </div>
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span class="relative inline-block">
-              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                <defs>
-                  <pattern id="ace59d72-08d5-4850-b9e4-d9d0b86c0525" x="0" y="0" width=".135" height=".30">
-                    <circle cx="1" cy="1" r=".7"></circle>
-                  </pattern>
-                </defs>
-                <rect fill="url(#ace59d72-08d5-4850-b9e4-d9d0b86c0525)" width="52" height="24"></rect>
-              </svg>
-              <span class="relative">Transparent</span>
-            </span>
-            pricing. Pay as you grow.
-          </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+      <div>Pricing 5</div>
+  </section>
+  <section class="dark:bg-gray-800">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div>
+          <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider bg-teal-400 text-teal-900 dark:text-gray-800 uppercase rounded-full ">
+            Brand new
           </p>
         </div>
-        <div class="grid max-w-md gap-10 row-gap-5 sm:row-gap-10 lg:max-w-screen-md lg:grid-cols-2 sm:mx-auto">
-          <div class="flex flex-col justify-between p-5 bg-white border rounded shadow-sm">
-            <div class="mb-6">
-              <div class="flex items-center justify-between pb-6 mb-6 border-b">
-                <div>
-                  <p class="text-sm font-bold tracking-wider uppercase">
-                    Personal use
-                  </p>
-                  <p class="text-5xl font-extrabold">Free</p>
-                </div>
-                <div class="flex items-center justify-center w-24 h-24 rounded-full bg-blue-gray-50">
-                  <svg class="w-10 h-10 text-gray-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                    <path d="M12,7L12,7 c-1.657,0-3-1.343-3-3v0c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3v0C15,5.657,13.657,7,12,7z" fill="none" stroke="currentColor"></path>
-                    <path d="M15,23H9v-5H7v-6 c0-1.105,0.895-2,2-2h6c1.105,0,2,0.895,2,2v6h-2V23z" fill="none" stroke="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl md:mx-auto">
+          <span class="relative inline-block">
+            <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 dark:text-emerald-500 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+              <defs>
+                <pattern id="ace59d72-08d5-4850-b9e4-d9d0b86c0525" x="0" y="0" width=".135" height=".30">
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#ace59d72-08d5-4850-b9e4-d9d0b86c0525)" width="52" height="24"></rect>
+            </svg>
+            <span class="relative dark:text-emerald-300">Transparent</span>
+          </span>
+          pricing. Pay as you grow.
+        </h2>
+        <p class="text-base text-gray-700 dark:text-gray-300 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+        </p>
+      </div>
+      <div class="grid max-w-md gap-10 row-gap-5 sm:row-gap-10 lg:max-w-screen-md lg:grid-cols-2 sm:mx-auto">
+        <div class="flex flex-col justify-between p-5 bg-white dark:bg-gray-800 border rounded shadow-sm">
+          <div class="mb-6">
+            <div class="flex items-center justify-between pb-6 mb-6 border-b">
               <div>
-                <p class="mb-2 font-bold tracking-wide">Features</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">10 deploys per day</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">10 GB of storage</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">Unlimited domains</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">SSL Certificates</p>
-                  </li>
-                </ul>
+                <p class="text-sm font-bold tracking-wider uppercase">
+                  Personal use
+                </p>
+                <p class="text-5xl font-extrabold">Free</p>
+              </div>
+              <div class="flex items-center justify-center w-24 h-24 rounded-full bg-gray-50  dark:bg-gray-900 ">
+                <svg class="w-10 h-10 text-gray-600 dark:text-emerald-300 " viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                  <path d="M12,7L12,7 c-1.657,0-3-1.343-3-3v0c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3v0C15,5.657,13.657,7,12,7z" fill="none" stroke="currentColor"></path>
+                  <path d="M15,23H9v-5H7v-6 c0-1.105,0.895-2,2-2h6c1.105,0,2,0.895,2,2v6h-2V23z" fill="none" stroke="currentColor"></path>
+                </svg>
               </div>
             </div>
-            <div>
-              <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
-                Start for free
-              </a>
-              <p class="text-sm text-gray-600">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              </p>
+            <div >
+              <p class="mb-2 font-bold tracking-wide">Features</p>
+              <ul class="space-y-2 ">
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">10 deploys per day</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">10 GB of storage</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">Unlimited domains</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">SSL Certificates</p>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="flex flex-col justify-between p-5 bg-white border rounded shadow-sm">
-            <div class="mb-6">
-              <div class="flex items-center justify-between pb-6 mb-6 border-b">
-                <div>
-                  <p class="text-sm font-bold tracking-wider uppercase">
-                    For your team
-                  </p>
-                  <p class="text-5xl font-extrabold">$39</p>
-                </div>
-                <div class="flex items-center justify-center w-24 h-24 rounded-full bg-indigo-50">
-                  <svg class="w-10 h-10 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                    <path d="M4,7L4,7 C2.895,7,2,6.105,2,5v0c0-1.105,0.895-2,2-2h0c1.105,0,2,0.895,2,2v0C6,6.105,5.105,7,4,7z" fill="none" stroke="currentColor"></path>
-                    <path d="M6,21H3v-4 l-2,0v-5c0-1.105,0.895-2,2-2h1" fill="none" stroke="currentColor"></path>
-                    <path d="M20,7L20,7 c1.105,0,2-0.895,2-2v0c0-1.105-0.895-2-2-2h0c-1.105,0-2,0.895-2,2v0C18,6.105,18.895,7,20,7z" fill="none" stroke="currentColor"></path>
-                    <path d="M18,21h3v-4 l2,0v-5c0-1.105-0.895-2-2-2h-1" fill="none" stroke="currentColor"></path>
-                    <path d="M12,7L12,7 c-1.657,0-3-1.343-3-3v0c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3v0C15,5.657,13.657,7,12,7z" fill="none" stroke="currentColor"></path>
-                    <path d="M15,23H9v-6H7v-5 c0-1.105,0.895-2,2-2h6c1.105,0,2,0.895,2,2v6h-2V23z" fill="none" stroke="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
+          <div>
+            <a href="/" class="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 dark:text-gray-800 dark:bg-emerald-300 dark:hover:bg-emerald-400 focus:shadow-outline focus:outline-none">
+              Start for free
+            </a>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-white dark:bg-gray-800 border rounded shadow-sm">
+          <div class="mb-6">
+            <div class="flex items-center justify-between pb-6 mb-6 border-b">
               <div>
-                <p class="mb-2 font-bold tracking-wide">Features</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">Unlimited deploys</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">Up to 10 Team Members</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">100 GB of starge</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">24/7 support</p>
-                  </li>
-                  <li class="flex items-center">
-                    <div class="mr-2">
-                      <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
-                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
-                        <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
-                      </svg>
-                    </div>
-                    <p class="font-medium text-gray-800">Global CDN</p>
-                  </li>
-                </ul>
+                <p class="text-sm font-bold tracking-wider uppercase">
+                  For your team
+                </p>
+                <p class="text-5xl font-extrabold">$39</p>
+              </div>
+              <div class="flex items-center justify-center w-24 h-24 rounded-full bg-indigo-50 dark:bg-gray-900">
+                <svg class="w-10 h-10 text-purple-800 dark:text-emerald-300" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                  <path d="M4,7L4,7 C2.895,7,2,6.105,2,5v0c0-1.105,0.895-2,2-2h0c1.105,0,2,0.895,2,2v0C6,6.105,5.105,7,4,7z" fill="none" stroke="currentColor"></path>
+                  <path d="M6,21H3v-4 l-2,0v-5c0-1.105,0.895-2,2-2h1" fill="none" stroke="currentColor"></path>
+                  <path d="M20,7L20,7 c1.105,0,2-0.895,2-2v0c0-1.105-0.895-2-2-2h0c-1.105,0-2,0.895-2,2v0C18,6.105,18.895,7,20,7z" fill="none" stroke="currentColor"></path>
+                  <path d="M18,21h3v-4 l2,0v-5c0-1.105-0.895-2-2-2h-1" fill="none" stroke="currentColor"></path>
+                  <path d="M12,7L12,7 c-1.657,0-3-1.343-3-3v0c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3v0C15,5.657,13.657,7,12,7z" fill="none" stroke="currentColor"></path>
+                  <path d="M15,23H9v-6H7v-5 c0-1.105,0.895-2,2-2h6c1.105,0,2,0.895,2,2v6h-2V23z" fill="none" stroke="currentColor"></path>
+                </svg>
               </div>
             </div>
             <div>
-              <a
-                href="/"
-                class="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Get started
-              </a>
-              <p class="text-sm text-gray-600">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              </p>
+              <p class="mb-2 font-bold tracking-wide ">Features</p>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">Unlimited deploys</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">Up to 10 Team Members</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">100 GB of starge</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">24/7 support</p>
+                </li>
+                <li class="flex items-center">
+                  <div class="mr-2">
+                    <svg class="w-4 h-4 text-purple-800" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                      <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                      <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                    </svg>
+                  </div>
+                  <p class="font-medium text-gray-800 dark:text-gray-300">Global CDN</p>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div>
+            <a
+              href="/"
+              class="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-800 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+            >
+              Get started
+            </a>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            </p>
           </div>
         </div>
       </div>
-    
-    <!-- pricing 5 end  -->
+    </div>
+  </section>
+  
+  <!-- pricing 5 end  -->
+
 
 
     <!-- pricing 6 start -->
     <section class="section_divider">
-        <div>Pricing 6</div>
-    </section>
+      <div>Pricing 6</div>
+  </section>
+  <section class="dark:bg-gray-800">
+      
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
           <div>
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-400">
               Brand new
             </p>
           </div>
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:bg-gradient-to-r dark:from-emerald-300 dark:to-cyan-300 dark:text-transparent dark:bg-clip-text sm:text-4xl md:mx-auto">
             <span class="relative inline-block">
-              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 dark:text-emerald-800 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
                 <defs>
                   <pattern id="bc9273ce-29bb-4565-959b-714607d4d027" x="0" y="0" width=".135" height=".30">
                     <circle cx="1" cy="1" r=".7"></circle>
@@ -847,7 +852,7 @@
             </span>
             your way. Advance everyday.
           </h2>
-          <p class="text-base text-gray-700 md:text-lg">
+          <p class="text-base text-gray-700 dark:text-gray-300 md:text-lg">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
           </p>
         </div>
@@ -914,324 +919,329 @@
           </div>
         </div>
       </div>
-    
-    <!-- pricing 6 end -->
+  
+  </section>
+  <!-- pricing 6 end -->
+
 
     <!-- pricing 7 start -->
-    <section class="section_divider">
-        <dvi>Pricing 7</dvi>
-    </section>
+    <section class="section_divider" id="pricing_7">
+      <dvi>Pricing 7</dvi>
+  </section>
 
-    <div class="font-sans text-base text-gray-900 bg-gray-200 border-box">
-        <div class="mb-16 sm:mx-auto sm:my-0 sm:max-w-screen-lg">
-            <div class="px-6 py-4 bg-gray-200 divide-y divide-gray-400 sm:px-16 sm:py-8">
-                <div class="flex flex-col mb-4 items-between sm:flex-row sm:justify-between sm:items-end">
-                    <h2 class="mt-2 mb-4 text-xl font-light leading-tight tracking-wide text-center text-gray-900 sm:mr-auto sm:text-left sm:text-2xl">
-                        Choose the amount of storage
-                        <br>that's right for you.
-                    </h2>
+  <div class="font-sans text-base text-gray-900 bg-gray-200 dark:bg-gray-800 dark:text-gray-300 border-box">
+      <div class="mb-16 sm:mx-auto sm:my-0 sm:max-w-screen-lg">
+          <div class="px-6 py-4 bg-gray-200 dark:bg-gray-800 divide-y divide-gray-400 sm:px-16 sm:py-8">
+              <div class="flex flex-col mb-4 items-between sm:flex-row sm:justify-between sm:items-end">
+                  <h2 class="mt-2 mb-4 text-xl font-light leading-tight tracking-wide text-center text-gray-900 dark:text-gray-300 sm:mr-auto sm:text-left sm:text-2xl">
+                      Choose the amount of storage
+                      <br>that's right for you.
+                  </h2>
 
-                    <div class="flex items-end justify-center">
-                        <span class="inline-block mr-2 text-xs text-gray-700">Bill yearly</span>
-                        <label for="toggle" class="inline-flex items-center mt-3 cursor-pointer">
-                            <span class="relative">
-                              <span class="block w-10 h-5 bg-indigo-600 rounded-full shadow-inner "></span>
-                              <span class="absolute inset-y-0 left-0 block w-3 h-3 mt-1 ml-1 bg-white rounded-full shadow">
-                                <input id="toggle" type="checkbox" class="absolute w-0 h-0 opacity-0" />
-                              </span>
+                  <div class="flex items-end justify-center">
+                      <span class="inline-block mr-2 text-xs text-gray-700 dark:text-gray-300">Bill yearly</span>
+                      <label for="toggle" class="inline-flex items-center mt-3 cursor-pointer">
+                          <span class="relative">
+                            <span class="block w-10 h-5 bg-indigo-600 rounded-full shadow-inner "></span>
+                            <span class="absolute inset-y-0 left-0 block w-3 h-3 mt-1 ml-1 bg-white rounded-full shadow">
+                              <input id="toggle" type="checkbox" class="absolute w-0 h-0 opacity-0" />
                             </span>
-                          </label>
-                        <span class="inline-block ml-2 text-xs text-gray-700">Bill monthly</span>
-                    </div>
-                </div>
+                          </span>
+                        </label>
+                      <span class="inline-block ml-2 text-xs text-gray-700 dark:text-gray-300">Bill monthly</span>
+                  </div>
+              </div>
 
-                <div class="flex flex-col-reverse justify-between sm:flex-row">
-                    <div class="w-full mt-6 mr-6 sm:w-1/2">
+              <div class="flex flex-col-reverse justify-between sm:flex-row">
+                  <div class="w-full mt-6 mr-6 sm:w-1/2">
 
-                        <div class="flex items-center mb-6 text-gray-600 sm:hidden">
-                            <span class="flex-grow h-px bg-gray-400"></span>
-                             <span class="w-24 ml-1 -mr-1 text-sm">Pay with card</span>
-                            <span class="flex-grow h-px bg-gray-400"></span>
-                        </div>
+                      <div class="flex items-center mb-6 text-gray-600 sm:hidden">
+                          <span class="flex-grow h-px bg-gray-400"></span>
+                           <span class="w-24 ml-1 -mr-1 text-sm">Pay with card</span>
+                          <span class="flex-grow h-px bg-gray-400"></span>
+                      </div>
 
-                        <form method="post" action="#">
-                            <input type="text" name="name" placeholder="Full name" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
-                            <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
-                            <input type="password" name="password" placeholder="Password" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
+                      <form method="post" action="#">
+                          <input type="text" name="name" placeholder="Full name" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
+                          <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
+                          <input type="password" name="password" placeholder="Password" class="w-full px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md focus:outline-none" required>
 
-                            <input type="text" name="name" placeholder="Card number" maxlength="16" class="w-full px-4 py-3 mb-5 mr-3 font-normal text-gray-600 rounded text-md sm:w-7/12 focus:outline-none" required>
-                            <input type="text" name="name" placeholder="MM / YY" class="w-1/3 px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md sm:w-24 focus:outline-none" required>
-                            <input type="text" name="name" maxlength="3" placeholder="CVV" class="w-1/4 px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md sm:w-16 focus:outline-none" required>
+                          <input type="text" name="name" placeholder="Card number" maxlength="16" class="w-full px-4 py-3 mb-5 mr-3 font-normal text-gray-600 rounded text-md sm:w-7/12 focus:outline-none" required>
+                          <input type="text" name="name" placeholder="MM / YY" class="w-1/3 px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md sm:w-24 focus:outline-none" required>
+                          <input type="text" name="name" maxlength="3" placeholder="CVV" class="w-1/4 px-4 py-3 mb-5 font-normal text-gray-600 rounded text-md sm:w-16 focus:outline-none" required>
 
-                            <button class="w-full mt-3 focus:outline-none">
-                               <span class="block px-4 py-3 text-white uppercase bg-indigo-600 rounded hover:bg-indigo-700">Create account</span>
-                            </button>
-                        </form>
+                          <button class="w-full mt-3 focus:outline-none">
+                             <span class="block px-4 py-3 text-white uppercase bg-indigo-600 rounded hover:bg-indigo-700">Create account</span>
+                          </button>
+                      </form>
 
-                    </div>
-                    <div class="w-full mt-6 mb-6 sm:w-1/2">
-                        <a href="#" class="block w-full px-4 py-3 mb-4 bg-white border-2 border-indigo-500 border-opacity-50 border-solid rounded-lg">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-semibold text-gray-600 uppercase">Essential</span>
-                                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
-                                     10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
+                  </div>
+                  <div class="w-full mt-6 mb-6 sm:w-1/2">
+                      <a href="#" class="block w-full px-4 py-3 mb-4 bg-white border-2 border-indigo-500 border-opacity-50 border-solid rounded-lg">
+                          <div class="flex justify-between mb-2">
+                              <span class="text-sm font-semibold text-gray-600 uppercase">Essential</span>
+                              <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
+                                   10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                              </svg>
+                          </div>
 
-                            <div class="flex items-baseline justify-between">
-                                <h2>
-                                    <span class="mr-1 text-3xl font-semibold text-gray-700">200</span>
-                                    <span class="font-semibold text-gray-700">GB</span>
-                                    <span class="font-light text-gray-700">of storage</span>
-                                </h2>
+                          <div class="flex items-baseline justify-between">
+                              <h2>
+                                  <span class="mr-1 text-3xl font-semibold text-gray-700">200</span>
+                                  <span class="font-semibold text-gray-700">GB</span>
+                                  <span class="font-light text-gray-700">of storage</span>
+                              </h2>
 
-                                <span class="inline-block mr-2 font-semibold text-gray-700">$10 / mo</span>
-                            </div>
-                        </a>
+                              <span class="inline-block mr-2 font-semibold text-gray-700">$10 / mo</span>
+                          </div>
+                      </a>
 
-                        <a href="#" class="block w-full px-4 py-3 mb-4 bg-white rounded-lg">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-semibold text-gray-600 uppercase">Pro</span>
-                                <!-- <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
-                                     10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg> -->
-                            </div>
+                      <a href="#" class="block w-full px-4 py-3 mb-4 bg-white rounded-lg">
+                          <div class="flex justify-between mb-2">
+                              <span class="text-sm font-semibold text-gray-600 uppercase">Pro</span>
+                              <!-- <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
+                                   10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                              </svg> -->
+                          </div>
 
-                            <div class="flex items-baseline justify-between">
-                                <h2>
-                                    <span class="mr-1 text-3xl font-semibold text-gray-700">1</span>
-                                    <span class="font-semibold text-gray-700">TB</span>
-                                    <span class="font-light text-gray-700">of storage</span>
-                                </h2>
+                          <div class="flex items-baseline justify-between">
+                              <h2>
+                                  <span class="mr-1 text-3xl font-semibold text-gray-700">1</span>
+                                  <span class="font-semibold text-gray-700">TB</span>
+                                  <span class="font-light text-gray-700">of storage</span>
+                              </h2>
 
-                                <span class="inline-block mr-2 font-semibold text-gray-700">$20 / mo</span>
-                            </div>
-                        </a>
+                              <span class="inline-block mr-2 font-semibold text-gray-700">$20 / mo</span>
+                          </div>
+                      </a>
 
-                        <a href="#" class="block w-full px-4 py-3 bg-white rounded-lg">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-sm font-semibold text-gray-600 uppercase">Premium</span>
-                                <!-- <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
-                                     10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg> -->
-                            </div>
+                      <a href="#" class="block w-full px-4 py-3 bg-white rounded-lg">
+                          <div class="flex justify-between mb-2">
+                              <span class="text-sm font-semibold text-gray-600 uppercase">Premium</span>
+                              <!-- <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9
+                                   10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                              </svg> -->
+                          </div>
 
-                            <div class="flex items-baseline justify-between">
-                                <h2>
-                                    <span class="mr-1 text-3xl font-semibold text-gray-700">2</span>
-                                    <span class="font-semibold text-gray-700">TB</span>
-                                    <span class="font-light text-gray-700">of storage</span>
-                                </h2>
+                          <div class="flex items-baseline justify-between">
+                              <h2>
+                                  <span class="mr-1 text-3xl font-semibold text-gray-700">2</span>
+                                  <span class="font-semibold text-gray-700">TB</span>
+                                  <span class="font-light text-gray-700">of storage</span>
+                              </h2>
 
-                                <span class="inline-block mr-2 font-semibold text-gray-700">$40 / mo</span>
-                            </div>
-                        </a>
+                              <span class="inline-block mr-2 font-semibold text-gray-700">$40 / mo</span>
+                          </div>
+                      </a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    
-    <!-- pricing 7 end -->
+  
+  <!-- pricing 7 end -->
+
+
 
     <!-- pricing 8 start -->
     <section class="section_divider">
-        <div>Pricing 8</div>
-    </section>
-    <section x-data="{ selected: 'monthly' }">
-        <div class="pb-64 bg-gray-100">
-          <div class="  max-w-7xl px-4 pt-20 mx-auto text-center sm:text-left">
-            <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 md:text-5xl md:font-extrabold">Plans & Pricing</h1>
-            <p class="mb-10 text-lg text-gray-600 md:text-xl">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
-            <div class="w-64 mx-auto -mb-2 sm:mx-0">
-              <div class="flex justify-between p-2 text-center border border-purple-200 rounded-full">
-                <button  class="w-full rounded-full btn btn-primary text-purple-800 focus:text-white active:bg-purple-800 focus:bg-purple-800 text-md font-semibold" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">Bill Monthly</button>
-                <button class="w-full rounded-full btn btn-link text-purple-800  focus:text-white active:bg-purple-800 focus:bg-purple-800 p-2" @click="selected = 'yearly'" :class="{ 'btn-link': selected === 'monthly', 'btn-primary': selected === 'yearly' }">Bill Yearly</button>
-              </div>
+      <div>Pricing 8</div>
+  </section>
+  <section x-data="{ selected: 'monthly' }">
+      <div class="pb-20 bg-gray-100 dark:bg-gray-800 dark:border-b-2 dark:border-cyan-300"> 
+        <div class="  max-w-7xl px-4 pt-20 mx-auto text-center sm:text-left">
+          <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 dark:text-gray-100 md:text-5xl md:font-extrabold">Plans & Pricing</h1>
+          <p class="mb-10 text-lg text-gray-600 dark:text-gray-300 md:text-xl">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
+          <div class="w-64 mx-auto -mb-2 sm:mx-0">
+            <div class="flex justify-between p-2 text-center border border-purple-200 rounded-full">
+              <button  class="w-full rounded-full btn btn-primary text-purple-800 focus:text-white active:bg-purple-800 focus:bg-purple-800 text-md font-semibold" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">Bill Monthly</button>
+              <button class="w-full rounded-full btn btn-link text-purple-800  focus:text-white active:bg-purple-800 focus:bg-purple-800 p-2" @click="selected = 'yearly'" :class="{ 'btn-link': selected === 'monthly', 'btn-primary': selected === 'yearly' }">Bill Yearly</button>
             </div>
           </div>
         </div>
-        <div class="max-w-7xl pb-20 mx-auto -mt-48">
+      </div>
+      <div class="dark:bg-gray-800">
+        <div class="max-w-7xl pb-20 pt-10 mx-auto">
           <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 sm:gap-8">
             <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
               <div class="flex flex-col justify-between p-6 border-b border-gray-200">
-                <p class="mb-1 text-lg font-semibold text-gray-700">Free</p>
-                <p class="pb-0 my-2 font-mono text-4xl font-extrabold text-gray-900 md:pb-2">$0</p>
-                <a href="#" class="w-full mt-6 btn btn-primary btn-lg md:mt-16">Get Started</a>
+                <p class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-200 ">Free</p>
+                <p class="pb-0 my-2 font-mono text-4xl font-extrabold text-gray-900 dark:text-cyan-200 md:pb-2">$0</p>
+                <a href="#" class="w-full mt-6 p-3 rounded dark:bg-emerald-400 bg-gray-800 text-gray-300 text-center dark:text-gray-800 font-bold  md:mt-16">Get Started</a>
               </div>
               <div class="flex flex-col flex-grow p-6 space-y-3">
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email APIs, SMTP Relay, and Webhooks</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email APIs, SMTP Relay, and Webhooks</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Suppression Management</p>
+                  <p class="text-gray-700 dark:text-gray-300">Suppression Management</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email Tracking and Analytics</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email Tracking and Analytics</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">99.99% Guaranteed Uptime SLA</p>
+                  <p class="text-gray-700 dark:text-gray-300">99.99% Guaranteed Uptime SLA</p>
                 </div>
               </div>
             </div>
             <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
               <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                 <div>
-                  <p class="mb-1 text-lg font-semibold text-gray-700">Team</p>
-                  <p class="my-2 font-mono text-4xl font-extrabold text-gray-900" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
-                  <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
-                  <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+                  <p class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">Team</p>
+                  <p class="my-2 font-mono text-4xl font-extrabold text-gray-900 dark:text-cyan-200" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
+                  <p class="text-base text-gray-600 dark:text-gray-300" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+                  <p class="text-base text-gray-600 dark:text-gray-300" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
                 </div>
-                <a href="#" class="w-full mt-6 btn btn-light btn-lg">Try for free</a>
+                <a href="#" class="w-full mt-6 p-3 rounded dark:bg-emerald-400 bg-gray-800 text-gray-300 text-center dark:text-gray-800 font-bold ">Try for free</a>
               </div>
               <div class="flex flex-col flex-grow p-6 space-y-3">
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email APIs, SMTP Relay, and Webhooks</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email APIs, SMTP Relay, and Webhooks</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Suppression Management</p>
+                  <p class="text-gray-700 dark:text-gray-300">Suppression Management</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email Tracking and Analytics</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email Tracking and Analytics</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">99.99% Guaranteed Uptime SLA</p>
+                  <p class="text-gray-700 dark:text-gray-300">99.99% Guaranteed Uptime SLA</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">5 Days of Log Retention</p>
+                  <p class="text-gray-700 dark:text-gray-300">5 Days of Log Retention</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Limited 24/7 Ticket Support</p>
+                  <p class="text-gray-700 dark:text-gray-300">Limited 24/7 Ticket Support</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">1 Dedicated IP (Foundation 100k and up)</p>
+                  <p class="text-gray-700 dark:text-gray-300">1 Dedicated IP (Foundation 100k and up)</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">1,000 Email Address Validations</p>
+                  <p class="text-gray-700 dark:text-gray-300">1,000 Email Address Validations</p>
                 </div>
               </div>
             </div>
             <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
               <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                 <div>
-                  <p class="mb-1 text-lg font-semibold text-gray-700">Company</p>
-                  <p class="my-2 font-mono text-4xl font-extrabold text-gray-900" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
-                  <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
-                  <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+                  <p class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">Company</p>
+                  <p class="my-2 font-mono text-4xl font-extrabold text-gray-900 dark:text-cyan-200" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
+                  <p class="text-base text-gray-600 dark:text-gray-300" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+                  <p class="text-base text-gray-600 dark:text-gray-300" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
                 </div>
-                <a href="#" class="w-full mt-6 btn btn-light btn-lg">Try for free</a>
+                <a href="#" class="w-full mt-6 p-3 rounded dark:bg-emerald-400 bg-gray-800 text-gray-300 text-center dark:text-gray-800 font-bold ">Try for free</a>
               </div>
               <div class="flex flex-col flex-grow p-6 space-y-3">
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email APIs, SMTP Relay, and Webhooks</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email APIs, SMTP Relay, and Webhooks</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Suppression Management</p>
+                  <p class="text-gray-700 dark:text-gray-300">Suppression Management</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Email Tracking and Analytics</p>
+                  <p class="text-gray-700 dark:text-gray-300">Email Tracking and Analytics</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">99.99% Guaranteed Uptime SLA</p>
+                  <p class="text-gray-700 dark:text-gray-300">99.99% Guaranteed Uptime SLA</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">5 Days of Log Retention</p>
+                  <p class="text-gray-700 dark:text-gray-300">5 Days of Log Retention</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Limited 24/7 Ticket Support</p>
+                  <p class="text-gray-700 dark:text-gray-300">Limited 24/7 Ticket Support</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">1 Dedicated IP (Foundation 100k and up)</p>
+                  <p class="text-gray-700 dark:text-gray-300">1 Dedicated IP (Foundation 100k and up)</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">1,000 Email Address Validations</p>
+                  <p class="text-gray-700 dark:text-gray-300">1,000 Email Address Validations</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Instant Chat Support</p>
+                  <p class="text-gray-700 dark:text-gray-300">Instant Chat Support</p>
                 </div>
                 <div class="flex items-start">
                   <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <p class="text-gray-700">Custom Features</p>
+                  <p class="text-gray-700 dark:text-gray-300">Custom Features</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      
+      </div>
+    </section>
     
-    <!-- pricing 8 end -->
-
+  
+  <!-- pricing 8 end -->
 
 
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>FAQ 6</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+
+  <!-- faq 6 start -->
+  <section class="section_divider" id="faq_6">
+    <div>FAQ 6</div>
+</section>
+<div class="dark:bg-gray-800">
+  <section class="text-gray-700">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 dark:text-cyan-200 mb-4">
+          Frequently Asked Question
+        </h1>
+        <p class="text-base dark:text-cyan-300 leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          The most common questions about how our business works and what
+          can do for you.
+        </p>
+      </div>
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="w-full lg:w-1/2 px-4 py-2">
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              How Long is this site live?
+            </summary>
+
+            <span class="dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              Can I install/upload anything I want on there?
+            </summary>
+
+            <span class="dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              How can I migrate to another site?
+            </summary>
+
+            <span class="dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+        </div>
+        <div class="w-full lg:w-1/2 px-4 py-2">
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              Can I change the domain you give me?
+            </summary>
+
+            <span class="px-4 py-2 dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+          <details class="mb-4">
+            <summary class="font-semibold  bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              How many sites I can create at once?
+            </summary>
+
+            <span class="px-4 py-2 dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+          <details class="mb-4 ">
+            <summary class="font-semibold  bg-gray-200 dark:bg-gray-800 dark:border-2 dark:border-cyan-200 dark:text-cyan-200  rounded-md py-2 px-4">
+              How can I communicate with you?
+            </summary>
+
+            <span class="px-4 py-2 dark:text-cyan-300">
+              Laboris qui labore cillum culpa in sunt quis sint veniam.
+              Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+              minim velit nostrud pariatur culpa magna in aute.
+            </span>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- faq 6 end -->
+
+      
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

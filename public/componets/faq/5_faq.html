@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>FAQ 5</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+      
+
+  <!-- faq 5 start -->
+  <section class="section_divider" id="faq_5">
+    <div>FAQ 5</div>
+</section>
+<section class=" dark:bg-gray-800">
+  <div class=" px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2 grid grid-cols-1 gap-24 md:grid-cols-2">
+    <div>
+      <h1 class="mb-6 text-2xl font-light text-gray-900 dark:text-gray-100 md:text-3xl">Basic Questions</h1>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">What is accessibility?</p>
+      <p class="text-gray-600 dark:text-gray-100">
+        This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with
+        the web, and how we can make accessibility part of our web development workflow.
+      </p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">HTML: A good basis for accessibility?</p>
+      <p class="text-gray-600 dark:text-gray-100 ">A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose.</p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">CSS and JavaScript accessibility best practices?</p>
+      <p class="text-gray-600 dark:text-gray-100 ">
+        CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some
+        CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
+      </p>
+    </div>
+    <div>
+      <h1 class="mb-6 text-2xl font-light md:text-3xl dark:text-gray-100 ">Advanced Questions</h1>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?</p>
+      <p class="text-gray-600 dark:text-gray-100 ">
+        Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that
+        can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a
+        basic level to improve accessibility.
+      </p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">Accessible multimedia?</p>
+      <p class="text-gray-600 dark:text-gray-100 ">
+        Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives, so they can be understood by
+        assistive technologies and their users. This article shows how.
+      </p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900 dark:text-purple-400">Mobile accessibility?</p>
+      <p class="text-gray-600 dark:text-gray-100 ">With web access on mobile devices being so popular, and popular platforms such as iOS and Android.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- faq 5 end -->
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

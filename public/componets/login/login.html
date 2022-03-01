@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Login </title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    <!-- login 1 start  -->
+    <section class="section_divider">
+        <div>Login 1</div>
+    </section>
+    <div class="flex items-center justify-center p-5 sm:px-6">
+        <div class="w-full max-w-sm p-4 bg-gray-900 rounded-md shadow-md sm:p-6">
+            <div class="flex items-center justify-center">
+                <span class="text-xl font-medium text-white">Login</span>
+            </div>
+            <form class="mt-4">
+                <label for="email" class="block">
+                    <span class="text-sm text-white">Email</span>
+                    <input type="email" id="email" name="email" autocomplete="username"
+                        class="block w-full px-3 py-2 mt-1 text-white bg-gray-700 rounded-md focus:outline-none focus:shadow-outline focus:bg-gray-800"
+                        required />
+                </label>
+                <label for="password" class="block mt-3">
+                    <span class="text-sm text-white">Password</span>
+                    <input type="password" id="password" name="password" autocomplete="current-password"
+                        class="block w-full px-3 py-2 mt-1 text-white bg-gray-700 rounded-md focus:outline-none focus:shadow-outline focus:bg-gray-800"
+                        required />
+                </label>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox"
+                                class="text-indigo-600 border form-checkbox focus:outline-none focus:shadow-outline" />
+                            <span class="mx-2 text-sm text-white">Remember me</span>
+                        </label>
+                    </div>
+                    <div>
+                        <a class="block text-sm text-indigo-200 hover:underline focus:outline-none focus:underline"
+                            href="#">Forgot
+                            your password?</a>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button type="submit"
+                        class="w-full px-4 py-2 text-sm text-center text-white bg-indigo-500 rounded-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 ">Sign
+                        in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- login 1 end -->
+    
+    <!-- login 2 start -->
+    <section class="section_divider">
+        <div>Login 2</div>
+    </section>
+    <div class="flex items-center justify-center p-5 bg-gray-200 sm:px-6">
+        <div class="w-full max-w-sm p-4 bg-white rounded-md shadow-md sm:p-6">
+            <div class="flex items-center justify-center">
+                <span class="text-xl font-medium text-gray-900">Login</span>
+            </div>
+            <form class="mt-4">
+                <label for="email" class="block">
+                    <span class="text-sm text-gray-700">Email</span>
+                    <input type="email" id="email" name="email" autocomplete="username"
+                        class="block w-full px-3 py-2 mt-1 text-gray-700 border rounded-md form-input focus:border-indigo-600"
+                        required />
+                </label>
+                <label for="password" class="block mt-3">
+                    <span class="text-sm text-gray-700">Password</span>
+                    <input type="password" id="password" name="password" autocomplete="current-password"
+                        class="block w-full px-3 py-2 mt-1 text-gray-700 border rounded-md form-input focus:border-indigo-600"
+                        required />
+                </label>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="text-indigo-600 border form-checkbox" />
+                            <span class="mx-2 text-sm text-gray-600">Remember me</span>
+                        </label>
+                    </div>
+                    <div>
+                        <a class="block text-sm text-indigo-700 fontme hover:underline" href="#">Forgot your password?</a>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button type="submit"
+                        class="w-full px-4 py-2 text-sm text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-500">Sign
+                        in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!-- login 2 end -->
+    
+    <!-- login 3 start  -->
+    <section class="section_divider">
+        <div>Login 3</div>
+    </section>
+    <main class="flex justify-center dark:bg-gray-800">
+        <div class="w-full max-w-sm my-10 px-4 py-6 space-y-6  rounded-md border-2">
+          <h1 class="text-xl font-semibold text-center">Login</h1>
+          <form action="#" class="space-y-6">
+            <input class="w-full px-4 py-2 border rounded-md dark:bg-gray-300  focus:outline-none focus:ring focus:ring-cyan-100 " type="email" name="email" placeholder="Email address" required="">
+            <input class="w-full px-4 py-2 border rounded-md dark:bg-gray-300  focus:outline-none focus:ring focus:ring-cyan-100 " type="password" name="password" placeholder="Password" required="">
+            <div class="flex items-center justify-between">
+              <!-- Remember me toggle -->
+              <label class="flex items-center">
+                <div class="relative inline-flex items-center">
+                  <input type="checkbox" name="remembr_me" class="w-10 h-4 transition bg-gray-200 border-none rounded-full shadow-inner outline-none appearance-none toggle checked:bg-gray-light disabled:bg-gray-200 focus:outline-none">
+                  <span class="absolute top-0 left-0 w-4 h-4 transition-all transform scale-150 bg-white rounded-full shadow-sm"></span>
+                </div>
+                <span class="ml-3 text-sm font-normal text-gray-500 dark:text-gray-400">Remember me</span>
+              </label>
+
+              <a href="forgot-password.html" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+            </div>
+            <div>
+              <button type="submit" class="w-full px-4 py-2 font-medium text-center text-white transition-colors duration-200 rounded-md bg-cyan-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-1 dark:focus:ring-offset-darker">
+                Login
+              </button>
+            </div>
+          </form>
+
+          <!-- Or -->
+          <div class="flex items-center justify-center space-x-2 flex-nowrap">
+            <span class="w-20 h-px bg-gray-300"></span>
+            <span>OR</span>
+            <span class="w-20 h-px bg-gray-300"></span>
+          </div>
+
+          <!-- Social login links -->
+          <!-- Brand icons src https://boxicons.com -->
+          <a href="#" class="flex items-center justify-center px-4 py-2 space-x-2 text-white transition-all duration-200 bg-black rounded-md hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 dark:focus:ring-offset-darker">
+            <svg aria-hidden="true" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026,2c-5.509,0-9.974,4.465-9.974,9.974c0,4.406,2.857,8.145,6.821,9.465 c0.499,0.09,0.679-0.217,0.679-0.481c0-0.237-0.008-0.865-0.011-1.696c-2.775,0.602-3.361-1.338-3.361-1.338 c-0.452-1.152-1.107-1.459-1.107-1.459c-0.905-0.619,0.069-0.605,0.069-0.605c1.002,0.07,1.527,1.028,1.527,1.028 c0.89,1.524,2.336,1.084,2.902,0.829c0.091-0.645,0.351-1.085,0.635-1.334c-2.214-0.251-4.542-1.107-4.542-4.93 c0-1.087,0.389-1.979,1.024-2.675c-0.101-0.253-0.446-1.268,0.099-2.64c0,0,0.837-0.269,2.742,1.021 c0.798-0.221,1.649-0.332,2.496-0.336c0.849,0.004,1.701,0.115,2.496,0.336c1.906-1.291,2.742-1.021,2.742-1.021 c0.545,1.372,0.203,2.387,0.099,2.64c0.64,0.696,1.024,1.587,1.024,2.675c0,3.833-2.33,4.675-4.552,4.922 c0.355,0.308,0.675,0.916,0.675,1.846c0,1.334-0.012,2.41-0.012,2.737c0,0.267,0.178,0.577,0.687,0.479 C19.146,20.115,22,16.379,22,11.974C22,6.465,17.535,2,12.026,2z"></path>
+            </svg>
+            <span> Login with github </span>
+          </a>
+
+          <!-- Register link -->
+          <div class="text-sm text-gray-600 dark:text-gray-400">
+            Don't have an account yet? <a href="register.html" class="text-blue-600 hover:underline">Register</a>
+          </div>
+        </div>
+    </main>
+    
+    <!-- login 3 end -->
+
+    <!-- login 4 start -->
+    <section class="section_divider">
+        <div>Login 4</div>
+    </section>
+    <section class="grid grid-cols-1 gap-0 lg:grid-cols-12">
+        <div class="w-full col-span-1 p-4 mx-auto mt-6 lg:col-span-8 xl:p-12 md:w-2/4">
+          <a href="/" title="Kutty Home Page" class="flex items-center justify-start">
+            <svg class="w-auto h-6" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">
+              <path
+                d="M134.71 45.7599c1.32-1.44 2.67-2.94 4.05-4.5 1.44-1.56 2.82-3.09 4.14-4.59 1.32-1.56 2.55-3.03 3.69-4.41 1.2-1.38 2.22-2.58 3.06-3.6h15.93c-3.18 3.66-6.3 7.17-9.36 10.53-3 3.3-6.3 6.72-9.9 10.26 1.8 1.62 3.66 3.57 5.58 5.85 1.92 2.22 3.78 4.53 5.58 6.93 1.8 2.4 3.45 4.8 4.95 7.2 1.5 2.4 2.76 4.59 3.78 6.57h-15.39c-.96-1.56-2.07-3.27-3.33-5.13-1.2-1.92-2.49-3.81-3.87-5.67-1.38-1.92-2.85-3.75-4.41-5.49-1.5-1.74-3-3.21-4.5-4.41v20.7H121.3V8.31991l13.41-2.16V45.7599zM209.35 74.3799c-2.28.66-5.22 1.26-8.82 1.8-3.6.6-7.38.9-11.34.9-4.02 0-7.38-.54-10.08-1.62-2.64-1.08-4.74-2.58-6.3-4.5-1.56-1.98-2.67-4.32-3.33-7.02-.66-2.7-.99-5.67-.99-8.91v-26.37h13.41v24.75c0 4.32.57 7.44 1.71 9.36 1.14 1.92 3.27 2.88 6.39 2.88.96 0 1.98-.03 3.06-.09 1.08-.12 2.04-.24 2.88-.36v-36.54h13.41v45.72zM217.888 16.8699l13.41-2.16v13.95h16.11v11.16h-16.11v16.65c0 2.82.48 5.07 1.44 6.75 1.02 1.68 3.03 2.52 6.03 2.52 1.44 0 2.91-.12 4.41-.36 1.56-.3 2.97-.69 4.23-1.17l1.89 10.44c-1.62.66-3.42 1.23-5.4 1.71-1.98.48-4.41.72-7.29.72-3.66 0-6.69-.48-9.09-1.44-2.4-1.02-4.32-2.4-5.76-4.14-1.44-1.8-2.46-3.96-3.06-6.48-.54-2.52-.81-5.31-.81-8.37v-39.78zM254.279 16.8699l13.409-2.16v13.95h16.11v11.16h-16.11v16.65c0 2.82.48 5.07 1.44 6.75 1.02 1.68 3.03 2.52 6.03 2.52 1.44 0 2.91-.12 4.41-.36 1.56-.3 2.97-.69 4.23-1.17l1.891 10.44c-1.62.66-3.421 1.23-5.401 1.71s-4.409.72-7.289.72c-3.66 0-6.691-.48-9.091-1.44-2.4-1.02-4.32-2.4-5.76-4.14-1.44-1.8-2.459-3.96-3.059-6.48-.54-2.52-.81-5.31-.81-8.37v-39.78zM334.028 28.6599c-2.7 9.12-5.52 17.67-8.46 25.65-2.94 7.98-6.15 15.72-9.63 23.22-1.26 2.7-2.52 4.98-3.78 6.84-1.26 1.92-2.64 3.48-4.14 4.68-1.5 1.26-3.21 2.16-5.13 2.7-1.86.6-4.05.9-6.57.9-2.1 0-4.05-.21-5.85-.63-1.74-.36-3.18-.78-4.32-1.26l2.34-10.71c1.38.48 2.61.81 3.69.99 1.08.18 2.22.27 3.42.27 2.4 0 4.23-.66 5.49-1.98 1.32-1.26 2.43-3.03 3.33-5.31-3.06-6-6.12-12.72-9.18-20.16-3.06-7.5-5.94-15.9-8.64-25.2h14.22c.6 2.34 1.29 4.89 2.07 7.65.84 2.7 1.71 5.46 2.61 8.28.9 2.76 1.8 5.46 2.7 8.1.96 2.64 1.86 5.04 2.7 7.2.78-2.16 1.59-4.56 2.43-7.2.84-2.64 1.65-5.34 2.43-8.1.84-2.82 1.62-5.58 2.34-8.28.78-2.76 1.47-5.31 2.07-7.65h13.86z"
+                fill="#1A202C"
+              />
+              <path
+                d="M5.61825.4114C24.3953-2.95442 43.4551 21.1695 51.21 34.8757v29.6906c-4.8347 14.2497-12.952 19.1401-20.8473 19.362-12.7347.358-22.758-14.27-17.6881-25.9574 2.926-6.7451 8.905-10.1655 13.0016-11.2189C5.61473 45.9161.32294 23.2628.01461 7.98884-.05756 4.41366 2.09844 1.04233 5.61825.4114z"
+                fill="#9E58E9"
+              />
+              <path
+                d="M96.8018.4114C78.0247-2.95442 58.9649 21.1695 51.21 34.8757v29.6906c4.8347 14.2497 12.952 19.1401 20.8474 19.362 12.7346.358 22.7579-14.27 17.688-25.9574-2.9259-6.7451-8.905-10.1655-13.0015-11.2189 20.0614-.8359 25.3531-23.4892 25.6611-38.76316.073-3.57518-2.083-6.94651-5.6032-7.57744z"
+                fill="#7629C8"
+              />
+            </svg>
+            <span class="sr-only">Kutty</span>
+          </a>
+          <h1 class="mt-6 mb-4 text-xl font-light text-left text-gray-800">Log in to your account</h1>
+          <form class="pb-1 space-y-4">
+            <label class="block">
+              <span class="block mb-1 text-sm font-medium text-gray-700">Your Email</span>
+              <input class="w-full px-3 py-3 rounded-lg bg-gray-50 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-purple-800  border-2 " type="email" placeholder="Ex. james@bond.com" inputmode="email" required />
+            </label>
+            <label class="block">
+              <span class="block mb-1 text-sm font-medium text-gray-700">Your Password</span>
+              <input class="w-full px-3 py-3 rounded-lg bg-gray-50 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-purple-800 border-2" type="password" placeholder="••••••••" required />
+            </label>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox" />
+                <span class="block ml-2 text-sm font-medium text-gray-700 cursor-pointer">Remember me</span>
+            </label>
+            <input type="submit" class=" bg-purple-800 text-white font-bold text-md rounded p-2 " value="Login" />
+            </div>
+          </form>
+          <div class="my-6 space-y-2">
+            <p class="text-xs text-gray-600">
+              Don't have an account?
+              <a href="#" class="text-purple-700 hover:text-black">Create an account</a>
+            </p>
+            <a href="#" class="block text-xs text-purple-700 hover:text-black">Forgot password?</a>
+            <a href="#" class="block text-xs text-purple-700 hover:text-black">Privacy & Terms</a>
+          </div>
+        </div>
+        <div class="col-span-1 lg:col-span-4">
+          <img
+            src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            alt="3 women looking at a laptop"
+            class="object-cover w-full h-64 min-h-full bg-gray-100"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    
+    <!-- login 4 end -->
+
+
+    <!-- login 5 start  -->
+    <section class="section_divider">
+        <div>Login 5</div>
+    </section>
+    <section class="grid grid-cols-1 gap-0 lg:grid-cols-12">
+        <div class="w-full col-span-1 p-4 mx-auto mt-6 lg:col-span-4 xl:p-12 sm:w-2/4 lg:w-full">
+          <a href="/" title="Kutty Home Page" class="flex items-center justify-start">
+            <svg class="w-auto h-6" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">
+              <path
+                d="M134.71 45.7599c1.32-1.44 2.67-2.94 4.05-4.5 1.44-1.56 2.82-3.09 4.14-4.59 1.32-1.56 2.55-3.03 3.69-4.41 1.2-1.38 2.22-2.58 3.06-3.6h15.93c-3.18 3.66-6.3 7.17-9.36 10.53-3 3.3-6.3 6.72-9.9 10.26 1.8 1.62 3.66 3.57 5.58 5.85 1.92 2.22 3.78 4.53 5.58 6.93 1.8 2.4 3.45 4.8 4.95 7.2 1.5 2.4 2.76 4.59 3.78 6.57h-15.39c-.96-1.56-2.07-3.27-3.33-5.13-1.2-1.92-2.49-3.81-3.87-5.67-1.38-1.92-2.85-3.75-4.41-5.49-1.5-1.74-3-3.21-4.5-4.41v20.7H121.3V8.31991l13.41-2.16V45.7599zM209.35 74.3799c-2.28.66-5.22 1.26-8.82 1.8-3.6.6-7.38.9-11.34.9-4.02 0-7.38-.54-10.08-1.62-2.64-1.08-4.74-2.58-6.3-4.5-1.56-1.98-2.67-4.32-3.33-7.02-.66-2.7-.99-5.67-.99-8.91v-26.37h13.41v24.75c0 4.32.57 7.44 1.71 9.36 1.14 1.92 3.27 2.88 6.39 2.88.96 0 1.98-.03 3.06-.09 1.08-.12 2.04-.24 2.88-.36v-36.54h13.41v45.72zM217.888 16.8699l13.41-2.16v13.95h16.11v11.16h-16.11v16.65c0 2.82.48 5.07 1.44 6.75 1.02 1.68 3.03 2.52 6.03 2.52 1.44 0 2.91-.12 4.41-.36 1.56-.3 2.97-.69 4.23-1.17l1.89 10.44c-1.62.66-3.42 1.23-5.4 1.71-1.98.48-4.41.72-7.29.72-3.66 0-6.69-.48-9.09-1.44-2.4-1.02-4.32-2.4-5.76-4.14-1.44-1.8-2.46-3.96-3.06-6.48-.54-2.52-.81-5.31-.81-8.37v-39.78zM254.279 16.8699l13.409-2.16v13.95h16.11v11.16h-16.11v16.65c0 2.82.48 5.07 1.44 6.75 1.02 1.68 3.03 2.52 6.03 2.52 1.44 0 2.91-.12 4.41-.36 1.56-.3 2.97-.69 4.23-1.17l1.891 10.44c-1.62.66-3.421 1.23-5.401 1.71s-4.409.72-7.289.72c-3.66 0-6.691-.48-9.091-1.44-2.4-1.02-4.32-2.4-5.76-4.14-1.44-1.8-2.459-3.96-3.059-6.48-.54-2.52-.81-5.31-.81-8.37v-39.78zM334.028 28.6599c-2.7 9.12-5.52 17.67-8.46 25.65-2.94 7.98-6.15 15.72-9.63 23.22-1.26 2.7-2.52 4.98-3.78 6.84-1.26 1.92-2.64 3.48-4.14 4.68-1.5 1.26-3.21 2.16-5.13 2.7-1.86.6-4.05.9-6.57.9-2.1 0-4.05-.21-5.85-.63-1.74-.36-3.18-.78-4.32-1.26l2.34-10.71c1.38.48 2.61.81 3.69.99 1.08.18 2.22.27 3.42.27 2.4 0 4.23-.66 5.49-1.98 1.32-1.26 2.43-3.03 3.33-5.31-3.06-6-6.12-12.72-9.18-20.16-3.06-7.5-5.94-15.9-8.64-25.2h14.22c.6 2.34 1.29 4.89 2.07 7.65.84 2.7 1.71 5.46 2.61 8.28.9 2.76 1.8 5.46 2.7 8.1.96 2.64 1.86 5.04 2.7 7.2.78-2.16 1.59-4.56 2.43-7.2.84-2.64 1.65-5.34 2.43-8.1.84-2.82 1.62-5.58 2.34-8.28.78-2.76 1.47-5.31 2.07-7.65h13.86z"
+                fill="#1A202C"
+              />
+              <path
+                d="M5.61825.4114C24.3953-2.95442 43.4551 21.1695 51.21 34.8757v29.6906c-4.8347 14.2497-12.952 19.1401-20.8473 19.362-12.7347.358-22.758-14.27-17.6881-25.9574 2.926-6.7451 8.905-10.1655 13.0016-11.2189C5.61473 45.9161.32294 23.2628.01461 7.98884-.05756 4.41366 2.09844 1.04233 5.61825.4114z"
+                fill="#9E58E9"
+              />
+              <path
+                d="M96.8018.4114C78.0247-2.95442 58.9649 21.1695 51.21 34.8757v29.6906c4.8347 14.2497 12.952 19.1401 20.8474 19.362 12.7346.358 22.7579-14.27 17.688-25.9574-2.9259-6.7451-8.905-10.1655-13.0015-11.2189 20.0614-.8359 25.3531-23.4892 25.6611-38.76316.073-3.57518-2.083-6.94651-5.6032-7.57744z"
+                fill="#7629C8"
+              />
+            </svg>
+            <span class="sr-only">Kutty</span>
+          </a>
+          <h1 class="mt-6 mb-4 text-xl font-light text-left text-gray-800">Log in to your account</h1>
+          <form class="pb-1 space-y-4">
+            <label class="block">
+              <span class="block mb-1 text-sm font-medium text-gray-700">Your Email</span>
+              <input class="w-full px-3 py-3 rounded-lg bg-gray-50 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-purple-800  border-2 " type="email" placeholder="Ex. james@bond.com" inputmode="email" required />
+            </label>
+            <label class="block">
+              <span class="block mb-1 text-xs font-medium text-gray-700">Your Password</span>
+              <input class="w-full px-3 py-3 rounded-lg bg-gray-50 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-purple-800  border-2 " type="password" placeholder="••••••••" required />
+            </label>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox" />
+                <span class="block ml-2 text-sm font-medium text-gray-700 cursor-pointer">Remember me</span>
+              </label>
+              <input type="submit" class=" bg-purple-800 text-white font-bold text-md rounded p-2 " value="Login" />
+            </div>
+          </form>
+          <div class="my-6 space-y-2">
+            <p class="text-xs text-gray-600">
+              Don't have an account?
+              <a href="#" class="text-purple-700 hover:text-black">Create an account</a>
+            </p>
+            <a href="#" class="block text-xs text-purple-700 hover:text-black">Forgot password?</a>
+            <a href="#" class="block text-xs text-purple-700 hover:text-black">Privacy & Terms</a>
+          </div>
+        </div>
+        <div class="col-span-1 lg:col-span-8">
+          <img
+            src="https://images.unsplash.com/photo-1531548731165-c6ae86ff6491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            alt="3 women looking at a laptop"
+            class="object-cover w-full h-64 min-h-full bg-gray-100"
+            loading="lazy"
+          />
+        </div>
+    </section>
+    
+    <!-- login 5 end -->
+
+    <!-- login 6 start -->
+    <section class="section_divider">
+        <div>Login 6</div>
+    </section>
+
+    <div class="w-full my-10 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div class="px-6 py-4">
+            <h2 class="text-3xl font-bold text-center text-gray-700 dark:text-white">Brand</h2>
+
+            <h3 class="mt-1 text-xl font-medium text-center text-gray-600 dark:text-gray-200">Welcome Back</h3>
+
+            <p class="mt-1 text-center text-gray-500 dark:text-gray-400">Login or create account</p>
+
+            <form>
+                <div class="w-full mt-4">
+                    <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="email" placeholder="Email Address" aria-label="Email Address" />
+                </div>
+
+                <div class="w-full mt-4">
+                    <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="password" placeholder="Password" aria-label="Password" />
+                </div>
+
+                <div class="flex items-center justify-between mt-4">
+                    <a href="#" class="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500">Forget Password?</a>
+
+                    <button class="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none" type="button">Login</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex items-center justify-center py-4 text-center bg-gray-50 dark:bg-gray-700">
+            <span class="text-sm text-gray-600 dark:text-gray-200">Don't have an account? </span>
+
+            <a href="#" class="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline">Register</a>
+        </div>
+    </div>
+    
+    <!-- login 6 end -->
+
+    <!-- login 7 start -->
+    <section class="section_divider">
+        <div>Login 7</div>
+    </section>
+    
+    
+    <div class="w-full my-10 max-w-sm p-6 m-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+        <h1 class="text-3xl font-semibold text-center text-gray-700 dark:text-white">Brand</h1>
+
+        <form class="mt-6">
+            <div>
+                <label for="username" class="block text-sm text-gray-800 dark:text-gray-200">Username</label>
+                <input type="text"
+                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+            </div>
+
+            <div class="mt-4">
+                <div class="flex items-center justify-between">
+                    <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">Password</label>
+                    <a href="#" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
+                </div>
+
+                <input type="password"
+                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+            </div>
+
+            <div class="mt-6">
+                <button
+                    class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                    Login
+                </button>
+            </div>
+        </form>
+
+        <div class="flex items-center justify-between mt-4">
+            <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
+
+            <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">or login with Social Media</a>
+
+            <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/5"></span>
+        </div>
+
+        <div class="flex items-center mt-6 -mx-2">
+            <button type="button"
+                class="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:bg-blue-400 focus:outline-none">
+                <svg class="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z">
+                    </path>
+                </svg>
+
+                <span class="hidden mx-2 sm:inline">Sign in with Google</span>
+            </button>
+
+            <a href="#"
+                class="p-2 mx-2 text-sm font-medium text-gray-500 transition-colors duration-200 transform bg-gray-300 rounded-md hover:bg-gray-200">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+
+        <p class="mt-8 text-xs font-light text-center text-gray-400"> Don't have an account? <a href="#"
+                class="font-medium text-gray-700 dark:text-gray-200 hover:underline">Create One</a></p>
+    </div>
+    <!-- login 7 end -->
+
+
+    
+    <!-- login 8 start -->
+    <section class="section_divider">
+        <div>Login 8</div>
+    </section>
+
+    <div class="flex my-10 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+        <div class="hidden bg-cover lg:block lg:w-1/2" style="background-image:url('https://images.unsplash.com/photo-1606660265514-358ebbadc80d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80')"></div>
+        
+        <div class="w-full px-6 py-8 md:px-8 lg:w-1/2">
+            <h2 class="text-2xl font-semibold text-center text-gray-700 dark:text-white">Brand</h2>
+
+            <p class="text-xl text-center text-gray-600 dark:text-gray-200">Welcome back!</p>
+
+            <a href="#" class="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-200 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <div class="px-4 py-2">
+                    <svg class="w-6 h-6" viewBox="0 0 40 40">
+                        <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107"/>
+                        <path d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z" fill="#FF3D00"/>
+                        <path d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z" fill="#4CAF50"/>
+                        <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2"/>
+                    </svg>
+                </div>
+
+                <span class="w-5/6 px-4 py-3 font-bold text-center">Sign in with Google</span>
+            </a>
+
+            <div class="flex items-center justify-between mt-4">
+                <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
+
+                <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">or login with email</a>
+
+                <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
+            </div>
+
+            <div class="mt-4">
+                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="LoggingEmailAddress">Email Address</label>
+                <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="email">
+            </div>
+
+            <div class="mt-4">
+                <div class="flex justify-between">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="loggingPassword">Password</label>
+                    <a href="#" class="text-xs text-gray-500 dark:text-gray-300 hover:underline">Forget Password?</a>
+                </div>
+
+                <input id="loggingPassword" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="password">
+            </div>
+
+            <div class="mt-8">
+                <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                    Login
+                </button>
+            </div>
+            
+            <div class="flex items-center justify-between mt-4">
+                <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+
+                <a href="#" class="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</a>
+                
+                <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- login 8 end -->
+
+
+    <!-- login 9 start -->
+    <section class="section_divider">
+        <div>Login 9</div>
+    </section>
+    
+    
+    <div class="bg-white dark:bg-gray-900 my-10">
+        <div class="flex justify-center h-screen">
+            <div class="hidden bg-cover lg:block lg:w-2/3" style="background-image: url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+                <div class="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white">Brand</h2>
+                        
+                        <p class="max-w-xl mt-3 text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In autem ipsa, nulla laboriosam dolores, repellendus perferendis libero suscipit nam temporibus molestiae</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
+                <div class="flex-1">
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-center text-gray-700 dark:text-white">Brand</h2>
+                        
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your account</p>
+                    </div>
+
+                    <div class="mt-8">
+                        <form>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email Address</label>
+                                <input type="email" name="email" id="email" placeholder="example@example.com" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="mt-6">
+                                <div class="flex justify-between mb-2">
+                                    <label for="password" class="text-sm text-gray-600 dark:text-gray-200">Password</label>
+                                    <a href="#" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Forgot password?</a>
+                                </div>
+
+                                <input type="password" name="password" id="password" placeholder="Your Password" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="mt-6">
+                                <button
+                                    class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                                    Sign in
+                                </button>
+                            </div>
+
+                        </form>
+
+                        <p class="mt-6 text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="#" class="text-blue-500 focus:outline-none focus:underline hover:underline">Sign up</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login 9 end -->
+
+    <!-- login 10 start -->
+    <section class="section_divider">
+      <div>Login 10</div>
+    </section>
+
+    <div class="my-10 w-full flex justify-center ">
+      <div class="bg-[url(https://i.postimg.cc/13pssvxG/bg-image.png)] w-full sm:w-1/2 md:w-9/12 lg:w-1/2 mx-3 md:mx-5 lg:mx-0 shadow-md flex flex-col md:flex-row items-center rounded z-10 overflow-hidden bg-center bg-cover bg-blue-600">
+        <div class="w-full md:w-1/2 flex flex-col justify-center items-center bg-opacity-25 bg-blue-600 backdrop-blur-sm ">
+          <h1 class="text-3xl md:text-4xl font-extrabold text-white my-2 md:my-0">
+            HartDev
+          </h1>
+          <p class="mb-2 text-white hidden md:block font-mono">
+            search a new somethings
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col items-center bg-white dark:bg-gray-800 py-5 md:py-8 px-4">
+          <h3 class="mb-4 font-bold text-3xl flex items-center text-blue-500">
+            LOGIN
+          </h3>
+          <form action="#" class="px-3 flex flex-col justify-center items-center w-full gap-3">
+            <input 
+              type="email" placeholder="email.."
+              class="px-4 py-2 w-full rounded border border-gray-300 shadow-sm text-base placeholder-gray-500 placeholder-opacity-50 focus:outline-none focus:border-blue-500"
+            >
+            <input 
+              type="password" placeholder="password.."
+              class="px-4 py-2 w-full rounded border border-gray-300 shadow-sm text-base placeholder-gray-500 placeholder-opacity-50 focus:outline-none focus:border-blue-500"
+            >
+            <button class="flex justify-center items-center bg-blue-500 hover:bg-blue-600 text-white focus:outline-none focus:ring rounded px-3 py-1">
+              <svg class="w-5 h-5 inline"fill="none"stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+              </svg>
+              <p class="ml-1 text-lg">
+                Login
+              </p>
+            </button>
+          </form>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mt-2">
+            don't have an account?
+            <a href="#" class="text-green-500 hover:text-green-600 mt-3 focus:outline-none font-bold underline">
+              register
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- login 10 end -->
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

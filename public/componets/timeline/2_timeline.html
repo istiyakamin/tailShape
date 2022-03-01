@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Timeline 2</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- timeline 2 start -->
+    <section class="section_divider" id="timeline_2">
+        <div>Timeline 2</div>
+    </section>
+
+    <div class="max-w-xl p-8 mx-auto dark:bg-gray-800 dark:text-gray-100">
+	<ul class="space-y-12">
+		<li class="flex items-start space-x-3">
+			<a rel="noopener noreferrer" href="#" class="flex items-center h-8 text-sm hover:underline">v3.2.0</a>
+			<div class="flex-1 space-y-2">
+				<div class="flex items-center justify-between space-x-4 dark:text-gray-400">
+					<a rel="noopener noreferrer" href="#" class="inline-flex items-center px-3 py-1 my-1 space-x-2 text-sm border rounded-full group dark:border-gray-700">
+						<span aria-hidden="true" class="h-1.5 w-1.5 rounded-full dark:bg-green-400"></span>
+						<span class="group-hover:underline dark:text-gray-100">Feature</span>
+					</a>
+					<span class="text-xs whitespace-nowrap">10h ago</span>
+				</div>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt condimentum. Nisl ultrices eu venenatis diam.</p>
+				</div>
+			</div>
+		</li>
+		<li class="flex items-start space-x-3">
+			<a rel="noopener noreferrer" href="#" class="flex items-center h-8 text-sm hover:underline">v3.1.9</a>
+			<div class="flex-1 space-y-2">
+				<div class="flex items-center justify-between space-x-4 dark:text-gray-400">
+					<a rel="noopener noreferrer" href="#" class="inline-flex items-center px-3 py-1 my-1 space-x-2 text-sm border rounded-full group dark:border-gray-700">
+						<span aria-hidden="true" class="h-1.5 w-1.5 rounded-full dark:bg-green-400"></span>
+						<span class="group-hover:underline dark:text-gray-100">Bugfix</span>
+					</a>
+					<span class="text-xs whitespace-nowrap">2 weeks ago</span>
+				</div>
+				<div class="space-y-2">
+					<p>Scelerisque amet elit non sit ut tincidunt condimentum. Nisi ultrices eu venenatis diam.</p>
+					<p>Illum quaerat ab inventore, eveniet repudiandae saepe, iste sed molestias laborum atque, quos reprehenderit fugit cumo!</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+    </div>
+    <!-- timeline 2 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

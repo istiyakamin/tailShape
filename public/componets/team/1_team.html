@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Team 1</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- team 1 start -->
+    <section class="section_divider" id="team_1"> 
+        <div>Team 1</div>
+    </section>
+
+    <section class="container p-6 mx-auto bg-white dark:bg-gray-800">
+        <h2 class="text-xl font-medium text-gray-800 capitalize dark:text-white md:text-2xl">Our Team</h2>
+
+        <div class="flex items-center justify-center">
+            <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80" alt="avatar"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Ahmed Omer</h3>
+                        <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">CEO</span>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Jane Doe</h3>
+                        <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">Co-founder</span>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80" alt="avatar"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Steve Ben</h3>
+                        <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">UI/UX</span>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Patterson Johnson</h3>
+                        <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">Software Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- team 1 end -->
+    
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

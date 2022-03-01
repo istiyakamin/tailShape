@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Timeline 3</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+
+    <!-- timeline 3 start -->
+    <section class="section_divider" id="timeline_3">
+        <div>Timeline 3</div>
+    </section>
+
+    <ul class="p-4 lg:p-8 dark:bg-gray-800 dark:text-gray-100">
+	<li>
+		<article>
+			<a rel="noopener noreferrer" href="#" class="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-900">
+				<h3 class="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">Earum at ipsa aliquid quis, exercitationem est.</h3>
+				<time datetime="" class="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-gray-400">Oct 13, 2020</time>
+				<p class="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe exercitationem numquam, labore necessitatibus deleniti quasi. Illo porro nihil necessitatibus debitis delectus aperiam, fuga impedit assumenda odit, velit eveniet est.</p>
+			</a>
+		</article>
+	</li>
+	<li>
+		<article>
+			<a rel="noopener noreferrer" href="#" class="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-900">
+				<h3 class="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">Earum at ipsa aliquid quis, exercitationem est.</h3>
+				<time datetime="" class="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-gray-400">Oct 13, 2020</time>
+				<p class="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe exercitationem numquam, labore necessitatibus deleniti quasi. Illo porro nihil necessitatibus debitis delectus aperiam, fuga impedit assumenda odit, velit eveniet est.</p>
+			</a>
+		</article>
+	</li>
+	<li>
+		<article>
+			<a rel="noopener noreferrer" href="#" class="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-900">
+				<h3 class="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">Earum at ipsa aliquid quis, exercitationem est.</h3>
+				<time datetime="" class="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-gray-400">Oct 13, 2020</time>
+				<p class="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe exercitationem numquam, labore necessitatibus deleniti quasi. Illo porro nihil necessitatibus debitis delectus aperiam, fuga impedit assumenda odit, velit eveniet est.</p>
+			</a>
+		</article>
+	</li>
+	<li>
+		<article>
+			<a rel="noopener noreferrer" href="#" class="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-900">
+				<h3 class="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">Earum at ipsa aliquid quis, exercitationem est.</h3>
+				<time datetime="" class="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-gray-400">Oct 13, 2020</time>
+				<p class="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe exercitationem numquam, labore necessitatibus deleniti quasi. Illo porro nihil necessitatibus debitis delectus aperiam, fuga impedit assumenda odit, velit eveniet est.</p>
+			</a>
+		</article>
+	</li>
+    </ul>
+
+    <!-- timeline 3 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Contact 9 </title>
+</head>
+<body> 
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    <!-- contact 9 start -->
+    <section class="section_divider" id="contact_9">
+      <div>Contact 9</div>
+    </section>
+    <div class="relative  px-4 w-full  bg-gray-50 dark:bg-gray-800">
+      <div class="mx-auto max-w-5xl py-10">
+
+        <div>
+          <span class="absolute top-0 left-0 hidden md:block opacity-10">
+            <svg width="250" height="600" fill="none" viewBox="0 0 250 600" aria-hidden="true">
+              <pattern id="pattern-rectangles"  width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="10" height="10" class="text-green-500" fill="currentColor" />
+              </pattern>
+              <rect width="250" height="600" fill="url(#pattern-rectangles)" />
+            </svg>
+          </span>
+          <span class="absolute bottom-0 right-0 opacity-20">
+            <svg width="300" height="300" fill="none" viewBox="0 0 300 300" aria-hidden="true">
+              <pattern id="pattern-circles" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+                <circle id="pattern-circle" cx="10" cy="10" r="5" class="fill-current text-green-500" />
+              </pattern>
+              <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
+            </svg>
+          </span>
+        </div>
+        
+
+
+        <div class="relative space-y-5">
+
+          <h2 class="text-center text-5xl text-green-500 font-light">Contact Us</h2>
+
+          <p class="mx-auto py-5 max-w-3xl text-center text-base text-gray-600 dark:text-gray-300">Atque sint nemo vero sequi veniam, numquam fugiat aperiam doloremque, itaque officia exercitationem! Excepturi deleniti accusantium minus quibusdam dolores doloremque natus fugit!</p>
+
+          <div class="flex flex-wrap justify-between items-center text-base">
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">18 avenue des Champs-Élysées, 75008 Paris</span>
+            </div>
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">357-233-9644</span>
+            </div>
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">my-email@fancymail.com</span>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="relative mt-16 rounded border-2 border-gray-200">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr" 
+          title="map" scrolling="no" frameborder="0"
+          width="100%" height="450" 
+          class="" 
+          loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- contact 9 end -->
+
+    
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

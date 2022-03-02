@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Sidebar 3 </title>
+</head>
+<body> 
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- sidebar 3 start -->
+    <section class="section_divider">
+        <div>Sidebar 3</div>
+    </section>
+    <aside class="w-full p-6 sm:w-60 dark:bg-gray-900 dark:text-gray-100">
+        <nav class="space-y-8 text-sm">
+            <div class="space-y-2">
+                <h2 class="text-sm font-semibold tracking-widest uppercase dark:text-gray-400">Getting Started</h2>
+                <div class="flex flex-col space-y-1">
+                    <a rel="noopener noreferrer" href="#">Installation</a>
+                    <a rel="noopener noreferrer" href="#">Plugins</a>
+                    <a rel="noopener noreferrer" href="#">Migrations</a>
+                    <a rel="noopener noreferrer" href="#">Appearance</a>
+                    <a rel="noopener noreferrer" href="#">Mamba UI</a>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-sm font-semibold tracking-widest uppercase dark:text-gray-400">Dashboard</h2>
+                <div class="flex flex-col space-y-1">
+                    <a rel="noopener noreferrer" href="#">Header</a>
+                    <a rel="noopener noreferrer" href="#">Drawer</a>
+                    <a rel="noopener noreferrer" href="#">Page Title</a>
+                    <a rel="noopener noreferrer" href="#">Menus</a>
+                    <a rel="noopener noreferrer" href="#">Sidebar</a>
+                    <a rel="noopener noreferrer" href="#">Footer</a>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-sm font-semibold tracking-widest uppercase dark:text-gray-400">Pages</h2>
+                <div class="flex flex-col space-y-1">
+                    <a rel="noopener noreferrer" href="#">Homepage</a>
+                    <a rel="noopener noreferrer" href="#">Users</a>
+                    <a rel="noopener noreferrer" href="#">Tools</a>
+                    <a rel="noopener noreferrer" href="#">Settings</a>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-sm font-semibold tracking-widest uppercase dark:text-gray-400">Misc</h2>
+                <div class="flex flex-col space-y-1">
+                    <a rel="noopener noreferrer" href="#">Tutorials</a>
+                    <a rel="noopener noreferrer" href="#">Changelog</a>
+                </div>
+            </div>
+        </nav>
+    </aside>
+    
+    <!-- sidebar 3 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

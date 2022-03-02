@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Blog 3 </title>
+</head>
+<body> 
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- blog 3 start  -->
+    <section class="section_divider" id="blog_3">
+      <div>Blog 3</div>
+  </section>
+  <section class="w-full mx-auto flex justify-center">
+      
+      <div class="relative flex flex-col max-w-xl p-5 divide-y xl:flex-row xl:divide-y-0 xl:divide-x dark:bg-gray-900 dark:text-gray-100 divide-gray-700">
+          <div class="p-3 space-y-1 xl:ml-6">
+              <h3 class="text-3xl font-semibold">Lorem ipsum dolor sit amet</h3>
+              <p class="text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam possimus repellat incidunt odit eligendi mollitia quaerat autem nobis fugiat natus?</p>
+          </div>
+          <div class="flex items-center p-3 w-full space-x-3">
+              <img alt="" src="https://source.unsplash.com/100x100/?portrait" class="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500">
+              <div class="space-y-1">
+                  <span class="text-sm">April 03, 2021</span>
+                  <div class="flex flex-wrap space-y-2">
+                      <a rel="noopener noreferrer" href="#" class="inline-block px-2 py-1 text-sm font-semibold rounded-md dark:bg-green-400 dark:text-gray-900">javascript</a>
+                      <a rel="noopener noreferrer" href="#" class="inline-block px-2 py-1 text-sm font-semibold rounded-md dark:bg-green-400 dark:text-gray-900">serverless</a>
+                      <a rel="noopener noreferrer" href="#" class="inline-block px-2 py-1 text-sm font-semibold rounded-md dark:bg-green-400 dark:text-gray-900">aws</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </section>
+  
+  <!-- blog 3 end -->
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

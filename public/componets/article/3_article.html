@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Article 3 </title>
+</head>
+<body> 
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- article 3 start  -->
+    <section class="section_divider" id="article_3">
+      <div>Article 3</div>
+    </section>
+    <section class="dark:bg-gray-800 dark:text-gray-50">
+      
+      <article class="max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
+        <div class="w-full mx-auto space-y-4">
+          <h1 class="text-5xl font-bold leading-none">Interdum et malesuada fames ac ante ipsum primis in faucibus?</h1>
+          <div class="flex flex-wrap space-x-2 text-sm dark:text-gray-400">
+            <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#MambaUI</a>
+            <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#TailwindCSS</a>
+            <a rel="noopener noreferrer" href="#" class="p-1 hover:underline">#Angular</a>
+          </div>
+          <p class="text-sm dark:text-gray-400">by
+            <a href="#" target="_blank" rel="noopener noreferrer" class="hover:underline dark:text-green-400">
+              <span>Leroy Jenkins</span>
+            </a>on
+            <time datetime="2021-02-12 15:34:18-0200">Feb 12th 2021</time>
+          </p>
+        </div>
+        <div class="dark:text-gray-100">
+          <p>Insert the actual text content here...</p>
+        </div>
+      </article>
+    </section>
+    <!-- article 3 end  -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Article 2 </title>
+</head>
+<body> 
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    <!-- article 2 start -->
+    <section class="section_divider" id="article_2">
+      <div>Article 2</div>
+    </section>
+    
+    <section class="dark:bg-gray-800 dark:text-gray-50">
+      <div class="max-w-2xl px-6 py-16 mx-auto space-y-12">
+        <article class="space-y-8 dark:bg-gray-800 dark:text-gray-50">
+          <div class="space-y-6">
+            <h1 class="text-4xl font-bold md:tracking-tight md:text-5xl">Suspendisse ut magna et ipsum sodales accumsan.</h1>
+            <div class="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400">
+              <div class="flex items-center md:space-x-2">
+                <img src="https://source.unsplash.com/75x75/?portrait" alt="" class="w-4 h-4 border rounded-full dark:bg-gray-500 dark:border-gray-700">
+                <p class="text-sm">Leroy Jenkins • July 19th, 2021</p>
+              </div>
+              <p class="flex-shrink-0 mt-3 text-sm md:mt-0">4 min read • 1,570 views</p>
+            </div>
+          </div>
+          <div class="dark:text-gray-100">
+            <p>Insert the actual text content here...</p>
+          </div>
+        </article>
+        <div>
+          <div class="flex flex-wrap py-6 space-x-2 border-t border-dashed dark:border-gray-400">
+            <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline dark:bg-green-400 dark:text-gray-900">#MambaUI</a>
+            <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline dark:bg-green-400 dark:text-gray-900">#TailwindCSS</a>
+            <a rel="noopener noreferrer" href="#" class="px-3 py-1 rounded-sm hover:underline dark:bg-green-400 dark:text-gray-900">#Angular</a>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-lg font-semibold">Related posts</h4>
+            <ul class="ml-4 space-y-1 list-disc">
+              <li>
+                <a rel="noopener noreferrer" href="#" class="hover:underline">Nunc id magna mollis</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#" class="hover:underline">Duis molestie, neque eget pretium lobortis</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#" class="hover:underline">Mauris nec urna volutpat, aliquam lectus sit amet</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- article 2 end -->
+
+    
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

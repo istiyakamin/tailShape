@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>Skeleton 4</title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    
+    <!-- skeleton 4 start -->
+    <section class="section_divider">
+        <div>Skeleton 4</div>
+    </section>
+    
+    <!-- This is an example component -->
+
+
+        <div class="w-full flex items-center flex-col  bg-white">
+            <div class="flex flex-col bg-white shadow-md  rounded-md items-center">
+
+            <div class="flex items-center p-4">
+                <div data-placeholder class="mr-2 h-10 w-10  rounded-full overflow-hidden relative bg-gray-200">
+            
+                    </div>
+                <div class="flex flex-col justify-between items-center">
+                <div data-placeholder class="mb-2 h-5 w-40 overflow-hidden relative bg-gray-200">
+                
+                </div>
+                </div>
+
+            </div>
+            <div data-placeholder class="h-52 w-full overflow-hidden relative bg-gray-200"></div>
+            
+            <div class="flex flex-col p-4">
+                <div class="flex">
+                <div data-placeholder  class=" flex h-5 w-5 overflow-hidden relative bg-gray-200 mr-1"></div>
+                <div data-placeholder  class="flex h-5 w-48 overflow-hidden relative bg-gray-200"></div>
+                </div>
+                <div class="flex mt-1">
+                <div data-placeholder  class="flex h-5 w-5 overflow-hidden relative bg-gray-200 mr-1"></div>
+                <div data-placeholder  class="flex h-5 w-48 overflow-hidden relative bg-gray-200"></div>
+                </div>
+            </div>
+            <div class="w-full h-px  overflow-hidden relative bg-gray-200 m-4"></div>
+            <div class="flex justify-between items-center p-4 w-full">
+                <div data-placeholder class="mr-2 h-10 w-16  overflow-hidden relative bg-gray-200">
+            
+                    </div>
+                
+                <div data-placeholder class="mb-2 h-5 w-20 overflow-hidden relative bg-gray-200">
+                
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <style>
+        [data-placeholder]::after {
+            content: "test ";
+            box-shadow: 0 0 50px 9px rgb(110, 98, 98);
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: 100%; 
+            animation: load 1s infinite;
+        }
+        @keyframes load {
+            0%{ left: -100%}
+            100%{ left: 150%}
+        }
+        </style>
+    
+    <!-- skeleton 4 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

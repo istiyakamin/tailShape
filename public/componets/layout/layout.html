@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <title>layout </title>
+</head>
+<body>
+
+
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+
+    <!-- layout 1 start -->
+    <section class="section_divider">
+        <div>Layout 1</div>
+    </section>
+
+      <!-- layout  -->
+      <div class="min-h-screen flex flex-col">
+        <header class="bg-red-50 mx-auto text-xl font-extrabold">Header</header>
+  
+        <div class="flex-1 flex flex-col sm:flex-row">
+          <main class="flex-1 bg-indigo-100 flex items-center justify-center text-xl font-extrabold">Content here</main>
+  
+          <nav class="order-first sm:w-32 bg-purple-200 flex items-center justify-center text-xl font-extrabold">Sidebar</nav>
+  
+          <aside class="sm:w-32 bg-yellow-100 text-xl font-extrabold flex items-center justify-center">Right Sidebar</aside>
+        </div>
+  
+        <footer class="bg-gray-100 mx-auto text-xl font-extrabold ">Footer</footer>
+      </div>
+      <!-- layout  -->
+    <!-- layout 1 end -->
+    
+
+
+    <!-- layout 2 start -->
+    <section class="section_divider">
+        <div>Layout 2 independent scroll </div>
+    </section>
+        <!-- 
+        1. Apply h-screen at flex flex-col layout 
+        2. Apply overflow-y-hidden at main container
+        3. Apply overflow-y-auto to column that needs scroll
+        -->
+        
+    <div class="min-h-screen flex flex-col h-screen">
+        <header class="bg-red-50">Header</header>
+        <!-- main container -->
+        <div class="flex-1 flex flex-row overflow-y-hidden">
+          <main class="flex-1 bg-indigo-100 overflow-y-auto">Content here</main>
+      
+          <nav class="order-first sm:w-32 bg-purple-200 overflow-y-auto">Sidebar</nav>
+      
+          <aside class="sm:w-32 bg-yellow-100 overflow-y-auto">Right Sidebar</aside>
+        </div>
+        <!-- end main container -->
+      
+        <footer class="bg-gray-100">Footer</footer>
+      </div>
+      
+    
+    <!-- layout 2 end -->
+    
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

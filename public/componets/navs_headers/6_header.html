@@ -66,7 +66,7 @@
               </svg>
               <span class="sr-only">Open Menu</span>
             </button>
-            <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow" x-show.transition="open" @click.away="open = false" x-cloak>
+            <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white dark:bg-gray-800 rounded shadow" x-show.transition="open" @click.away="open = false" x-cloak>
               <button class="self-end flex-none px-2 ml-2 btn btn-link btn-icon" @click="open = false">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,11 +85,11 @@
                 </svg>
                 <span class="sr-only">Close Menu</span>
               </button>
-              <a href="#" class="w-full font-semibold hover:bg-gray-600">Features</a>
-              <a href="#" class="w-full btn btn-link">Pricing</a>
-              <a href="#" class="w-full btn btn-link">Blog</a>
-              <a href="#" class="w-full btn btn-link">Company</a>
-              <a href="#" class="w-full btn btn-link">Sign in</a>
+              <a href="#" class="w-full font-semibold dark:text-cyan-300 dark:hover:text-gray-800 hover:bg-gray-300 focus:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition p-1  text-xs">Features</a>
+              <a href="#" class="w-full dark:text-cyan-300 dark:hover:text-gray-800 hover:bg-gray-300 focus:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition p-1  text-xs">Pricing</a>
+              <a href="#" class="w-full dark:text-cyan-300 dark:hover:text-gray-800 hover:bg-gray-300 focus:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition p-1  text-xs">Blog</a>
+              <a href="#" class="w-full dark:text-cyan-300 dark:hover:text-gray-800 hover:bg-gray-300 focus:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition p-1  text-xs">Company</a>
+              <a href="#" class="w-full dark:text-cyan-300 dark:hover:text-gray-800 hover:bg-gray-300 focus:bg-gray-300 focus:ring-2 focus:ring-blue-500 transition p-1  text-xs">Sign in</a>
             </div>
           </div>
         </div>

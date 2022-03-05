@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Template 13</title>
+</head>
+<body>
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+    
+
+
+    <!-- header 9 start -->
+     
+    <header x-data="{mobile_13_template:false}" class="p-4 dark:bg-gray-800 dark:text-gray-100">
+      <div class="container flex justify-between h-16 mx-auto">
+        <ul class="items-stretch hidden space-x-3 lg:flex">
+          <li class="flex">
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent text-indigo-400 border-indigo-400">Link</a>
+          </li>
+          <li class="flex">
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
+          </li>
+          <li class="flex">
+            <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
+          </li>
+        </ul>
+        
+        <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 text-black dark:text-indigo-400">
+            <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"></path>
+            <path d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z"></path>
+          </svg>
+        </a>
+
+        <div class="flex items-center md:space-x-4 hidden md:flex">
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-coolGray-100">
+                  <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                </svg>
+              </button>
+            </span>
+            <input type="search" name="Search" placeholder="Search..." class="w-32 py-2 pl-10 text-sm border rounded-md sm:w-auto focus:outline-none  dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900">
+          </div>
+          <button type="button" class=" px-6 py-2 font-semibold rounded lg:block bg-indigo-500 dark:bg-indigo-400 dark:text-gray-900">Log in</button>
+        </div>
+
+        <button title="Open menu" @click="mobile_13_template=! mobile_13_template" type="button" class="p-4 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-coolGray-100">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <div x-show="mobile_13_template">
+            menu
+        </div>
+      </div>
+    </header>
+    
+    <!-- header 9 end -->
+
+
+    <!-- hero 9 start --> 
+    <section class="relative min-h-screen bg-gray-200 dark:bg-gray-800 min-w-screen animation-fade animation-delay py-24">
+        <div class="container px-1 mx-auto sm:px-10 md:px-0">
+            <div class="flex flex-col items-center justify-center w-full md:flex-row">
+                <div class="flex justify-center w-full md:max-w-md md:mr-8 lg:mr-12">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1H7IW0.json"  background="transparent" class="max-w-md min-w-sm" speed="1" loop autoplay></lottie-player>
+                </div>
+
+                <div class="w-full max-w-md px-4 pb-10 text-xs text-center md:pb-0 sm:text-sm lg:text-base md:max-w-lg md:w-full md:text-left">
+                    <h2 class="text-2xl font-bold leading-snug dark:text-gray-300 sm:text-3xl md:text-4xl lg:text-5xl md:leading-tight md:mt-10">
+                      Understanding the<br />
+                      customer journey.
+                    </h2>
+
+                    <p class="mt-4 sm:mt-6 md:max-w-sm dark:text-purple-800">
+                      To succeed, one must have an unwavering desire to succeed amidst fear of failure.
+                    </p>
+
+                    <button class="flex justify-center w-full max-w-xs py-4 mx-auto mt-10 text-sm font-semibold text-black transition-colors duration-100 bg-orange-500 rounded hover:bg-purple-600 hover:text-white focus:bg-purple-600 focus:text-white md:max-w-sm md:mx-0">
+                      Start your 14 day FREE Trial
+                    </button>
+
+                    <hr class="my-10 border-2" />
+
+                    <p class="text-gray-700 dark:text-gray-300 text-md">
+                      “Our conversion rates have gone up 12% since we start using this platform! I highly recommend using this tool.”
+                    </p>
+
+                    <div class="mt-4">
+                        <div class="self-center font-semibold text-gray-900 dark:text-purple-800">Jane Doe, CTO of SomeCompany</div>
+                        <div class="flex justify-center mt-3 md:justify-start">
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                            <svg class="w-8 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" data-type="glyph" data-name="favourite-31">
+                                <g class="nc-icon-wrapper" fill="currentColor">
+                                    <path fill="currentColor" d="M12.712,1.942l2.969,6.015l6.638,0.965c0.651,0.095,0.911,0.895,0.44,1.354l-4.804,4.682l1.134,6.612 c0.111,0.649-0.57,1.143-1.152,0.837L12,19.286l-5.938,3.122C5.48,22.714,4.799,22.219,4.91,21.57l1.134-6.612l-4.804-4.682 c-0.471-0.459-0.211-1.26,0.44-1.354l6.638-0.965l2.969-6.015C11.579,1.352,12.421,1.352,12.712,1.942z"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- hero 9 end -->
+ 
+
+    <!-- feature 9 start -->
+     
+    <section class="dark:bg-gray-800 dark:text-gray-100 py-24">
+        <div class=" container flex flex-col mx-auto lg:flex-row">
+            <div class="w-full lg:w-1/3" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-size: cover;"></div>
+            <div class="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 mb-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <h2 class="text-3xl font-semibold leading-none">Modern solutions to all kinds of problems</h2>
+                <p class="mt-4 mb-8 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum rem amet!</p>
+                <button class="self-start px-10 py-3 text-lg font-medium rounded-3xl dark:bg-green-400 dark:text-gray-900">Get started</button>
+            </div>
+        </div>
+    </section>
+    <!-- feature 9 end -->
+
+
+    <!-- pricing 9 start --> 
+    <section class="bg-gray-100 dark:bg-gray-800 ">
+      <div class="max-w-7xl px-4 py-24 mx-auto text-left md:text-center ">
+    
+        <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+          <div>
+            <p class="mb-1 text-xs font-bold tracking-wide text-gray-500 uppercase dark:text-gray-300">For Developers</p>
+            <h1 class="mb-2 text-5xl font-bold leading-tight text-gray-900 dark:text-white md:font-extrabold">$9<span class="text-2xl font-medium text-gray-600 dark:text-gray-300"> per month</span></h1>
+            <p class="mb-6 text-lg text-gray-600 dark:text-gray-400">
+              One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your status.
+            </p>
+            <div class="justify-center block space-x-0 space-y-2 md:flex md:space-x-2 md:space-y-0">
+              <a href="#" class="w-full bg-purple-700 px-4 py-2 text-lg font-semibold text-white rounded dark:bg-gray-800 dark:border-2 dark:border-gray-300 dark:text-gray-100 dark:hover:bg-gray-900 md:w-auto">Get Started</a>
+              <a href="#" class="w-full bg-gray-100 px-4 py-2 text-lg font-semibold text-gray-800 rounded hover:bg-gray-300  md:w-auto">Contact Us</a>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1 text-xs font-bold tracking-wide text-gray-500 uppercase dark:text-gray-300">For Designers</p>
+            <h1 class="mb-2 text-5xl font-bold leading-tight text-gray-900 dark:text-white md:font-extrabold">$19<span class="text-2xl font-medium text-gray-600 dark:text-gray-300 "> per month</span></h1>
+            <p class="mb-6 text-lg text-gray-600 dark:text-gray-400 ">
+              One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your status.
+            </p>
+            <div class="justify-center block space-x-0 space-y-2 md:flex md:space-x-2 md:space-y-0">
+              <a href="#" class="w-full bg-purple-700 px-4 py-2 text-lg font-semibold text-white rounded dark:bg-gray-800 dark:border-2 dark:border-gray-300 dark:text-gray-100 dark:hover:bg-gray-900  md:w-auto">Get Started</a>
+              <a href="#" class="w-full bg-gray-100 px-4 py-2 text-lg font-semibold text-gray-800 rounded hover:bg-gray-300 md:w-auto">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    
+    <!-- pricing 9 end -->
+
+
+    
+    <!-- contact 7 start -->
+    
+    <section class="w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat bg-[url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')]" >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div class="lg:w-3/6 lg:pr-0 pr-0">
+                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p class="leading-relaxed mt-4 text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="lg:w-3/6 xl:w-2/5 md:w-full bg-gray-50 dark:bg-gray-800 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md">
+                <div class="relative mb-4">
+                    <label for="full-name" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Phone</label>
+                    <input type="email" id="phone" name="phone" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out"> </textarea>
+                </div>
+                <button class="text-white bg-indigo-500 rounded-md border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 dark:bg-emerald-300 dark:text-gray-800 dark:font-bold text-lg">Submit</button>
+            </div>
+        </div>
+    </section>
+  
+    <!-- contact 7 end -->
+
+  
+    <!-- footer 9 start -->
+    
+    <footer class="bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+        <span class="inline-block w-32 p-4 bg-gray-400 dark:ring-2 dark:rign-sky-300 dark:bg-gray-700 rounded-lg text-center text-white"> Logo </span>
+
+
+        <div class="grid grid-cols-1 gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p class="font-medium dark:text-gray-300 ">
+                Company
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> About </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Meet the Team </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> History </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Careers </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300 ">
+                Services 
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> 1on1 Coaching </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Company Review </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accounts Review </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> HR Consulting </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> SEO Optimisation </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300 ">
+                Helpful Links
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Contact </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> FAQs </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Live Chat </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300">
+                Legal
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Privacy Policy </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Terms &amp; Conditions </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Returns Policy </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accessibility </a>
+              </nav>
+            </div>
+          </div>
+    
+        <div class="pt-8 mt-8 border-t border-gray-100 sm:items-center sm:justify-between sm:flex">
+          <p class="text-xs text-gray-500">
+            © 2022 Company Name
+          </p>
+    
+          <strong class="inline-flex items-center dark:text-white p-2 space-x-2 text-sm font-medium border border-gray-200 rounded">
+            <span> Status: </span>
+    
+            <span class="w-3 h-3 bg-green-600 rounded-full"></span>
+    
+            <span class="font-medium text-green-600">
+              All systems operational
+            </span>
+          </strong>
+        </div>
+      </div>
+    </footer>    
+    <!-- footer 9 end -->
+  
+    
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+  
+  </body>
+  </html>

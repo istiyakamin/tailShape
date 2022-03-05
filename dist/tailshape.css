@@ -696,6 +696,90 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -0.25rem;
 }
 
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.right-32 {
+  right: 8rem;
+}
+
+.right-2\/4 {
+  right: 50%;
+}
+
+.right-1\/4 {
+  right: 25%;
+}
+
+.right-3\/4 {
+  right: 75%;
+}
+
+.left-3\/4 {
+  left: 75%;
+}
+
+.right-\[\] {
+  right: ;
+}
+
+.right-\[20\] {
+  right: 20;
+}
+
+.right-\[20px\] {
+  right: 20px;
+}
+
+.right-\[200px\] {
+  right: 200px;
+}
+
+.right-\[250px\] {
+  right: 250px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -3394,10 +3478,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
-}
-
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
 }
 
 .bg-gradient-to-br {
@@ -6637,10 +6717,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-transparent {
-  background-color: transparent;
 }
 
 .dark .dark\:bg-opacity-40 {

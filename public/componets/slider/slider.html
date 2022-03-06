@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Slider </title>
+</head>
+<body> 
+
+
+    
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+     <!-- slider 1 start -->
+     <section class="section_divider">
+        <div>Slider 1 </div>
+    </section> 
+        
+
+    <div class="min-w-screen min-h-screen bg-indigo-500 flex items-center justify-center px-5 py-5">
+        <div class="w-full mx-auto rounded-3xl shadow-lg bg-white px-10 pt-16 pb-10 text-gray-600" style="max-width: 350px" x-data="app()">
+            <div class="overflow-hidden relative mb-10">
+                <div class="overflow-hidden cursor-grab relative" @pointerdown="touchstartX=$event.screenX,touchstartY=$event.screenY" @pointerup="touchendX=$event.screenX,touchendY=$event.screenY,$nextTick(()=>handleSwipe())">
+                    <template x-for="(item,index) in slides">
+                        <div class="w-full overflow-hidden text-center select-none" x-show="item.show" x-transition:enter="transition duration-300 transform ease" :x-transition:enter-start="currentTransition.start" :x-transition:enter-end="currentTransition.end" x-transition:leave="absolute top-0 left-0 transition duration-300 transform ease" :x-transition:leave-start="previousTransition.start" :x-transition:leave-end="previousTransition.end">
+                            <div class="w-64 h-64 border rounded-full mx-auto mb-10 overflow-hidden bg-cover bg-center" :style="`background-image:url(${item.img})`"></div>
+                            <h2 x-text="item.title" class="font-bold text-xl text-indigo-500 mb-3"></h2>
+                            <p x-text="item.body" class="text-sm leading-tight h-16"></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <template x-for="(item,index) in slides">
+                    <span :id="`slideDot${index}`" class="w-2 h-2 rounded-full mx-1" :class="{'bg-indigo-500':index==currentIndex,'bg-gray-200':index!==currentIndex}"></span>
+                </template>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function app() {
+        return {
+            touchstartX: 0,
+            touchstartY: 0,
+            touchendX: 0,
+            touchendY: 0,
+            previousIndex: 0,
+            currentIndex: 0,
+            previousTransition: {
+                start: null,
+                end: null,
+            },
+            currentTransition: {
+                start: null,
+                end: null,
+            },
+            slides: [
+                {
+                    show:true,
+                    img: 'https://source.unsplash.com/random/?work',
+                    title: 'Lorem ipsum',
+                    body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                },
+                {
+                    img: 'https://source.unsplash.com/random/?tree',
+                    title: 'Dolor sit amet',
+                    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                },
+                {
+                    img: 'https://source.unsplash.com/random/?building',
+                    title: 'Consectetur',
+                    body: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                }
+            ],
+            handleSwipe: function() {
+                // Stop
+                if( this.touchstartX - this.touchendX > -20 && this.touchstartX - this.touchendX < 20 ) return;
+                // Set previous index
+                this.previousIndex = this.currentIndex;
+                // Swipe
+                if (this.touchendX < this.touchstartX) {
+                    // Swipe left
+                    this.currentIndex = Math.min(this.slides.length-1,this.currentIndex+1);
+                    this.previousTransition.start = 'translate-x-none opacity-1';
+                    this.previousTransition.end = '-translate-x-1/4 opacity-0';
+                    this.currentTransition.start = 'translate-x-1/4 opacity-0';
+                    this.currentTransition.end = 'translate-x-none opacity-1';
+                } else {
+                    // Swipe right
+                    this.currentIndex = Math.max(0,this.currentIndex-1);
+                    this.previousTransition.start = 'translate-x-none opacity-1';
+                    this.previousTransition.end = 'translate-x-1/4 opacity-0';
+                    this.currentTransition.start = '-translate-x-1/4 opacity-0';
+                    this.currentTransition.end = 'translate-x-none opacity-1';
+                }
+                // Check previous index
+                if( this.previousIndex !== this.currentIndex ) {
+                    this.showSlide();
+                }
+            },
+            showSlide: function() {
+                for(let i = 0; i < this.slides.length; i++){
+                    this.slides[i].show = i == this.currentIndex;
+                }
+            }
+        }
+    }
+    </script>
+    
+    <!-- slider 1 end -->
+    
+    
+
+    <!-- slider 2 start -->
+    <section class="section_divider">
+        <div>Slider 2</div>
+    </section>
+    
+    <main class="w-full min-h-screen grid place-content-center bg-gray-900">
+
+        <div x-data="imageSlider" class="bg-gray-100 rounded-md max-w-2xl mx-auto relative p-2 sm:p-4 overflow-hidden">
+
+            <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
+                <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+            </div>
+
+            <button @click="previous()"
+                class="absolute left-5 top-1/2 -translate-y-1/2 bg-gray-100 rounded-full w-11 h-11 flex justify-center items-center shadow-md z-10">
+                <svg class="w-8 h-8 font-bold text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                    </path>
+                </svg>
+            </button>
+
+            <button @click="forward()"
+                class="absolute right-5 top-1/2 -translate-y-1/2 bg-gray-100 rounded-full w-11 h-11 flex justify-center items-center shadow-md z-10">
+                <svg class="w-8 h-8 font-bold text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <div class="relative h-80" style="width: 30rem;">
+                <template x-for="(image, index) in images">
+                    <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300"
+                        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0" class="absolute top-0">
+                        <img :src="image" alt="image" class="rounded-sm">
+                    </div>
+                </template>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('imageSlider', () => ({
+                currentIndex: 1,
+                images: [
+                    'https://unsplash.it/640/425?image=30',
+                    'https://unsplash.it/640/425?image=40',
+                    'https://unsplash.it/640/425?image=50'
+                ],
+                previous() {
+                    if (this.currentIndex > 1) {
+                        this.currentIndex = this.currentIndex - 1;
+                    }
+                },
+                forward() {
+                    if (this.currentIndex < this.images.length) {
+                        this.currentIndex = this.currentIndex + 1;
+                    }
+                }
+            }))
+        })
+    </script>
+        
+    <!-- slider 2 end -->
+
+
+    <!-- slider 3 start -->
+    <section class="section_divider">
+        <div>Slider 3 </div>
+    </section>
+
+    <div class="text-xl font-bold m-5 text-center">Use Keyboard Arrow Keys To Go Left And Right</div>
+
+    <div class="gallery border-2 rounded mx-auto m-5 bg-white" style="width:750px;">
+    <div class="top flex p-2 border-b select-none">
+      <div class="heading text-gray-800 w-full pl-3 font-semibold my-auto"></div>
+      <div class="buttons ml-auto flex text-gray-600 mr-1">
+        <svg action="prev" class="w-7 border-2 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="prev" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        <svg action="next" class="w-7 border-2 rounded-r-lg p-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </div>
+    </div>
+    <div class="content-area w-full h-96 overflow-hidden">
+      <div class="platform shadow-xl h-full flex">
+        <!-- frame start -->
+        <div class="each-frame border-box flex-none h-full" title="Tiger"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://images-na.ssl-images-amazon.com/images/I/81eJpEEQwYL._AC_SL1500_.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Tiger</div>
+                    <div class="long-text text-lg">(Panthera tigris) is the largest extant cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange-brown fur with a lighter underside. It is an apex predator, primarily preying on ungulates such as deer and wild boar.</div> 
+                    <!-- this buttons are usable everywhere inside gallery element -->
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="2">Goto Third Frame</div><!-- add (action="goto" goto="[val]{0 means first frame and so on}") attribute to jump into frames -->
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="end">Goto Last Frame</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Lion"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://image.freepik.com/free-vector/cute-lion-cartoon_160606-353.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Lion</div>
+                    <div class="long-text text-lg">The lion is a species in the family Felidae and a member of the genus Panthera. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions have a prominent mane.</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Rat"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://i.pinimg.com/originals/07/1d/d0/071dd09d7b36e49139fe2cf08ff728a8.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Rat</div>
+                    <div class="long-text text-lg">Rats are various medium-sized, long-tailed rodents. Species of rats are found throughout the order Rodentia, but stereotypical rats are found in the genus Rattus. Other rat genera include Neotoma, Bandicota and Dipodomys. Rats are typically distinguished from</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Owl"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://image.freepik.com/free-vector/cartoon-owl-tree-branch_194935-43.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Owl</div>
+                    <div class="long-text text-lg">Owls are birds from the order Strigiformes, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.</div> 
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="0">Goto First Frame</div>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+
+      </div>
+    </div>
+    </div>
+ 
+
+    <script>
+        function gallery(){
+            this.index=0;
+            this.load=function(){
+                this.rootEl = document.querySelector(".gallery");
+                this.platform = this.rootEl.querySelector(".platform");
+                this.frames = this.platform.querySelectorAll(".each-frame");
+                this.contentArea = this.rootEl.querySelector(".content-area");      
+                this.width = parseInt(this.rootEl.style.width);
+                this.limit = {start:0,end:this.frames.length-1};
+                this.frames.forEach(each=>{each.style.width=this.width+"px";});   
+                this.goto(this.index);      
+            }
+            this.set_title = function(){this.rootEl.querySelector(".heading").innerText=this.frames[this.index].getAttribute("title");}
+            this.next = function(){this.platform.style.right=this.width * ++this.index + "px";this.set_title();}
+            this.prev = function(){this.platform.style.right=this.width * --this.index + "px";this.set_title();}
+            this.goto = function(index){this.platform.style.right = this.width * index + "px";this.index=index;this.set_title();}
+            this.load();
+        }
+        var G = new gallery();
+            G.rootEl.addEventListener("click",function(t){
+                var val = t.target.getAttribute("action");
+                if(val == "next" && G.index != G.limit.end){G.next();}
+                if(val == "prev" && G.index != G.limit.start){G.prev();}
+                if(val == "goto"){
+                    let rv = t.target.getAttribute("goto");
+                    rv = rv == "end" ? G.limit.end:rv;
+                    G.goto(parseInt(rv));
+                }
+            });
+            document.addEventListener("keyup",function(t){
+                var val = t.keyCode;
+                if(val == 39 && G.index != G.limit.end){G.next();}
+                if(val == 37 && G.index != G.limit.start){G.prev();}
+            });
+
+            // run G.load() if new data loaded with ajax
+
+    </script>
+    
+    <!-- slider 3 end -->
+
+
+
+  <!-- slider 4 start -->
+  <section class="section_divider">
+      <div>Slider 4</div>
+  </section>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+    var cont=0;
+function loopSlider(){
+    var xx= setInterval(function(){
+        switch(cont)
+        {
+        case 0:{
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+        cont=1;
+        
+        break;
+        }
+        case 1:
+        {
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+            
+        cont=0;
+        
+        break;
+        }
+        
+        
+        }},8000);
+
+}
+
+function reinitLoop(time){
+clearInterval(xx);
+setTimeout(loopSlider(),time);
+}
+
+
+
+function sliderButton1(){
+
+    $("#slider-2").fadeOut(400);
+    $("#slider-1").delay(400).fadeIn(400);
+    $("#sButton2").removeClass("bg-purple-800");
+    $("#sButton1").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=0
+    
+    }
+    
+    function sliderButton2(){
+    $("#slider-1").fadeOut(400);
+    $("#slider-2").delay(400).fadeIn(400);
+    $("#sButton1").removeClass("bg-purple-800");
+    $("#sButton2").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=1
+    
+    }
+
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+        
+
+        loopSlider();
+        
+    });
+
+    
+    </script>
+
+    <section>
+      <div class="sliderAx h-auto">
+          <div id="slider-1" class="container mx-auto">
+            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80)">
+           <div class="md:w-1/2">
+            <p class="font-bold text-sm uppercase">Services</p>
+            <p class="text-3xl font-bold">Hello world</p>
+            <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+            <a href="#" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+            </div>  
+        </div> <!-- container -->
+          <br>
+          </div>
+    
+          <div id="slider-2" class="container mx-auto">
+            <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)">
+           
+      <p class="font-bold text-sm uppercase">Services</p>
+            <p class="text-3xl font-bold">Hello world</p>
+            <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+            <a href="#" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+             
+        </div> <!-- container -->
+          <br>
+          </div>
+        </div>
+     <div  class="flex justify-between w-12 mx-auto pb-2">
+            <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+        <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+      </div>
+    
+    </section>
+  
+  <!-- slider 4 end -->
+
+
+  <!-- slider 5 start -->
+    <section class="section_divider">
+        <div> Slider 5</div>
+    </section> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade relative" data-bs-ride="carousel">
+        <div
+        class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+        >
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+        ></button>
+        </div>
+        <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active relative float-left w-full">
+            <video class="w-full" autoplay loop muted>
+            <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+            </video>
+            <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item relative float-left w-full">
+            <video class="w-full" autoplay loop muted>
+            <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
+            </video>
+            <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item relative float-left w-full">
+            <video class="w-full" autoplay loop muted>
+            <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4" />
+            </video>
+            <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+        </div>
+        <button
+        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+        >
+        <span
+            class="carousel-control-prev-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+        >
+        <span
+            class="carousel-control-next-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  <!-- slider 5 end -->
+
+
+  <!-- slider 6 start -->
+    <section class="section_divider">
+        <div>Slider 6 </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <div id="carouselExampleCaptionsFull" class="carousel slide carousel-fade relative h-screen" data-bs-ride="carousel">
+        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptionsFull"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptionsFull"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleCaptionsFull"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+        ></button>
+        </div>
+        <div class="carousel-inner relative w-full overflow-hidden h-screen">
+        <div class="carousel-item active relative float-left w-full h-screen bg-no-repeat bg-cover bg-center">
+            <video class="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsinline autoplay muted loop>
+            <source class="" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="flex justify-center items-center h-full">
+                <div class="text-white text-center px-14 px-md-0">
+                <h2 class="text-3xl font-semibold mb-4">Learn Tailwind Elements</h2>
+                <h5 class="text-lg font-semibold mb-6">Best & free guide of responsive web design</h5>
+                <div class="md:space-x-2">
+                    <a type="button" class="inline-block px-6 py-2 mb-2 md:mb-0 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" href="#!" role="button"     data-mdb-ripple="true" data-mdb-ripple-color="light">Start tutorial</a>
+                    <a type="button" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" href="#!" role="button"     data-mdb-ripple="true" data-mdb-ripple-color="light">Read more</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item relative float-left w-full h-screen bg-no-repeat bg-cover bg-center">
+            <video class="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsinline autoplay muted loop>
+            <source class="" src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.3)">
+            <div class="flex justify-center items-center h-full">
+                <div class="text-white text-center px-14 px-md-0">
+                <h2 class="text-3xl font-semibold mb-4">You can place here any content</h2>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item relative float-left w-full h-screen bg-no-repeat bg-cover bg-center">
+            <video class="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsinline autoplay muted loop>
+            <source class="" src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);">
+            <div class="flex justify-center items-center h-full">
+                <div class="text-white text-center px-14 px-md-0">
+                <h2 class="text-3xl font-semibold mb-4">And cover it with any mask</h2>
+                <a type="button" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" href="#!" role="button"     data-mdb-ripple="true" data-mdb-ripple-color="light">Learn more</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <button
+        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptionsFull"
+        data-bs-slide="prev"
+        >
+        <span
+            class="carousel-control-prev-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptionsFull"
+        data-bs-slide="next"
+        >
+        <span
+            class="carousel-control-next-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  <!-- slider 6 end -->
+
+ 
+ 
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

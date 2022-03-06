@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Slider 3</title>
+</head>
+<body> 
+
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+ 
+    
+
+
+    <!-- slider 3 start -->
+    <section class="section_divider">
+        <div>Slider 3 </div>
+    </section>
+
+    <div class="text-xl font-bold m-5 text-center">Use Keyboard Arrow Keys To Go Left And Right</div>
+
+    <div class="gallery border-2 rounded mx-auto m-5 bg-white" style="width:750px;">
+    <div class="top flex p-2 border-b select-none">
+      <div class="heading text-gray-800 w-full pl-3 font-semibold my-auto"></div>
+      <div class="buttons ml-auto flex text-gray-600 mr-1">
+        <svg action="prev" class="w-7 border-2 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="prev" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        <svg action="next" class="w-7 border-2 rounded-r-lg p-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+      </div>
+    </div>
+    <div class="content-area w-full h-96 overflow-hidden">
+      <div class="platform shadow-xl h-full flex">
+        <!-- frame start -->
+        <div class="each-frame border-box flex-none h-full" title="Tiger"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://images-na.ssl-images-amazon.com/images/I/81eJpEEQwYL._AC_SL1500_.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Tiger</div>
+                    <div class="long-text text-lg">(Panthera tigris) is the largest extant cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange-brown fur with a lighter underside. It is an apex predator, primarily preying on ungulates such as deer and wild boar.</div> 
+                    <!-- this buttons are usable everywhere inside gallery element -->
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="2">Goto Third Frame</div><!-- add (action="goto" goto="[val]{0 means first frame and so on}") attribute to jump into frames -->
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="end">Goto Last Frame</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Lion"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://image.freepik.com/free-vector/cute-lion-cartoon_160606-353.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Lion</div>
+                    <div class="long-text text-lg">The lion is a species in the family Felidae and a member of the genus Panthera. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions have a prominent mane.</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Rat"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://i.pinimg.com/originals/07/1d/d0/071dd09d7b36e49139fe2cf08ff728a8.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Rat</div>
+                    <div class="long-text text-lg">Rats are various medium-sized, long-tailed rodents. Species of rats are found throughout the order Rodentia, but stereotypical rats are found in the genus Rattus. Other rat genera include Neotoma, Bandicota and Dipodomys. Rats are typically distinguished from</div> 
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <div class="each-frame border-box flex-none h-full" title="Owl"> <!-- title shows in top -->
+            <!-- this is full editable area -->
+            <div class="main flex w-full p-8"> 
+                <div class="sub w-4/6 my-auto">
+                    <img class="w-full p-8" src="https://image.freepik.com/free-vector/cartoon-owl-tree-branch_194935-43.jpg" alt="">
+                </div>
+                <div class="sub w-full my-auto">
+                    <div class="head text-3xl font-bold mb-4">The Owl</div>
+                    <div class="long-text text-lg">Owls are birds from the order Strigiformes, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.</div> 
+                    <div class="goto border border-gray-400 text-sm font-semibold inline-block mt-2 p-1 px-2 rounded cursor-pointer" action="goto" goto="0">Goto First Frame</div>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+
+      </div>
+    </div>
+    </div>
+ 
+
+    <script>
+        function gallery(){
+            this.index=0;
+            this.load=function(){
+                this.rootEl = document.querySelector(".gallery");
+                this.platform = this.rootEl.querySelector(".platform");
+                this.frames = this.platform.querySelectorAll(".each-frame");
+                this.contentArea = this.rootEl.querySelector(".content-area");      
+                this.width = parseInt(this.rootEl.style.width);
+                this.limit = {start:0,end:this.frames.length-1};
+                this.frames.forEach(each=>{each.style.width=this.width+"px";});   
+                this.goto(this.index);      
+            }
+            this.set_title = function(){this.rootEl.querySelector(".heading").innerText=this.frames[this.index].getAttribute("title");}
+            this.next = function(){this.platform.style.right=this.width * ++this.index + "px";this.set_title();}
+            this.prev = function(){this.platform.style.right=this.width * --this.index + "px";this.set_title();}
+            this.goto = function(index){this.platform.style.right = this.width * index + "px";this.index=index;this.set_title();}
+            this.load();
+        }
+        var G = new gallery();
+            G.rootEl.addEventListener("click",function(t){
+                var val = t.target.getAttribute("action");
+                if(val == "next" && G.index != G.limit.end){G.next();}
+                if(val == "prev" && G.index != G.limit.start){G.prev();}
+                if(val == "goto"){
+                    let rv = t.target.getAttribute("goto");
+                    rv = rv == "end" ? G.limit.end:rv;
+                    G.goto(parseInt(rv));
+                }
+            });
+            document.addEventListener("keyup",function(t){
+                var val = t.keyCode;
+                if(val == 39 && G.index != G.limit.end){G.next();}
+                if(val == 37 && G.index != G.limit.start){G.prev();}
+            });
+
+            // run G.load() if new data loaded with ajax
+
+    </script>
+    
+    <!-- slider 3 end -->
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+</body>
+</html>

@@ -12,11 +12,372 @@
     <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
         d
     </button>
+     
+
+    <!-- header 12 start -->
+ 
+    <nav x-data="{template_16_nav_status:false}" class="bg-white shadow dark:bg-gray-800">
+      <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+              <div>
+                  <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+              </div>
+              
+              <!-- Mobile menu button -->
+              <div class="flex md:hidden ">
+                  <button @click="template_16_nav_status=!template_16_nav_status" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                      <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                          <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                      </svg>
+                  </button>
+              </div>
+          </div>
+
+          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+          <div   :class="template_16_nav_status ? 'block items-center md:flex ' : 'hidden items-center md:flex '" >
+              <div class="flex flex-col md:flex-row md:mx-6">
+                  <a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Home</a>
+                  <a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Shop</a>
+                  <a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Contact</a>
+                  <a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">About</a>
+              </div>
+
+              <div class="flex justify-center md:block border p-2 rounded mt-3 md:mt-0 md:rounded-none md:border-none">
+                  <a class="relative text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+
+                      <span class="absolute top-3 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </nav>
+
+    <!-- header 12 end -->
+
+
+    <!-- section 1 start --> 
+
+    <section class="bg-white dark:bg-gray-800">
+        <div class="container px-6 py-24 mx-auto">
+            <div class="items-center lg:flex">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Who I am</h2>
+
+                    <p class="mt-4 text-gray-500 dark:text-gray-400 lg:max-w-md">
+                        Hi I am brand , software engineer <a class="font-bold text-blue-600 dark:text-blue-400" href="#">@team</a> , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in sed non alias, fugiat, commodi nemo ut fugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+                    </p>
+
+                    <div class="flex items-center mt-6 -mx-2">
+                        <a class="mx-2" href="#" aria-label="Twitter">
+                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/>
+                            </svg>
+                        </a>
+                    
+                        <a class="mx-2" href="#" aria-label="Facebook">
+                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/>
+                            </svg>
+                        </a>
+                    
+                        <a class="mx-2" href="#" aria-label="Linkden">
+                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z"/>
+                            </svg>
+                        </a>
+                    
+                        <a class="mx-2" href="#" aria-label="Github">
+                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9 1.4.3 2.6.4 3.8.4 8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1-8.4 1.9-15.9 2.7-22.6 2.7-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1 10.5 0 20-3.4 25.6-6 2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8 0 0 1.6-.5 5-.5 8.1 0 26.4 3.1 56.6 24.1 17.9-5.1 37-7.6 56.1-7.7 19 .1 38.2 2.6 56.1 7.7 30.2-21 48.5-24.1 56.6-24.1 3.4 0 5 .5 5 .5 12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5 1.2 0 2.6-.1 4-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-8 lg:mt-0 lg:w-1/2">
+                    <div class="flex items-center justify-center lg:justify-end">
+                        <div class="max-w-lg">
+                            <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- section 1 end -->
 
 
 
+    <!-- feature 11 start --> 
 
+    <section class="dark:bg-gray-800 dark:text-gray-100 py-24">
+        <div class="container mx-auto p-4 space-y-2 text-center">
+            <h2 class="text-5xl font-bold">Built to empower every team</h2>
+            <p class="dark:text-gray-400">Libero minima optio qui</p>
+        </div>
+        <div class="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-green-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Product</h3>
+                <div class="space-y-1 leading-tight">
+                    <p>Similique quas ea veniam</p>
+                    <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p>
+                </div>
+            </div><!---->
+        </div>
+    </section>
+    
+    <!-- feature 11 end -->
+    
+        
+
+    <!-- timeline 1 start -->
+    
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+        <div class="container max-w-5xl px-4 py-24 mx-auto">
+            <div class="grid gap-4 mx-4 sm:grid-cols-12">
+                <div class="col-span-12 sm:col-span-3">
+                    <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-green-400">
+                        <h3 class="text-3xl font-semibold">Morbi tempor</h3>
+                        <span class="text-sm font-bold tracking-wider uppercase dark:text-gray-400">Vestibulum diam nunc</span>
+                    </div>
+                </div>
+                <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                    <div class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Donec porta enim vel </h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2020</time>
+                            <p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Aliquam sit amet nunc ut</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jul 2019</time>
+                            <p class="mt-3">Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Pellentesque habitant morbi</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jan 2016</time>
+                            <p class="mt-3">Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- timeline 1 end -->
+  
+
+  
+    <!-- contact 6 start --> 
+    <section class="text-gray-600 body-font relative dark:bg-gray-800">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-emerald-300">Contact Us</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base dark:text-emerald-100">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Name</label>
+                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Message</label>
+                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 dark:bg-emerald-400 dark:text-gray-800 dark:font-bold rounded text-lg">Button</button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 dark:border-cyan-100 text-center">
+                <a class="text-indigo-500 dark:text-emerald-300">example@email.com</a>
+                <p class="leading-normal my-5 dark:text-cyan-100">49 Smith St.
+                  <br>Saint Cloud, MN 56301
+                </p>
+                <span class="inline-flex">
+                  <a class="text-gray-500 dark:hover:text-cyan-300 hover:cursor-pointer">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 dark:hover:text-cyan-300 hover:cursor-pointer">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 dark:hover:text-cyan-300 hover:cursor-pointer">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 dark:hover:text-cyan-300 hover:cursor-pointer">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <!-- contact 6 end -->
+  
+   
+  
+    <!-- footer 9 start --> 
+    <footer class="bg-gray-50 dark:bg-gray-800 ">
+        <div class="max-w-screen-xl px-4 py-24 mx-auto sm:px-6 lg:px-8">
+          <span class="inline-block w-32 p-4 bg-gray-400 dark:ring-2 dark:rign-sky-300 dark:bg-gray-700 rounded-lg text-center text-white"> Logo </span>
+  
+  
+          <div class="grid grid-cols-1 gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <p class="font-medium dark:text-gray-300 ">
+                  Company
+                </p>
+      
+                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> About </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Meet the Team </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> History </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Careers </a>
+                </nav>
+              </div>
+      
+              <div>
+                <p class="font-medium dark:text-gray-300 ">
+                  Services 
+                </p>
+      
+                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> 1on1 Coaching </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Company Review </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accounts Review </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> HR Consulting </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> SEO Optimisation </a>
+                </nav>
+              </div>
+      
+              <div>
+                <p class="font-medium dark:text-gray-300 ">
+                  Helpful Links
+                </p>
+      
+                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Contact </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> FAQs </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Live Chat </a>
+                </nav>
+              </div>
+      
+              <div>
+                <p class="font-medium dark:text-gray-300">
+                  Legal
+                </p>
+      
+                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Privacy Policy </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Terms &amp; Conditions </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Returns Policy </a>
+                  <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accessibility </a>
+                </nav>
+              </div>
+            </div>
+      
+          <div class="pt-8 mt-8 border-t border-gray-100 sm:items-center sm:justify-between sm:flex">
+            <p class="text-xs text-gray-500">
+              © 2022 Company Name
+            </p>
+      
+            <strong class="inline-flex items-center dark:text-white p-2 space-x-2 text-sm font-medium border border-gray-200 rounded">
+              <span> Status: </span>
+      
+              <span class="w-3 h-3 bg-green-600 rounded-full"></span>
+      
+              <span class="font-medium text-green-600">
+                All systems operational
+              </span>
+            </strong>
+          </div>
+        </div>
+      </footer>    
+    <!-- footer 9 end -->
+    
 
 <!-- start of script section -->
 <script type="text/javascript">

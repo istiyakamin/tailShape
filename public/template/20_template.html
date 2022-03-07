@@ -16,6 +16,398 @@
 
 
 
+    <!-- header 16 start --> 
+      <nav x-data="{mobile_nav_status:false}" class="bg-white shadow dark:bg-gray-800">
+          <div class="container px-6 py-3 mx-auto">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                  <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                          <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+  
+                          <!-- Search input on desktop screen -->
+                          <div class="hidden mx-10 md:block">
+                              <div class="relative">
+                                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                      <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                                          <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
+                                  </span>
+  
+                                  <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Mobile menu button -->
+                      <div class="flex md:hidden">
+                          <button @click="mobile_nav_status=!mobile_nav_status" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                                  <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                              </svg>
+                          </button>
+                      </div>
+                  </div>
+  
+                  <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                  <div :class="mobile_nav_status ? 'block items-center md:flex' : 'hidden items-center md:flex' ">
+                      <div class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1">
+                          <a class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Home</a>
+                          <a class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Blog</a>
+                          <a class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Compoents</a>
+                          <a class="my-1 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0" href="#">Courses</a>
+                      </div>
+  
+                      <div class="flex items-center py-2 -mx-1 md:mx-0">
+                          <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-gray-500 rounded-md hover:bg-blue-600 md:mx-2 md:w-auto" href="#">Login</a>
+                          <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 md:mx-0 md:w-auto" href="#">Join free</a>
+                      </div>
+  
+                      <!-- Search input on mobile screen -->
+                      <div class="mt-3 md:hidden">
+                          <div class="relative">
+                              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                  <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                                      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                              </span>
+  
+                              <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="py-5 mt-3 -mx-3 overflow-y-hidden overflow-x-auto whitespace-nowrap h-0 bg-transparent hidden lg:block">
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">News</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Articles</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Videos</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Tricks</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">PHP</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Laravel</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Vue</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">React</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Tailwindcss</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Meraki UI</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">CPP</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">JavaScript</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Ruby</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Mysql</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Pest</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">PHPUnit</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Netlify</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">VS Code</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">PHPStorm</a>
+                  <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Sublime</a>
+              </div>
+          </div>
+      </nav>
+    
+    <!-- header 16 end -->
+
+
+    
+    <!-- blog 7 start -->
+     
+    <div class="dark:bg-gray-800 dark:text-gray-50 py-24">
+        <div class="container grid grid-cols-12 mx-auto">
+            <div class="flex flex-col justify-center col-span-12 align-middle bg-no-repeat bg-cover dark:bg-gray-700 lg:col-span-6 lg:h-auto" style="background-image: url('https://source.unsplash.com/random/640x480'); background-position: center center; background-blend-mode: multiply; background-size: cover;">
+                <div class="flex flex-col items-center p-8 py-12 text-center">
+                    <span>12 June</span>
+                    <h1 class="py-4 text-5xl font-bold">Lorem, ipsum dolor sit amet consectetur adipisicing.</h1>
+                    <p class="pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
+                <div class="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 class="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" class="inline-flex items-center py-2 space-x-2 text-sm dark:text-green-400">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 class="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" class="inline-flex items-center py-2 space-x-2 text-sm dark:text-green-400">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="pt-6 pb-4 space-y-2">
+                    <span>12 June</span>
+                    <h1 class="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, a!</p>
+                    <a rel="noopener noreferrer" href="#" class="inline-flex items-center py-2 space-x-2 text-sm dark:text-green-400">
+                        <span>Read more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- blog 7 end -->
+
+
+    <!-- feature 14 start --> 
+    <section class="dark:bg-gray-900 dark:text-gray-100 py-24">
+
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+            <h2 class="mb-8 text-4xl font-bold leading-none text-center">What do we have to offer?</h2>
+            <ul class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Ea et neque distinctio</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Quaerat obcaecati voluptatem </span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Quas eius repudianda</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Free and MIT licensed</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Praesentium ea et neque distinctio</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-green-400">
+                        <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                        <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                    </svg>
+                    <span>Architecto beatae esse ab amet </span>
+                </li><!---->
+            </ul>
+        </div>
+
+    </section>
+    <!-- feature 14 end -->
+
+
+    <!-- timeline 1 start --> 
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+        <div class="container max-w-5xl px-4 py-24 mx-auto">
+            <div class="grid gap-4 mx-4 sm:grid-cols-12">
+                <div class="col-span-12 sm:col-span-3">
+                    <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-green-400">
+                        <h3 class="text-3xl font-semibold">Morbi tempor</h3>
+                        <span class="text-sm font-bold tracking-wider uppercase dark:text-gray-400">Vestibulum diam nunc</span>
+                    </div>
+                </div>
+                <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                    <div class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Donec porta enim vel </h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2020</time>
+                            <p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Aliquam sit amet nunc ut</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jul 2019</time>
+                            <p class="mt-3">Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400">
+                            <h3 class="text-xl font-semibold tracking-wide">Pellentesque habitant morbi</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jan 2016</time>
+                            <p class="mt-3">Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.</p>
+                        </div><!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- timeline 1 end -->
+  
+
+    <!-- contact 9 start --> 
+    <div class="relative  px-4 w-full  bg-gray-50 dark:bg-gray-800">
+      <div class="mx-auto max-w-5xl py-24">
+
+        <div>
+          <span class="absolute top-0 left-0 hidden md:block opacity-10">
+            <svg width="250" height="600" fill="none" viewBox="0 0 250 600" aria-hidden="true">
+              <pattern id="pattern-rectangles"  width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="10" height="10" class="text-green-500" fill="currentColor" />
+              </pattern>
+              <rect width="250" height="600" fill="url(#pattern-rectangles)" />
+            </svg>
+          </span>
+          <span class="absolute bottom-0 right-0 opacity-20">
+            <svg width="300" height="300" fill="none" viewBox="0 0 300 300" aria-hidden="true">
+              <pattern id="pattern-circles" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+                <circle id="pattern-circle" cx="10" cy="10" r="5" class="fill-current text-green-500" />
+              </pattern>
+              <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
+            </svg>
+          </span>
+        </div>
+        
+
+
+        <div class="relative space-y-5">
+
+          <h2 class="text-center text-5xl text-green-500 font-light">Contact Us</h2>
+
+          <p class="mx-auto py-5 max-w-3xl text-center text-base text-gray-600 dark:text-gray-300">Atque sint nemo vero sequi veniam, numquam fugiat aperiam doloremque, itaque officia exercitationem! Excepturi deleniti accusantium minus quibusdam dolores doloremque natus fugit!</p>
+
+          <div class="flex flex-wrap justify-between items-center text-base">
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">18 avenue des Champs-Élysées, 75008 Paris</span>
+            </div>
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">357-233-9644</span>
+            </div>
+            <div class="m-2.5 inline-flex items-center">
+              <span class="text-gray-600 dark:text-emerald-400 font-semibold">my-email@fancymail.com</span>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="relative mt-16 rounded border-2 border-gray-200">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr" 
+          title="map" scrolling="no" frameborder="0"
+          width="100%" height="450" 
+          class="" 
+          loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- contact 9 end -->
+
+    
+    <!-- footer 11 start --> 
+    <footer class="bg-gray-900">
+        <div class="grid max-w-screen-xl grid-cols-1 mx-auto lg:grid-cols-2">
+          <div class="px-4 py-16 border-b border-gray-800 md:border-b-0 md:border-l lg:pl-12 lg:order-last">
+            <div class="block lg:hidden">
+              <span class="inline-block w-32 h-10 bg-gray-700 rounded-lg"> </span>
+              
+            </div>
+      
+            <div class="mt-12 space-y-4 lg:mt-0">
+              <span class="block w-10 h-1 bg-indigo-500 rounded"></span>
+      
+              <div>
+                <h5 class="text-2xl font-medium text-white">
+                  Request a Demo
+                </h5>
+      
+                <p class="max-w-xs mt-1 text-xs text-gray-500">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatum debitis quia pariatur iusto in nisi expedita placeat vero magni.
+                </p>
+              </div>
+      
+              <form>
+                <div class="relative max-w-lg">
+                  <label class="sr-only" for="email"> Email </label>
+      
+                  <input class="w-full py-4 pl-3 pr-16 text-sm bg-gray-800 border-none rounded-lg" id="email" type="email" placeholder="Enter your email">
+      
+                  <button class="absolute p-3 text-white -translate-y-1/2 bg-blue-600 rounded-md top-1/2 right-1.5" type="button">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="px-4 py-16 lg:pr-12">
+            <div class="hidden lg:block">
+              <span class="inline-block w-32 p-4 bg-gray-700 rounded-lg text-center text-white"> Logo </span>
+            </div>
+      
+            <div class="grid grid-cols-3 gap-8 lg:mt-12">
+              <div>
+                <p class="font-bold text-white">
+                  Helpful
+                </p>
+      
+                <nav class="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
+                  <a class="hover:opacity-75" href=""> Contact </a>
+                  <a class="hover:opacity-75" href=""> Live Chat </a>
+                  <a class="hover:opacity-75" href=""> Resources </a>
+                </nav>
+              </div>
+      
+              <div>
+                <p class="font-bold text-white">
+                  Solutions
+                </p>
+      
+                <nav class="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
+                  <a class="hover:opacity-75" href=""> Instant Checkout </a>
+                  <a class="hover:opacity-75" href=""> Product Upsells </a>
+                  <a class="hover:opacity-75" href=""> Slideout Cart </a>
+                  <a class="hover:opacity-75" href=""> User Dashboards </a>
+                </nav>
+              </div>
+      
+              <div>
+                <p class="font-bold text-white">
+                  About
+                </p>
+      
+                <nav class="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
+                  <a class="hover:opacity-75" href=""> About Us </a>
+                  <a class="hover:opacity-75" href=""> Meet the Team </a>
+                  <a class="hover:opacity-75" href=""> History </a>
+                  <a class="hover:opacity-75" href=""> Careers </a>
+                </nav>
+              </div>
+            </div>
+      
+            <div class="flex mt-12 space-x-6 text-xs text-white">
+              <p> © 2022 Company Name </p>
+              <a class="underline hover:opacity-75" href=""> Privacy Policy </a>
+              <a class="underline hover:opacity-75" href=""> Terms &amp; Conditions </a>
+              <a class="underline hover:opacity-75" href=""> Cookies </a>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!-- footer 11 end -->
+
+
 
 
 <!-- start of script section -->

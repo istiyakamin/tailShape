@@ -8,15 +8,602 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <title>Template 22</title>
 </head>
-<body>
+<body class="overflow-hidden">
     <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
         d
     </button>
     
 
 
+    <!-- header 21 start --> 
+    <nav x-data="{mobile_nav_status:false}" class="w-full py-6 bg-white dark:bg-gray-800 ">
+      <div class="flex items-center justify-between mx-auto xl:max-w-7xl lg:max-w-5xl md:max-w-3xl md:px-2 px-4">
+        <section class="flex items-center text-gray-900 dark:text-cyan-300 space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clip-rule="evenodd" />
+          </svg>
+          <a href="#" class="font-bold text-xl focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg">BRAND</a>
+        </section>
+        
+        <section>
+          <button @click="mobile_nav_status=!mobile_nav_status" class="flex md:hidden hover:bg-gray-100 p-2 rounded-full transition-all focus:ring focus:ring-purple-500 focus:ring-opacity-25 active:bg-gray-200 outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <!-- :class="mobile_nav_status ? 'block ' : 'hidden md:space-x-8 space-x-6 text-gray-900 dark:text-cyan-300 font-semibold md:flex' " -->
+          <ul :class="mobile_nav_status ? ' absolute w-full text-center flex flex-col bg-gray-800 -ml-60 rounded' : 'hidden  md:space-x-8 space-x-6 text-gray-900 dark:text-cyan-300 font-semibold md:flex'">
+            <li class="relative group py-2">
+              <a href="#" class="group focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"> Home </a>
+              <div class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0" ></div>
+            </li>
+            <li class="relative group py-2">
+              <a href="#" class="focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg">Services</a>
+              <div class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"></div>
+            </li>
+            <li class="relative group py-2">
+              <a href="#" class="focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg">About</a>
+              <div class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"></div>
+            </li>
+            <li class="relative group py-2">
+              <a href="#" class="bg-purple-500 px-4 py-1 rounded-xl text-white hover:bg-purple-400 active:bg-purple-600 focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none">Contact</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav>
+    
+    <!-- header 21 end -->
 
 
+    
+    <!-- hero 11 start --> 
+    <section class=" dark:bg-gray-800">
+        <div class=" px-4 py-32 mx-auto max-w-7xl w-full lg:w-8/12 xl:w-5/12">
+          <p class="mb-2 text-xs font-semibold tracking-wide text-gray-400 uppercase">For Developers</p>
+          <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 dark:text-cyan-300 md:text-4xl">Focus on your apps</h1>
+          <p class="mb-5 text-base text-gray-500 md:text-lg">
+            Today every company needs apps to engage their customers and run their businesses. Step up your ability to build, manage, and deploy great apps at scale with us.
+          </p>
+          <a href="#" class="w-full mb-2 rounded-lg px-2 py-2 hover:ring-2 hover:ring-gray-800 hover:bg-gray-200 hover:text-gray-800 bg-gray-800  text-gray-300 dark:text-cyan-300 dark:ring-2 dark:ring-cyan-300 dark:hover:bg-cyan-300 dark:hover:text-gray-800 mr-6 sm:w-auto sm:mb-0">Sign up for free</a>
+          <a href="#" class="w-full mb-2 rounded-lg px-2 py-2 ring-2 ring-gray-800 hover:bg-gray-800 hover:ring-0 hover:text-gray-300 dark:text-gray-800 dark:bg-cyan-300 dark:hover:text-cyan-300 dark:hover:ring-2 dark:hover:ring-cyan-300 dark:hover:bg-gray-800 sm:w-auto sm:mb-0">Read our blog</a>
+        </div>
+    </section>
+
+    <!-- hero 11 end -->
+
+
+    <!-- feature 10 start --> 
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+        <div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-50">Aliquip definiebas ad est</h2>
+                <p class="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">Quando cetero his ne, eum admodum sapientem ut.</p>
+            </div>
+            <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                <div>
+                    <h3 class="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Ad vix debet docendi</h3>
+                    <p class="mt-3 text-lg dark:text-gray-400">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+                    <div class="mt-12 space-y-12">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Per ei quaeque sensibus</h4>
+                                <p class="mt-2 dark:text-gray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Cu imperdiet posidonium sed</h4>
+                                <p class="mt-2 dark:text-gray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Nulla omittam sadipscing mel ne</h4>
+                                <p class="mt-2 dark:text-gray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-hidden="true" class="mt-10 lg:mt-0">
+                    <img src="https://source.unsplash.com/random/360x480/?tree" alt="" class="mx-auto rounded-lg shadow-lg dark:bg-gray-500">
+                </div>
+            </div>
+            <div>
+                <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                    <div class="lg:col-start-2">
+                        <h3 class="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Eam nibh gloriatur ex</h3>
+                        <p class="mt-3 text-lg dark:text-gray-400">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+                        <div class="mt-12 space-y-12">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Cibo augue offendit has ad</h4>
+                                    <p class="mt-2 dark:text-gray-400">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium leading-6 dark:text-gray-50">At eum ferri luptatum lobortis</h4>
+                                    <p class="mt-2 dark:text-gray-400">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-green-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Dicunt verterem evertitur eu sea</h4>
+                                    <p class="mt-2 dark:text-gray-400">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+                        <img src="https://source.unsplash.com/random/361x481/?tree" alt="" class="mx-auto rounded-lg shadow-lg dark:bg-gray-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- feature 10 end -->
+
+
+    <!-- pricing 2 start --> 
+    <section x-data="{ toggle: 'basic' }"
+    class="relative min-h-screen py-16 bg-gray-200 dark:bg-gray-800 min-w-screen animation-fade animation-delay">
+    <div class="container w-full px-10 mx-auto sm:px-5 ">
+        <div class="sm:flex ">
+            <aside class="w-full sm:flex-initial">
+                <div @click="toggle = 'basic'"
+                    :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'basic' }"
+                    class="flex mt-1 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                    <div class="self-center flex-shrink p-5">
+                        <svg x-show="toggle === 'basic'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                391.88,166.392 " />
+                        </svg>
+                        <svg x-show="toggle != 'basic'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                            xml:space="preserve">
+                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow px-0 py-5 md:px-5">
+                        <div class="text-2xl">Basic</div>
+                        <div class="pt-1 text-sm">Start pack + 3 submissions</div>
+                    </div>
+                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 5</div>
+                </div>
+                <div @click="toggle = 'silver'"
+                    :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'silver' }"
+                    class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                    <div class="self-center flex-shrink p-5">
+                        <svg x-show="toggle === 'silver'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                391.88,166.392 " />
+                        </svg>
+                        <svg x-show="toggle != 'silver'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                            xml:space="preserve">
+                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow px-0 py-5 md:px-5">
+                        <div class="text-2xl">Silver</div>
+                        <div class="pt-1 text-sm text-gray-500">Start pack + 10 submissions</div>
+                    </div>
+                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 10</div>
+                </div>
+                <div @click="toggle = 'gold'" :class="{ 'bg-blue-500 text-white hover:bg-blue-700': toggle === 'gold' }"
+                    class="flex mt-3 text-black bg-white rounded-md hover:text-white hover:bg-gray-700">
+                    <div class="self-center flex-shrink p-5">
+                        <svg x-show="toggle === 'gold'" class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <ellipse style="fill:#32BEA6;" cx="256" cy="256" rx="256" ry="255.832" />
+                            <polygon style="fill:#FFFFFF;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                391.88,166.392 " />
+                        </svg>
+                        <svg x-show="toggle != 'gold'" class="w-8 text-gray-700 stroke-current stroke-2" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                            xml:space="preserve">
+                            <ellipse style="fill:#FFFFFF;" cx="256" cy="256" rx="256" ry="255.832" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow px-0 py-5 md:px-5">
+                        <div class="text-2xl">Gold</div>
+                        <div class="pt-1 text-sm text-gray-500">Start pack + 20 submissions</div>
+                    </div>
+                    <div class="self-center flex-shrink w-32 px-5 py-5 text-2xl text-center md:px-5">$ 15</div>
+                </div>
+            </aside>
+            <div x-show="toggle === 'basic'"
+                class="flex w-full mt-10 bg-white dark:bg-gray-800  rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                <div class="flex-grow px-8 py-5 dark:text-white dark:border-2 dark:rounded-l-md dark:border-emerald-300">
+                    <div class="text-4xl">
+                        Basic Package
+                    </div>
+                    <div class="mt-0 text-lg text-gray-500">3 Submissions</div>
+
+                    <div class="flex mt-5 ">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">Starter pack</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">3 Submissions</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                    </div>
+                    <div class="flex">
+                        <div class="mt-8">
+                            <a href="#">
+                                <div
+                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                    Choose Package
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-64 h-full bg-blue-500 dark:border-l-2  bg-opacity-25 rounded-r md:flex-shrink bg-[url(https://picsum.photos/400/400?grayscale)]"
+                  ></div>
+            </div>
+            <div x-show="toggle === 'silver'"
+                class="flex w-full mt-10 bg-white dark:bg-gray-800 rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                <div class="flex-grow px-8 py-5 dark:text-white">
+                    <div class="text-4xl ">
+                        Silver Package
+                    </div>
+                    <div class="mt-0 text-lg text-gray-500">10 Submissions</div>
+
+                    <div class="flex mt-5">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">Starter pack</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">10 Submissions</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                    </div>
+                    <div class="flex">
+                        <div class="mt-8">
+                            <a href="#">
+                                <div
+                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                    Choose Package
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-64 h-full bg-blue-500 dark:border-l-2 dark:border-emerald-300 bg-opacity-25 rounded-r md:flex-shrink"
+                    style="background: url('https://picsum.photos/400/400?grayscale');"></div>
+            </div>
+            <div x-show="toggle === 'gold'"
+                class="flex w-full mt-10 bg-white dark:bg-gray-800 rounded-md sm:mt-1 sm:ml-5 sm:flex-initial">
+                <div class="flex-grow px-8 py-5 dark:text-white">
+                    <div class="text-4xl">
+                        Gold Package
+                    </div>
+                    <div class="mt-0 text-lg text-gray-500">20 Submissions</div>
+
+                    <div class="flex mt-5">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">Starter pack</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">20 Submissions</div>
+                    </div>
+                    <div class="flex">
+                        <div class="self-center flex-shrink">
+                            <svg class="w-8" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <polygon style="fill:#32BEA6;" points="235.472,392.08 114.432,297.784 148.848,253.616 223.176,311.52 345.848,134.504
+                                    391.88,166.392 " />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ml-3">FREE Ebook</div>
+                    </div>
+                    <div class="flex">
+                        <div class="mt-8">
+                            <a href="#">
+                                <div
+                                    class="w-full px-8 py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-800 pointer-cursor">
+                                    Choose Package
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-64 h-full bg-blue-500 bg-opacity-25 dark:border-l-2 dark:border-emerald-300 rounded-r md:flex-shrink"
+                    style="background: url('https://picsum.photos/400/400?grayscale');"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    
+    <!-- pricing 2 end -->
+      
+    
+    <!-- contact 7 start -->  
+    <section class="w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat bg-[url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=1280')]" >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+            <div class="lg:w-3/6 lg:pr-0 pr-0">
+                <h1 class="font-medium text-5xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p class="leading-relaxed mt-4 text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="lg:w-3/6 xl:w-2/5 md:w-full bg-gray-50 dark:bg-gray-800 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md">
+                <div class="relative mb-4">
+                    <label for="full-name" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Phone</label>
+                    <input type="email" id="phone" name="phone" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600 dark:text-emerald-300">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out"> </textarea>
+                </div>
+                <button class="text-white bg-indigo-500 rounded-md border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 dark:bg-emerald-300 dark:text-gray-800 dark:font-bold text-lg">Submit</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- contact 7 end -->
+
+
+
+    <!--footer 6 start--> 
+
+    <footer class="bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 sm:px-6 lg:px-8">
+        <span class="inline-block w-32 p-4 bg-gray-400 dark:ring-2 dark:rign-sky-300 dark:bg-gray-700 rounded-lg text-center text-white"> Logo </span>
+    
+        <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
+          <div class="lg:order-last">
+            <p class="font-medium dark:text-gray-300 dark:hover:text-sky-300">
+              Newsletter
+            </p>
+    
+            <form class="max-w-sm mt-4">
+              <div class="relative">
+                <label class="sr-only" for="email"> Email </label>
+    
+                <input class="w-full py-4 pl-3 pr-16 text-sm border-2 border-gray-200 rounded-lg" id="email" type="email" placeholder="Enter your email address">
+    
+                <button class="absolute p-2 text-white -translate-y-1/2 bg-blue-600 rounded-full hover:bg-blue-700 active:bg-blue-500 top-1/2 right-4" type="button">
+                  <svg class="w-4 h-4 rotate-45 translate-x-[1px] -translate-y-[1px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+    
+            <div class="flex mt-8 space-x-6 text-gray-500">
+              <a class="hover:opacity-75 dark:text-gray-300 dark:hover:text-sky-300" href="" target="_blank" rel="noreferrer">
+                <span class="sr-only"> Facebook </span>
+    
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+    
+              <a class="hover:opacity-75 dark:text-gray-300 dark:hover:text-sky-300" href="" target="_blank" rel="noreferrer">
+                <span class="sr-only"> Instagram </span>
+    
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+    
+              <a class="hover:opacity-75 dark:text-gray-300 dark:hover:text-sky-300" href="" target="_blank" rel="noreferrer">
+                <span class="sr-only"> Twitter </span>
+    
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                </svg>
+              </a>
+    
+              <a class="hover:opacity-75 dark:text-gray-300 dark:hover:text-sky-300" href="" target="_blank" rel="noreferrer">
+                <span class="sr-only"> GitHub </span>
+    
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+    
+              <a class="hover:opacity-75 dark:text-gray-300 dark:hover:text-sky-300" href="" target="_blank" rel="noreferrer">
+                <span class="sr-only"> Dribbble </span>
+    
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+    
+          <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p class="font-medium dark:text-gray-300 ">
+                Company
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> About </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Meet the Team </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> History </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Careers </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300">
+                Services
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> 1on1 Coaching </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Company Review </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accounts Review </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> HR Consulting </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> SEO Optimisation </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300">
+                Helpful Links
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Contact </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> FAQs </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Live Chat </a>
+              </nav>
+            </div>
+    
+            <div>
+              <p class="font-medium dark:text-gray-300">
+                Legal
+              </p>
+    
+              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Privacy Policy </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Terms &amp; Conditions </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Returns Policy </a>
+                <a class="hover:opacity-75 dark:hover:text-sky-300" href=""> Accessibility </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+    
+        <p class="mt-8 text-xs text-gray-500">
+          © 2022 Company Name
+        </p>
+      </div>
+    </footer>
+    <!--footer 6 end -->
 
 <!-- start of script section -->
 <script type="text/javascript">

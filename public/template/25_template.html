@@ -15,6 +15,528 @@
     
 
 
+    <!-- header 7 start --> 
+    <section class=" dark:bg-gray-800 ">
+
+      <div x-data="{open_11_template_nav: false}" class="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="relative flex items-center justify-between lg:justify-center lg:space-x-16">
+          <ul class=" hidden md:block flex items-center space-x-8 lg:flex">
+            <li><a href="#" aria-label="Our product" title="Our product" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">Product</a></li>
+            <li><a href="#" aria-label="Our product" title="Our product" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">Features</a></li>
+            <li><a href="#" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">Pricing</a></li>
+          </ul>
+          <a href="#" aria-label="Company" title="Company" class="inline-flex items-center">
+            <svg class="w-8 text-purple-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+              <rect x="3" y="1" width="7" height="12"></rect>
+              <rect x="3" y="17" width="7" height="6"></rect>
+              <rect x="14" y="1" width="7" height="6"></rect>
+              <rect x="14" y="11" width="7" height="12"></rect>
+            </svg>
+            <span class="ml-2 text-xl font-bold tracking-wide dark:text-gray-300 text-gray-800 uppercase">Company</span>
+          </a>
+          <ul class=" hidden md:block flex items-center space-x-8 lg:flex">
+            <li><a href="#" aria-label="About us" title="About us" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">About us</a></li>
+            <li><a href="#" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">Sign in</a></li>
+            <li><a href="#" aria-label="Sign up" title="Sign up" class="font-medium tracking-wide dark:text-cyan-500 text-gray-700 transition-colors duration-200 hover:text-purple-400">Sign up</a></li>
+          </ul>
+          <!-- Mobile menu -->
+          <div  class="md:hidden" >
+            <button @click="open_11_template_nav = ! open_11_template_nav" aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-purple-50 focus:bg-purple-50">
+              <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
+                <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+              </svg>
+            </button>
+            <!-- Mobile menu dropdown  -->
+            <div x-show="open_11_template_nav" @click.outside="open_11_template_nav = false" class="absolute top-0 left-0 w-full ">
+              <div class="p-5 bg-white dark:bg-gray-800 border rounded shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                  <div >
+                    <a href="#" aria-label="Company" title="Company" class="inline-flex items-center">
+                      <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                        <rect x="3" y="1" width="7" height="12"></rect>
+                        <rect x="3" y="17" width="7" height="6"></rect>
+                        <rect x="14" y="1" width="7" height="6"></rect>
+                        <rect x="14" y="11" width="7" height="12"></rect>
+                      </svg>
+                      <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
+                    </a>
+                  </div>
+                  <div>
+                    <button  @click="open_11_template_nav = false" aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                      <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <path
+                          fill="currentColor"
+                          d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <nav>
+                  <ul class="space-y-4">
+                    <li><a href="#" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200  hover:text-purple-400">Product</a></li>
+                    <li><a href="#" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400">Features</a></li>
+                    <li><a href="#" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400">Pricing</a></li>
+                    <li><a href="#" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400">About us</a></li>
+                    <li><a href="#" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide text-gray-700 dark:text-cyan-500 transition-colors duration-200 hover:text-purple-400">Sign in</a></li>
+                    <li>
+                      <a
+                        href="#"
+                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                        aria-label="Sign up"
+                        title="Sign up"
+                      >
+                        Sign up
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- header 7 end -->
+
+
+
+    <!-- hero 17 start  --> 
+    <section class="py-24 dark:bg-gray-800 dark:text-gray-100">
+      <div class="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
+        <div class=" mx-auto px-6 pt-20 pb-20 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-900">
+          <span class="block mb-2 dark:text-indigo-400">Some design system</span>
+          <h1 class="text-5xl font-extrabold dark:text-gray-50">Build it with Some Company</h1>
+          <p class="my-8">
+            <span class="font-medium dark:text-indigo-400 ">Modular and versatile.</span>Fugit vero facilis dolor sit neque cupiditate minus esse accusamus cumque at.
+          </p>
+          <form novalidate="" action="" class="self-stretch space-y-3">
+            <div class="pb-3">
+              <label for="name" class="text-sm sr-only">Your name</label>
+              <input id="name" type="text" placeholder="Your name" class="w-full py-2 px-2 text-gray-800 outline-none dark:rounded-md border-b-2 border-b-gray-800 dark:border-gray-700">
+            </div>
+            <div class="pb-3">
+              <label for="lastname" class="text-sm sr-only">Email address</label>
+              <input id="lastname" type="text" placeholder="Email address" class="w-full py-2 px-2 text-gray-800 outline-none dark:rounded-md  border-b-2 border-b-gray-800  dark:border-gray-700">
+            </div>
+            <button type="button" class="w-full py-2 font-semibold rounded bg-gray-800 text-gray-50 dark:bg-indigo-400 dark:text-gray-900">Join the waitlist</button>
+          </form>
+        </div>
+        <!-- <img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full rounded-md xl:col-span-3 dark:bg-coolGray-500"> -->
+        <img src="https://images.unsplash.com/photo-1643609186613-e9e96efeb9ec?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=360&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NTM0MDIzNQ&ixlib=rb-1.2.1&q=80&w=480" alt="" class="object-cover w-5/6 my-auto mx-auto rounded-md xl:col-span-3 dark:bg-gray-500">
+      </div>
+    </section>
+
+    <!-- hero 17 end -->
+
+
+    <!-- feature 1 start  --> 
+    <section class="bg-gray-300 dark:bg-gray-900 ">
+        <div class="container px-6 py-24 mx-auto">
+            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">explore our <br> awesome <span class="underline decoration-blue-500">Components</span></h1>
+            
+            <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+            </p>
+            
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+                <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                    <span class="inline-block text-blue-500 dark:text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                        </svg>
+                    </span>
+
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">elegant Dark Mode</h1>
+
+                    <p class="text-gray-500 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                    </p>
+
+                    <a href="#" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                    <span class="inline-block text-blue-500 dark:text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                        </svg>
+                    </span>
+
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Easy to customiztions</h1>
+
+                    <p class="text-gray-500 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                    </p>
+
+                    <a href="#" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                    <span class="inline-block text-blue-500 dark:text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </span>
+
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Simple & clean designs</h1>
+
+                    <p class="text-gray-500 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                    </p>
+
+                    <a href="#" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- feature 1 end  -->
+
+
+
+    <!-- pricing 12 start --> 
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+      <h2 class="dark:text-gray-300 text-gray-800 font-bold text-center text-5xl pt-5">Price</h2>
+      <div class="container mx-auto px-6 py-24 overflow-x-auto">
+        <table class="w-full">
+          <caption class="sr-only">Pricing plan comparison</caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th scope="col">
+                <h2 class="px-2 text-lg font-medium">Starter</h2>
+                <p class="mb-3">
+                  <span class="text-2xl font-bold sm:text-4xl dark:text-gray-50">0€</span>
+                  <span class="font-medium dark:text-gray-400">/mo</span>
+                </p>
+              </th>
+              <th scope="col">
+                <h2 class="px-2 text-lg font-medium">Standard</h2>
+                <p class="mb-3">
+                  <span class="text-2xl font-bold sm:text-4xl dark:text-gray-50">19€</span>
+                  <span class="font-medium dark:text-gray-400">/mo</span>
+                </p>
+              </th>
+              <th scope="col">
+                <h2 class="px-2 text-lg font-medium">Premium</h2>
+                <p class="mb-3">
+                  <span class="text-2xl font-bold sm:text-4xl dark:text-gray-50">49€</span>
+                  <span class="font-medium dark:text-gray-400">/mo</span>
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="space-y-6 text-center divide-y divide-gray-700">
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Euismod</h3>
+              </th>
+              <td>
+                <span class="block text-sm">1</span>
+              </td>
+              <td>
+                <span class="block text-sm">10</span>
+              </td>
+              <td>
+                <span class="block text-sm">100</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Principes et</h3>
+              </th>
+              <td>
+                <span class="block text-sm">0,5 GB</span>
+              </td>
+              <td>
+                <span class="block text-sm">5 GB</span>
+              </td>
+              <td>
+                <span class="block text-sm">500 GB</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Et mel porro</h3>
+              </th>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Free plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Standard plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Premium plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Veniam suscipiantur</h3>
+              </th>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Not included in Free plan" class="w-5 h-5 mx-auto dark:text-gray-600">
+                  <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Standard plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Premium plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Ornatus tacimates</h3>
+              </th>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Not included in Free plan" class="w-5 h-5 mx-auto dark:text-gray-600">
+                  <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Not included in Standard plan" class="w-5 h-5 mx-auto dark:text-gray-600">
+                  <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Premium plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600" >
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left">
+                <h3 class="py-3">Aliquam fastidii in mei</h3>
+              </th>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Not included in Free plan" class="w-5 h-5 mx-auto dark:text-gray-600">
+                  <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Not included in Standard plan" class="w-5 h-5 mx-auto dark:text-gray-600">
+                  <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-label="Included in Premium plan" class="w-5 h-5 mx-auto dark:text-green-400 text-green-600">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <!-- pricing 12 end -->
+
+
+
+    <!-- faq 2 start -->
+    <section class="dark:bg-gray-900 dark:text-gray-100 bg-gray-300 ">
+      <div class="container flex flex-col items-center p-4 mx-auto md:p-8">
+          <h1 class="text-3xl font-bold leading-none text-center sm:text-4xl">Help Center</h1>
+          <div class="relative mt-6 mb-12">
+              <span class="absolute inset-y-0 flex items-center pl-2 mx-auto">
+                  <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                      <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-gray-100">
+                          <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                      </svg>
+                  </button>
+              </span>
+              <input type="search" name="Search" placeholder="Search..." class="w-full py-3 pl-12 text-sm rounded-full border-2 sm:w-96 focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900">
+          </div>
+          <div class="flex flex-col w-full divide-y sm:flex-row sm:divide-y-0 sm:divide-x sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+              <div class="flex flex-col w-full divide-y divide-gray-700">
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Billing</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Support</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Account</a>
+              </div>
+              <div class="flex flex-col w-full divide-y divide-gray-700">
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Features</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Contact us</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">My orders</a>
+              </div>
+              <div class="hidden w-full divide-y sm:flex-col sm:flex divide-gray-700">
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Enterprise</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Privacy</a>
+                  <a rel="noopener noreferrer" href="#" class="flex items-center justify-center p-4 sm:py-8 lg:py-12">Developers</a>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- faq 2 end -->
+
+
+
+
+    <!-- footer 12 start --> 
+    <div class="bg-gray-800">
+      <div class="px-4 pt-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid row-gap-10 mb-8 lg:grid-cols-6">
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="font-medium tracking-wide text-gray-300">Category</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">News</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">World</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Games</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">References</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium tracking-wide text-gray-300">Apples</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Web</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">eCommerce</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Business</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Entertainment</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Portfolio</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium tracking-wide text-gray-300">Cherry</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Media</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Brochure</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Nonprofit</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Educational</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Projects</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium tracking-wide text-gray-300">Business</p>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Infopreneur</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Personal</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Wiki</a>
+                </li>
+                <li>
+                  <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-purple-200">Forum</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:max-w-md lg:col-span-2">
+            <span class="text-base font-medium tracking-wide text-gray-300">Subscribe for updates</span>
+            <form class="flex flex-col mt-4 md:flex-row">
+              <input
+                placeholder="Email"
+                required=""
+                type="text"
+                class="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-purple-400 focus:outline-none focus:shadow-outline"
+              />
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="mt-4 text-sm text-gray-500">
+              Bacon ipsum dolor amet short ribs pig sausage prosciuto chicken spare ribs salami.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
+          <p class="text-sm text-gray-500">
+            © Copyright 2020 Lorem Inc. All rights reserved.
+          </p>
+          <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-teal-400">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+                ></path>
+              </svg>
+            </a>
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-teal-400">
+              <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                <circle cx="15" cy="15" r="4"></circle>
+                <path
+                  d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+                ></path>
+              </svg>
+            </a>
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-teal-400">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer 12 end-->
+  
+
 
 
 

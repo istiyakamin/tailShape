@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>About page 1</title>
+</head>
+<body>
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+
+    <!-- header 24 start --> 
+     
+    <style>
+      @media(max-width:1520px) {
+          .left-svg {
+              display: none;
+          }
+      }
+
+      /* small css for the mobile nav close */
+      #nav-mobile-btn.close span:first-child {
+          transform: rotate(45deg);
+          top: 4px;
+          position: relative;
+          background: #a0aec0;
+      }
+
+      #nav-mobile-btn.close span:nth-child(2) {
+          transform: rotate(-45deg);
+          margin-top: 0px;
+          background: #a0aec0;
+      }
+  </style>
+
+    <header class="relative z-50 w-full h-24 overflow-hidden dark:bg-gray-900 ">
+      <div
+          class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0">
+
+          <a href="/" class="relative flex flex-row items-center h-full font-black leading-none">
+              <svg class="w-auto h-6 text-indigo-600 fill-current" viewBox="0 0 194 116"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g fill-rule="evenodd">
+                      <path
+                          d="M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z" />
+                      <path d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z" />
+                  </g>
+              </svg>
+              <span class="ml-3 text-xl text-gray-800 dark:text-red-300">Brand Logo<span class="text-pink-500">.</span></span>
+          </a>
+
+          <nav id="nav"
+              class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
+              <a href="#"
+                  class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600 ">Home</a>
+              <a href="#features"
+                  class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600">Features</a>
+              <a href="#pricing"
+                  class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600">Pricing</a>
+              <a href="#testimonials"
+                  class="font-bold duration-100 transition-color hover:text-indigo-600 dark:text-pink-500 dark:hover:text-indigo-600">Testimonials</a>
+              <div class="flex flex-col w-full font-medium border-t border-gray-200 md:hidden">
+                  <a href="#_" class="w-full py-2 font-bold text-center text-pink-500 ">Login</a>
+                  <a href="#_"
+                      class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">Get
+                      Started</a>
+              </div>
+          </nav>
+
+          <div
+              class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
+              <a href="#_"
+                  class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
+              <a href="#_"
+                  class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">Get
+                  Started</a>
+              <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
+                  viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="c">
+                          <stop stop-color="#E614F2" offset="0%" />
+                          <stop stop-color="#FC3832" offset="100%" />
+                      </linearGradient>
+                      <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="f">
+                          <stop stop-color="#657DE9" offset="0%" />
+                          <stop stop-color="#1C0FD7" offset="100%" />
+                      </linearGradient>
+                      <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
+                          id="a">
+                          <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                          <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" in="shadowBlurOuter1" />
+                      </filter>
+                      <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
+                          id="d">
+                          <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                          <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1" />
+                      </filter>
+                      <path
+                          d="M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z"
+                          id="b" />
+                      <path
+                          d="M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z"
+                          id="e" />
+                  </defs>
+                  <g fill="none" fill-rule="evenodd" opacity=".9">
+                      <g transform="rotate(65 416.452 409.167)">
+                          <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                          <use fill="url(#c)" xlink:href="#b" />
+                      </g>
+                      <g transform="rotate(29 421.929 414.496)">
+                          <use fill="#000" filter="url(#d)" xlink:href="#e" />
+                          <use fill="url(#f)" xlink:href="#e" />
+                      </g>
+                  </g>
+              </svg>
+          </div>
+
+          <div id="nav-mobile-btn"
+              class="absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10">
+              <span class="block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"></span>
+              <span class="block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"></span>
+          </div>
+
+      </div>
+    </header>
+    <script>
+      if (document.getElementById('nav-mobile-btn')) {
+          document.getElementById('nav-mobile-btn').addEventListener('click', function () {
+              if (this.classList.contains('close')) {
+                  document.getElementById('nav').classList.add('hidden');
+                  this.classList.remove('close');
+              } else {
+                  document.getElementById('nav').classList.remove('hidden');
+                  this.classList.add('close');
+              }
+          });
+      }
+    </script>
+    
+    <!-- header 24 end --> 
+
+
+    <!-- section 4 start -->
+ 
+    <section class="bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
+        <div class="max-h-96 md:h-screen">
+          <!-- https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 -->
+            <img class="w-screen h-screen object-cover object-top" src="https://source.unsplash.com/random/400*600/?team" alt="">
+        </div>
+        <div class="flex bg-gray-100 dark:bg-gray-800 p-10">
+            <div class="mb-auto mt-auto max-w-lg">
+            <h1 class="text-3xl uppercase dark:text-white  font-bold text-indigo-600">Brand Name</h1>
+            <p class="font-semibold mb-5 dark:text-cyan-100">Company Type</p>
+            <p class="dark:text-cyan-300">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+            <button class="bg-black rounded-md py-3 px-7 mt-6 text-white dark:hover:bg-emerald-300 dark:hover:text-gray-800 font-bold">Email Us</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- section 4 end -->
+
+
+    <!-- feature 12 start --> 
+    <section class="dark:bg-gray-800 dark:text-gray-100 py-24">
+      <div class="container p-4 mx-auto  space-y-1 text-center">
+          <span class="text-xs tracking-wider uppercase font-bold dark:text-green-400 text-indigo-600">shortcut to your dream ui</span>
+          <h2 class="pb-3 text-3xl font-bold md:text-4xl">Create a stylish website in minutes</h2>
+          <p>Get a jumpstart to creating your new webpage! With our fully responsive and carefully styled components you can get the structure of your website done with just a couple of clicks.</p>
+      </div>
+      <div class="container grid justify-center gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-4">
+          <div class="flex flex-col px-8 py-6">
+              <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Components</h2>
+              <p class="flex-1 mb-4 text-base leading-relaxed dark:text-gray-400">Individual components that can be re-used multiple times in your designs.</p>
+              <a class="inline-flex items-center space-x-2 text-sm dark:text-green-400  text-indigo-600" href="/components">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+              </a>
+          </div>
+          <div class="flex flex-col px-8 py-6 lg:border-none xl:border-solid">
+              <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Sections</h2>
+              <p class="flex-1 mb-4 text-base leading-relaxed dark:text-gray-400">Pre-made building blocks that you can stack on top of each other like Legos to build a website of your own in minutes.</p>
+              <a class="inline-flex items-center space-x-2 text-sm dark:text-green-400  text-indigo-600" href="/sections">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+              </a>
+          </div>
+          <div class="flex flex-col px-8 py-6">
+              <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Templates</h2>
+              <p class="flex-1 mb-4 text-base leading-relaxed dark:text-gray-400">Full pages that showcase pieces of what you can achieve with the building blocks that are in this UI kit.</p>
+              <a class="inline-flex items-center space-x-2 text-sm dark:text-green-400  text-indigo-600" href="/templates">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+              </a>
+          </div>
+          <div class="flex flex-col px-8 py-6">
+              <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Customization</h2>
+              <p class="flex-1 mb-4 text-base leading-relaxed dark:text-gray-400">Choose your primary color from any of the Tailwind CSS 2.0 colors. You can also view all of the components in our light and dark themes.</p>
+              <a class="inline-flex items-center space-x-2 text-sm dark:text-green-400  text-indigo-600" href="/docs">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+              </a>
+          </div>
+      </div>
+    </section>
+
+    <!-- feature 12 end -->
+
+
+    <!-- timeline 1 start --> 
+    <section class="dark:bg-gray-800 dark:text-gray-100 py-24">
+        <div class="container max-w-5xl px-4 py-12 mx-auto">
+            <div class="grid gap-4 mx-4 sm:grid-cols-12">
+                <div class="col-span-12 sm:col-span-3">
+                    <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-green-400 before:bg-indigo-600">
+                        <h3 class="text-3xl font-semibold">Morbi tempor</h3>
+                        <span class="text-sm font-bold tracking-wider uppercase dark:text-gray-400">Vestibulum diam nunc</span>
+                    </div>
+                </div>
+                <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                    <div class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400 before:bg-indigo-600">
+                            <h3 class="text-xl font-semibold tracking-wide text-indigo-600 ">Donec porta enim vel </h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2020</time>
+                            <p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400 before:bg-indigo-600">
+                            <h3 class="text-xl font-semibold tracking-wide text-indigo-600">Aliquam sit amet nunc ut</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jul 2019</time>
+                            <p class="mt-3">Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales.</p>
+                        </div>
+                        <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-green-400 before:bg-indigo-600">
+                            <h3 class="text-xl font-semibold tracking-wide text-indigo-600">Pellentesque habitant morbi</h3>
+                            <time class="text-xs tracking-wide uppercase dark:text-gray-400">Jan 2016</time>
+                            <p class="mt-3">Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.</p>
+                        </div><!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- timeline 1 end -->
+  
+
+
+    <!-- testimonial 24 start --> 
+
+    <div id="testimonials"
+    class="flex items-center justify-center w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex-col items-center ">
+            <div class="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
+                <p class="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">Our customers love
+                    our product
+                </p>
+                <h2
+                    class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+                    Testimonials</h2>
+                <p class="my-6 text-xl font-medium text-gray-500">Don't just take our word for it, read from our
+                    extensive
+                    list of case studies and customer testimonials.</p>
+
+            </div>
+            <div class="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
+                <div class="w-full xl:w-1/2 xl:pr-8">
+                    <blockquote
+                        class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
+                        <div class="flex flex-col pr-8">
+                            <div class="relative pl-12">
+                                <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                                    <path
+                                        d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
+                                </svg>
+                                <p class="mt-2 text-base text-gray-600">I'm loving these templates! Very nice
+                                    features and layouts.
+                                </p>
+                            </div>
+
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Sandra
+                                Walton <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
+                                    SomeCompany</span></h3>
+                            <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
+                        </div>
+                        <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
+                            src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                            alt="">
+                    </blockquote>
+                    <blockquote
+                        class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 mb-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease xl:mb-0">
+                        <div class="flex flex-col pr-10">
+                            <div class="relative pl-12">
+                                <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                                    <path
+                                        d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
+                                </svg>
+                                <p class="mt-2 text-base text-gray-600">Really digging this service. Now I can
+                                    quickly bootstrap any
+                                    project.</p>
+                            </div>
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Kenny
+                                Jones <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
+                                    SomeCompany</span></h3>
+                            <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
+                        </div>
+                        <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
+                            src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+                            alt="">
+                    </blockquote>
+                </div>
+                <div class="w-full xl:w-1/2 xl:pl-8">
+                    <blockquote
+                        class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
+                        <div class="flex flex-col pr-10">
+                            <div class="relative pl-12">
+                                <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                                    <path
+                                        d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
+                                </svg>
+                                <p class="mt-2 text-base text-gray-600">Extremely helpful in every single project we
+                                    have released.
+                                </p>
+                            </div>
+
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Mike Smith
+                                <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO SomeCompany</span>
+                            </h3>
+                            <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
+                        </div>
+                        <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
+                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
+                            alt="">
+                    </blockquote>
+                    <blockquote
+                        class="flex flex-col-reverse items-center justify-between w-full col-span-1 p-6 mt-16 text-center transition-all duration-200 bg-gray-100 rounded-lg md:flex-row md:text-left hover:bg-white hover:shadow ease">
+                        <div class="flex flex-col pr-10">
+                            <div class="relative pl-12">
+                                <svg class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                                    <path
+                                        d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
+                                </svg>
+                                <p class="mt-2 text-base text-gray-600">Finally a quick and easy system I can use
+                                    for any type of
+                                    project.</p>
+                            </div>
+
+                            <h3 class="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">Molly
+                                Sanchez <span class="mt-1 text-sm leading-5 text-gray-500 truncate">- CEO
+                                    SomeCompany</span></h3>
+                            <p class="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
+                        </div>
+                        <img class="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+                            alt="">
+                    </blockquote>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <!-- testimonial 24 end -->
+
+
+
+    <!-- footer 47 start --> 
+
+    <footer class="px-4 pt-12 pb-8 text-white bg-white dark:bg-gray-800 border-t border-gray-200">
+    <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
+        <div class="w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0 lg:text-left">
+            <a href="/"
+                class="flex justify-start text-left sm:text-center lg:text-left sm:justify-center lg:justify-start">
+                <span class="flex items-start sm:items-center">
+                    <svg class="w-auto h-6 text-gray-900 dark:text-cyan-300 fill-current" viewBox="0 0 194 116"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="evenodd">
+                            <path
+                                d="M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z">
+                            </path>
+                            <path d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z"></path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <p class="mt-6 mr-4 text-base text-gray-500 dark:text-gray-300">Crafting the next-level of user experience and engagement.
+            </p>
+        </div>
+        <div class="block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0">
+            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+                <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                    Product</li>
+                <li><a href="#_"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600  dark:text-gray-300 dark:hover:text-cyan-300">Features</a>
+                </li>
+                <li><a href="#_"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300">Integrations</a>
+                </li>
+                <li><a href="#_"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300 ">Pricing</a>
+                </li>
+                <li><a href="#_"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300 ">FAQ</a></li>
+            </ul>
+            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+                <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                    Company</li>
+                <li><a href="#_"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300 ">Privacy</a>
+                </li>
+                <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300">Terms
+                        of
+                        Service</a></li>
+            </ul>
+            <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
+                <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                    TailwindCSS
+                </li>
+                <li><a href="https://devdojo.com/tailwindcss/components"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300">Tailwind
+                        Components</a></li>
+                <li><a href="https://devdojo.com/tailwindcss/templates" 
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300">Tailwind
+                        Templates</a></li>
+                <li><a href="https://devdojo.com/tails"
+                        class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300">Tails</a></li>
+            </ul>
+            <div class="flex flex-col w-full text-gray-700">
+                <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">Follow Us</div>
+                <div class="flex justify-start pl-4 mt-2">
+                    <a class="flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300"
+                        target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
+                        </svg>
+                    </a>
+                    <a class="flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300"
+                        target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
+                        </svg>
+                    </a>
+                    <a class="flex items-center block text-gray-400 no-underline hover:text-gray-600 dark:text-gray-300 dark:hover:text-cyan-300"
+                        target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" pt-6 mt-10 text-center text-gray-400 dark:text-cyan-300 border-t border-gray-100">© 2020 Landmark. All rights
+        reserved.</div>
+    </footer>
+
+
+    <!-- footer 47 end -->
+
+  
+     
+
+
+    <!-- start of script section -->
+      <script type="text/javascript">
+        let toogler = document.getElementById("dark_mood_toogler");
+        let doc_html_el = document.getElementsByTagName('html')[0];
+      
+        doc_html_el.addEventListener('keyup',(e)=>{
+            // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+            if(e.ctrlKey && e.keyCode =='220'){
+              doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      
+            }
+        })
+        doc_html_el.addEventListener('keyup',(e)=>{
+            // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+            if(e.ctrlKey && e.keyCode =='191'){
+              toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+      
+            }
+        })
+        toogler.addEventListener('click',()=>{
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+          console.log(doc_html_el.className);
+        })
+      </script>
+    <!-- end of script section -->
+  
+  
+  </body>
+  </html>

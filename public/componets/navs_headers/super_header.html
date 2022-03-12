@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/tailshape.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer>
+    </script><script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <title>Header 21</title>
+</head>
+<body>
+    
+    
+  <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+    d
+</button>
+
+
+
+
+    <!-- header 21 start --> 
+    <nav x-data="{mobile_nav_status:false ,submenu_blog_dropdown:false,submenu_about_dropdown:false}" class="w-full py-6 bg-white dark:bg-gray-800 ">
+      <div class="flex items-center  justify-around mx-auto xl:max-w-7xl lg:max-w-5xl md:max-w-3xl md:px-2 px-4">
+
+        <section class="flex items-center text-gray-900 dark:text-cyan-300 space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clip-rule="evenodd" />
+          </svg>
+          <a href="#" class="font-bold text-xl focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg">BRAND</a>
+        </section>
+
+        <section>
+          <ul class="md:space-x-8 space-x-6 text-gray-900 dark:text-cyan-300 font-semibold hidden md:flex justify-center">
+            <li class="relative group">
+              <a href="#" class="group focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"> Home </a>
+              <div class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"></div>
+            </li>
+            <li class="relative group">
+              <a href="#" class="focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg">Services</a>
+              <div class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"></div>
+            </li>
+            <li class="nav-item dropdown" @mouseleave="submenu_about_dropdown=false">
+              <a @mouseover="submenu_about_dropdown = true" class="nav-link dropdown-toggle transition-all relative" href="#" data-bs-toggle="dropdown">About
+                <section  :class="submenu_about_dropdown ? 'opacity-100 transition-all duration-500' : 'opacity-0 transition-all duration-500'" >
+                  <ul  class=" items-center opacity-100 transition-all duration-1000 absolute rounded mt-2 w-2/5 bg-gray-300 text-center align-middle  ">
+                    <li class="p-5 ">
+                      <a class=" hover:bg-gray-300" href=" ">About element 1</a>
+                    </li> 
+                    <li class="p-5">
+                      <a class="hover:bg-gray-300" href=" ">About element 2</a>
+                    </li> 
+                    <li class="p-5">
+                      <a class="hover:bg-gray-300" href=" ">About element 3</a>
+                    </li>  
+                  </ul>
+                </section>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown" >
+              <a @mouseover="submenu_blog_dropdown = true" class="nav-link dropdown-toggle transition-all relative" href="#" data-bs-toggle="dropdown">Blog
+                <section  :class="submenu_blog_dropdown ? 'opacity-100 transition-all duration-500' : 'opacity-0 transition-all duration-500'" >
+                  <ul  @mouseout="submenu_blog_dropdown = false" class=" items-center opacity-100 transition-all duration-1000 absolute rounded mt-2 w-2/5 bg-gray-300 text-center align-middle  ">
+                    <li class="p-5 ">
+                      <a class=" hover:bg-gray-300" href=" ">Blog without Sidebar</a>
+                    </li> 
+                    <li class="p-5">
+                      <a class="hover:bg-gray-300" href=" ">Blog without Sidebar</a>
+                    </li> 
+                    <li class="p-5">
+                      <a class="hover:bg-gray-300" href=" ">Blog without Sidebar</a>
+                    </li>  
+                  </ul>
+                </section>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+
+          <div class=" ">
+            <ul class=" flex flex-row transition-all duration-1000"> 
+              <li class="transition-all duration-1000">
+                <a href="#" class=" relative bg-purple-500 px-3 py-2 hover:-top-2  rounded-xl text-white hover:bg-purple-400 active:bg-purple-600 focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+          <button @click="mobile_nav_status=!mobile_nav_status"  class="flex md:hidden hover:bg-gray-100 p-2 rounded-full focus:ring focus:ring-purple-500 focus:ring-opacity-25 active:bg-gray-200 outline-none ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          
+        
+      </div>
+
+        <!-- mobile nav -->
+        <!-- class="hidden  bg-white border-r dark:bg-gray-800 dark:border-gray-600" -->
+
+          <div  :class="mobile_nav_status ? 'opacity-100 md:opacity-0 fixed flex flex-col w-64 h-screen px-4 bg-gray-300 py-10 transition-all duration-1000' : 'opacity-0 absolute transition-all duration-1000'">
+      
+              <div class="relative mt-6 dark:bg-gray-800">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                      <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                          <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                  </span>
+      
+                  <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" placeholder="Search">
+              </div>
+              
+              <div class="flex flex-col justify-between flex-1 mt-6 dark:bg-gray-800">
+                  <nav>
+                      <a class="flex items-center px-4 py-2 text-gray-700 bg-gray-200   rounded-md dark:bg-gray-700 dark:text-gray-200" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Dashboard</span>
+                      </a>
+      
+                      <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-200 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Accounts</span>
+                      </a>
+      
+                      <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-200 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Tickets</span>
+                      </a>
+      
+                      <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-200 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Settings</span>
+                      </a>
+      
+                      <hr class="my-6 border-gray-200 dark:border-gray-600">
+      
+                      <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-200 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Tickets</span>
+                      </a>
+      
+                      <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-200 transform rounded-md dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+      
+                          <span class="mx-4 font-medium">Settings</span>
+                      </a>
+                  </nav>
+      
+                  <div class="flex items-center px-4 -mx-2">
+                      <img class="object-cover mx-2 rounded-full h-9 w-9" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="avatar">
+                      <h4 class="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">John Doe</h4>
+                  </div>
+              </div>
+          </div>
+ 
+        <!-- mobile nav -->
+
+    </nav>
+      <section class="text-5xl text-center bg-gray-300">some test text </section>
+    
+    <!-- header 21 end -->
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+
+
+
+</body>
+</html>

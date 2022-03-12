@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/tailshape.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Blog page 1</title>
+</head>
+<body>
+    <button class="dark_mode_button_custom_style" id="dark_mood_toogler">
+        d
+    </button>
+     
+    
+    <!-- header 24 start --> 
+     
+    <style>
+      @media(max-width:1520px) {
+          .left-svg {
+              display: none;
+          }
+      }
+
+      /* small css for the mobile nav close */
+      #nav-mobile-btn.close span:first-child {
+          transform: rotate(45deg);
+          top: 4px;
+          position: relative;
+          background: #a0aec0;
+      }
+
+      #nav-mobile-btn.close span:nth-child(2) {
+          transform: rotate(-45deg);
+          margin-top: 0px;
+          background: #a0aec0;
+      }
+    </style>
+
+    <header class="relative z-50 w-full h-24 overflow-hidden dark:bg-gray-900 ">
+      <div
+          class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0">
+
+          <a href="/" class="relative flex flex-row items-center h-full font-black leading-none">
+              <svg class="w-auto h-6 text-indigo-600 fill-current" viewBox="0 0 194 116"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g fill-rule="evenodd">
+                      <path
+                          d="M96.869 0L30 116h104l-9.88-17.134H59.64l47.109-81.736zM0 116h19.831L77 17.135 67.088 0z" />
+                      <path d="M87 68.732l9.926 17.143 29.893-51.59L174.15 116H194L126.817 0z" />
+                  </g>
+              </svg>
+              <span class="ml-3 text-xl text-gray-800 dark:text-red-300">Brand Logo<span class="text-pink-500">.</span></span>
+          </a>
+
+          <nav id="nav"
+              class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative">
+              <a href="#"
+                  class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600 ">Home</a>
+              <a href="#features"
+                  class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600">Features</a>
+              <a href="#pricing"
+                  class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color dark:text-pink-500 dark:hover:text-indigo-600 hover:text-indigo-600">Pricing</a>
+              <a href="#testimonials"
+                  class="font-bold duration-100 transition-color hover:text-indigo-600 dark:text-pink-500 dark:hover:text-indigo-600">Testimonials</a>
+              <div class="flex flex-col w-full font-medium border-t border-gray-200 md:hidden">
+                  <a href="#_" class="w-full py-2 font-bold text-center text-pink-500 ">Login</a>
+                  <a href="#_"
+                      class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold">Get
+                      Started</a>
+              </div>
+          </nav>
+
+          <div
+              class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
+              <a href="#_"
+                  class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0">Login</a>
+              <a href="#_"
+                  class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl">Get
+                  Started</a>
+              <svg class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
+                  viewBox="0 0 818 815" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="c">
+                          <stop stop-color="#E614F2" offset="0%" />
+                          <stop stop-color="#FC3832" offset="100%" />
+                      </linearGradient>
+                      <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="f">
+                          <stop stop-color="#657DE9" offset="0%" />
+                          <stop stop-color="#1C0FD7" offset="100%" />
+                      </linearGradient>
+                      <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
+                          id="a">
+                          <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                          <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" in="shadowBlurOuter1" />
+                      </filter>
+                      <filter x="-4.7%" y="-3.3%" width="109.3%" height="109.3%" filterUnits="objectBoundingBox"
+                          id="d">
+                          <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                          <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+                          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1" />
+                      </filter>
+                      <path
+                          d="M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z"
+                          id="b" />
+                      <path
+                          d="M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z"
+                          id="e" />
+                  </defs>
+                  <g fill="none" fill-rule="evenodd" opacity=".9">
+                      <g transform="rotate(65 416.452 409.167)">
+                          <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                          <use fill="url(#c)" xlink:href="#b" />
+                      </g>
+                      <g transform="rotate(29 421.929 414.496)">
+                          <use fill="#000" filter="url(#d)" xlink:href="#e" />
+                          <use fill="url(#f)" xlink:href="#e" />
+                      </g>
+                  </g>
+              </svg>
+          </div>
+
+          <div id="nav-mobile-btn"
+              class="absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10">
+              <span class="block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"></span>
+              <span class="block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"></span>
+          </div>
+
+      </div>
+    </header>
+
+    <script>
+      if (document.getElementById('nav-mobile-btn')) {
+          document.getElementById('nav-mobile-btn').addEventListener('click', function () {
+              if (this.classList.contains('close')) {
+                  document.getElementById('nav').classList.add('hidden');
+                  this.classList.remove('close');
+              } else {
+                  document.getElementById('nav').classList.remove('hidden');
+                  this.classList.add('close');
+              }
+          });
+      }
+    </script>
+    
+    <!-- header 24 end --> 
+
+  <!-- hero 16 start --> 
+  <section class= " dark:bg-gradient-to-b dark:bg-gray-800 pb-5">
+    <div class="bg-gray-300">
+      <div class="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-coolGray-900">
+        <h1 class="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-coolGray-900">Provident blanditiis wlk exercitationem</h1>
+        <p class="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-900">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
+      </div>
+    </div>
+    <!-- <img src="https://source.unsplash.com/random/480x320" alt="" class="w-5/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-800"> -->
+    <div class="w-full md:w-3/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 ">
+      <div class="overflow-hidden rounded-t"> 
+        <a href="" class="relative">
+          <span class="bg-red-100  w-full"></span>
+          <span class="absolute inset-2/4">Click Here</span>
+          
+          <img src="https://images.unsplash.com/photo-1645119675435-fc5b106eddeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=320&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NTMzODQyMQ&ixlib=rb-1.2.1&q=80&w=480" class="relative dark:bg-gray-800 hover:scale-110 w-full  transition-all duration-700 rounded-t-lg shadow-lg border-2" alt="">
+        </a>
+
+      </div>
+
+      <div class=" p-10 dark:bg-white w-full">
+        <div class="">
+          <div class="">
+            <a href="#" class="text-md text-blue-500 before:content-['-'] " rel="category">Teamwork</a>
+          </div>
+            <h2 class=" mt-2">
+                <a class="text-2xl font-semibold text-gray-800 " href="./blog-post.html">Amet Dolor Bibendum Parturient Cursus</a>
+            </h2>
+        </div>
+        <div class="text-md text-gray-600 mt-2 text-justify">
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+<!-- hero 16 end -->
+
+
+
+<!-- start of script section -->
+<script type="text/javascript">
+    let toogler = document.getElementById("dark_mood_toogler");
+    let doc_html_el = document.getElementsByTagName('html')[0];
+  
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 220 is the backward slash , need to press ctrl+ \ to activate or deactivate darkmode
+        if(e.ctrlKey && e.keyCode =='220'){
+          doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+  
+        }
+    })
+    doc_html_el.addEventListener('keyup',(e)=>{
+        // key 191 is the forward slash , need to press ctrl+ / to show or hide the darkmode button
+        if(e.ctrlKey && e.keyCode =='191'){
+          toogler.style.display =='block'? toogler.style.display = 'none':toogler.style.display ='block';
+  
+        }
+    })
+    toogler.addEventListener('click',()=>{
+      doc_html_el.className =='' ? doc_html_el.classList.add('dark'):doc_html_el.classList.remove('dark');
+      console.log(doc_html_el.className);
+    })
+  </script>
+  <!-- end of script section -->
+  
+  
+  </body>
+  </html>
